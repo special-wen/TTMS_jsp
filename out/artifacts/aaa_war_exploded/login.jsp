@@ -23,7 +23,7 @@
 <div id="login"></div>
 <div class="cont">
     <div class="form sign-in">
-        <form method="post" action="./roter.jsp" >
+        <form method="post" action="Login">
             <label>
                 <span>账号</span>
                 <input type="text" name = "user" class = "name" id="name"/>
@@ -34,7 +34,7 @@
             </label>
             <label>
                 <%
-                    String error = (String)session.getAttribute("loginError");
+                    String error = (String)request.getAttribute("loginError");
                     if(error != null){
                         out.println(error);
                         session.removeAttribute("loginError");

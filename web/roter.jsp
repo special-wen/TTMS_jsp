@@ -19,7 +19,7 @@
       if(username.equals("") || password.equals("")){
           session.setAttribute("loginError","用户名和密码不能为空");
           response.setStatus(response.SC_MOVED_TEMPORARILY);
-          response.setHeader("LOCATION","./login.jsp");
+          response.setHeader("LOCATION","./Login.jsp");
 
 //          out.println("用户名和密码不能为空");
 
@@ -30,7 +30,7 @@
           if(!user || !word){
               session.setAttribute("loginError","用户名和密码不符合要求");
               response.setStatus(response.SC_MOVED_TEMPORARILY);
-              response.setHeader("LOCATION","./login.jsp");
+              response.setHeader("LOCATION","./Login.jsp");
           }else{
               response.setStatus(response.SC_MOVED_TEMPORARILY);
               response.setHeader("LOCATION","./index.jsp");
