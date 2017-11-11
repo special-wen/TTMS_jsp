@@ -26,7 +26,7 @@ public class Login extends HttpServlet {
         request.setCharacterEncoding("UTF-8");
         //设置登录名和登录密码,每次登录后需要清除原session
 
-        String name_saler = "saler";
+        String name_saler = "Saler";
         String password_saler = "123456";
 
         String name_manager = "manager";
@@ -48,7 +48,7 @@ public class Login extends HttpServlet {
 //            request.getRequestDispatcher("login.jsp").forward(request,response);
         }else{
             if(user.equals(name_saler) && pass.equals(password_saler)){
-                System.out.println("login in by saler!");
+                System.out.println("login in by Saler!");
                 request.setAttribute("user",user);
                 request.getSession().setAttribute("login","ok");
                 request.getSession().setAttribute("saler","ok");
