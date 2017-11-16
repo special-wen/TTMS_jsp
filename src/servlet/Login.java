@@ -18,11 +18,12 @@ public class Login extends HttpServlet
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        // 一个账号登陆后，另一个账户登录，会访问前一个账户的内容，所以登陆后需要清除原session
-        // request.getSession().setAttribute("login", null);
-        // request.getSession().setAttribute("a", null);
-        // request.getSession().setAttribute("b", null);
-        // request.getSession().invalidate();
+//         一个账号登陆后，另一个账户登录，会访问前一个账户的内容，所以登陆后需要清除原session
+         request.getSession().setAttribute("login", null);
+         request.getSession().setAttribute("lyt", null);
+         request.getSession().setAttribute("Lyt", null);
+         request.getSession().setAttribute("LYT", null);
+         request.getSession().invalidate();
 
         String name = request.getParameter("user");
         String pass = request.getParameter("pass");

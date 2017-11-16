@@ -32,7 +32,7 @@
 <body>
 欢迎，${name} !
 <br>
-saler目录：<br>
+administrator目录：<br>
 <a href="administrator/administrator1.jsp">administrator/administrator1.jsp</a><br>
 <a href="administrator/administrator2.jsp">administrator/administrator1.jsp</a><br>
 </body>
