@@ -11,7 +11,9 @@
 <head>
     <meta charset="UTF-8">
     <title>登录</title>
-    <link rel="stylesheet" type="text/css" href="./Bootstrap/bootstrap.css">
+    <%--<link rel="stylesheet" type="text/css" href="./Bootstrap/bootstrap.css">--%>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="./font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="./css/login.css">
     <script src="./jquery/jquery.js"></script>
@@ -41,8 +43,13 @@
                     }
                 %>
             </label>
+            <label for="name" style="color: #cfcfcf">选择身份</label>
+            <select class="form-control" style="width: 200px;margin: auto">
+                <option value="administrator" style="color: #cfcfcf">管理员</option>
+                <option value="manager" style="color: #cfcfcf">经理</option>
+                <option style="color: #cfcfcf">售票员</option>
+            </select>
             <p class="forgot-pass">忘记密码？</p>
-            <!--<input type="submit" class="submit"/>-->
             <button type="button" class="submit"><input type="submit" /></button>
             <button type="button" class="fb-btn">Connect with <span>facebook</span></button>
         </form>
