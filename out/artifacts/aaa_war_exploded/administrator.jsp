@@ -4,7 +4,7 @@
   Date: 17-11-16
   Time: 下午4:28
   To change this template use File | Settings | File Templates.
---%>﻿
+--%>
 <%@ page pageEncoding="UTF-8" isErrorPage="false" errorPage="error.jsp"%>
 <%
     String path = request.getContextPath();
@@ -32,8 +32,9 @@
 <body>
 欢迎，${name} !
 <br>
-manager目录：<br>
-<a href="manager/manager1.jsp">manager/manager1.jsp</a><br>
-<a href="manager/manager2.jsp">manager/manager2.jsp</a></br>
+saler目录：<br>
+<a href="administrator/administrator1.jsp">administrator/administrator1.jsp</a><br>
+<a href="administrator/administrator2.jsp">administrator/administrator1.jsp</a><br>
 </body>
 </html>
+

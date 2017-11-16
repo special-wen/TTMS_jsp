@@ -6,10 +6,15 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%
+    String path = request.getContextPath();
+    String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <base href="<%=basePath%>">
     <title>登录</title>
     <%--<link rel="stylesheet" type="text/css" href="./Bootstrap/bootstrap.css">--%>
     <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -34,6 +39,12 @@
                 <span>密码</span>
                 <input type="password" name = "pass" class = "password" id="password" />
             </label>
+            <label for="name" style="color: #cfcfcf">选择身份</label>
+            <select class="form-control" name = "select" style="width: 200px;margin: auto">
+                <option value="administrator" style="color: #cfcfcf">管理员</option>
+                <option value="manager" style="color: #cfcfcf">经理</option>
+                <option value="saler" style="color: #cfcfcf">售票员</option>
+            </select>
             <label>
                 <%
                     String error = (String)request.getAttribute("loginError");
@@ -43,12 +54,6 @@
                     }
                 %>
             </label>
-            <label for="name" style="color: #cfcfcf">选择身份</label>
-            <select class="form-control" style="width: 200px;margin: auto">
-                <option value="administrator" style="color: #cfcfcf">管理员</option>
-                <option value="manager" style="color: #cfcfcf">经理</option>
-                <option style="color: #cfcfcf">售票员</option>
-            </select>
             <p class="forgot-pass">忘记密码？</p>
             <button type="button" class="submit"><input type="submit" /></button>
             <button type="button" class="fb-btn">Connect with <span>facebook</span></button>

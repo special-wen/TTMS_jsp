@@ -2,7 +2,7 @@
   Created by IntelliJ IDEA.
   User: zxw
   Date: 17-11-16
-  Time: 下午8:30
+  Time: 下午7:49
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page pageEncoding="UTF-8" isErrorPage="false" errorPage="error.jsp"%>
@@ -16,6 +16,6 @@
     </style>
 </head>
 <body>
-a2.jsp
+a1.jsp
 </body>
 </html>
