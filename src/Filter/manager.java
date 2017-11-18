@@ -22,6 +22,7 @@ public class manager implements Filter {
             System.out.println("无权访问manager");
             req.getRequestDispatcher("/error.jsp").forward(req,resp);
         }else {
+
             chain.doFilter(req,resp);
         }
     }

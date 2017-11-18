@@ -34,6 +34,6 @@
 <br>
 manager目录：<br>
 <a href="manager/manager1.jsp">manager/manager1.jsp</a><br>
-<a href="manager/manager2.jsp">manager/manager2.jsp</a></br>
+<%--<a href="manager/manager2.jsp">manager/manager2.jsp</a></br>--%>
 </body>
 </html>

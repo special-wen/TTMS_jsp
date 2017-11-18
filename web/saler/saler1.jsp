@@ -5,7 +5,7 @@
   Time: 下午7:46
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page pageEncoding="UTF-8" isErrorPage="false" errorPage="error.jsp"%>
+<%@ page pageEncoding="UTF-8" isErrorPage="false" errorPage="/error.jsp"%>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
