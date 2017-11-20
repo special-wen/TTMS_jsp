@@ -24,22 +24,7 @@
 </head>
 <body>
 <!--导航-->
-<div id="header">
-    <nav class="navbar navbar-default" role="navigation">
-        <div class="container-fluid">
-            <ul class="nav nav-tabs">
-                <li><a href="#">那一年影院</a></li>
-                <li class="active"><a href="studio.jsp">演出厅管理</a></li>
-                <li><a href="seat.jsp">座位管理</a></li>
-                <li><a href="../hard/user.jsp">用户管理</a></li>
-                <li class="nav navbar-nav navbar-right"><a href="../../login.jsp"><span><i class="fa fa-sign-out" aria-hidden="true"></i></span>退出登录</a></li>
-                <li class="nav navbar-nav navbar-right"><a href="#"><span><i class="fa fa-user-md" aria-hidden="true"></i></span> ${name}系统管理员</a></li>
-            </ul>
-
-        </div>
-    </nav>
-</div>
-
+<iframe src="/me.html" style="width: 100%;height: 50px;scrolling:no"></iframe>
 
 <!--所有的演出厅-->
 <div id="table">

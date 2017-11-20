@@ -39,15 +39,23 @@ function get_back_entry() {
             let json = JSON.parse(xmlhttp.responseText);
             let top = document.getElementById("back_entry");
             if(json.state==true){
-                let ad;
+                let ad,list;
+                let j = 0;
                 json = json.entry;
+                let nav = document.getElementById("navbar");
                 for(let i in json){
+                    //创建li标签
+                    list = document.createElement("li");
+                    nav.appendChild(list);
+                    if(j == 0){
+                        list.setAttribute("class","active");
+                    }
                     ad = document.createElement('a');
                     ad.setAttribute('href',json[i]);
                     ad.innerHTML = i;
-                    top.appendChild(ad);
-                    top.appendChild(document.createElement('br'))
-
+                    list.appendChild(ad);
+                    // top.appendChild(document.createElement('br'));
+                    j++;
                 }
 
             }else{
