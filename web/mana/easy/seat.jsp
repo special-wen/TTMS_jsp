@@ -1,11 +1,4 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: zxw
-  Date: 17-11-16
-  Time: 下午7:50
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page pageEncoding="UTF-8" isErrorPage="false" errorPage="error.jsp"%>
+<!--<%@ page pageEncoding="UTF-8" isErrorPage="false" errorPage="error.jsp"%>-->
 
 <html lang="en">
 <head>
@@ -22,7 +15,6 @@
     <script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 </head>
 <body>
-<iframe src="/me.html" style="width: 100%;height: 50px;scrolling:no"></iframe>
 <!--座位管理-->
 <div class="row container">
     <!--需要操作的演出厅-->
@@ -98,4 +90,5 @@
 
 
 </body>
+
 </html>

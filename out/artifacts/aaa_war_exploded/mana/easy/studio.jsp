@@ -24,7 +24,6 @@
 </head>
 <body>
 <!--导航-->
-<iframe src="/me.html" style="width: 100%;height: 50px;scrolling:no"></iframe>
 
 <!--所有的演出厅-->
 <div id="table">

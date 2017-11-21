@@ -16,7 +16,7 @@
     <script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 </head>
 <body>
-<iframe src="/me.html" style="width: 100%;height: 50px;overflow: hidden"></iframe>
+<%--<iframe src="/me.html" style="width: 100%;height: 50px;overflow: hidden"></iframe>--%>
 <!--所有的演出厅-->
 <div id = "table">
     <table class="table table-striped " id = 'studio' onclick="studioRow(this)">
