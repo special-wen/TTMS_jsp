@@ -66,3 +66,5 @@ function get_back_entry() {
     xmlhttp.open('GET','/BackEntry');
     xmlhttp.send();
 }
+
+

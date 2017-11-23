@@ -40,6 +40,8 @@ public class account extends HttpServlet {
                 if(sate == user.getType()){
                     json.put("state", true);
                     json.put("href","/me.html");
+
+                    request.getSession().invalidate();
                     Employee emp = DAOFactory.creatEmployeeDAO().findEmployeeByNo(name);
                     HttpSession session = request.getSession();
                     session.setAttribute("emp_no",name);
