@@ -15,6 +15,7 @@
     <script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 </head>
 <body>
+<jsp:include page="/me.jsp"></jsp:include>
 <!--座位管理-->
 <div class="row container">
     <!--需要操作的演出厅-->

@@ -22,7 +22,7 @@ function get_user_message(url) {
             }
             let name = document.getElementById("name");
             let nameA = document.createElement("a");
-            nameA.setAttribute("href","/me.html");
+            nameA.setAttribute("href","/me.jsp");
             nameA.innerText = json.emp_name;
             name.appendChild(nameA);
         }

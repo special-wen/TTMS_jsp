@@ -33,13 +33,14 @@ public class account extends HttpServlet {
             json.put("state",false);
             json.put("info","帐号密码不能为空！");
         }else{
+
             User user = new User();
             IUser iuser = DAOFactory.createUserDAO();
             user = iuser.findUserByNo(name);
             if(user != null && user.getEmp_pass().equals(pass)){
                 if(sate == user.getType()){
                     json.put("state", true);
-                    json.put("href","/me.html");
+                    json.put("href","/me.jsp");
 
                     request.getSession().invalidate();
                     Employee emp = DAOFactory.creatEmployeeDAO().findEmployeeByNo(name);

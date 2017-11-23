@@ -21,7 +21,7 @@
         <form>
             <label>
                 <span>账号</span>
-                <input type="text" name = "user" class = "name" id="name"/>
+                <input type="text" name = "user" class = "name" id="name" />
             </label>
             <label>
                 <span>密码</span>
@@ -55,10 +55,18 @@
         pass = document.getElementById("password").value;
         error = document.getElementById("loginError");
         select = document.getElementById("select");
+        let p = /^[0-9]{3,6}$/;
+        flag = p.test(name);
+        if(flag == false ){
+            error.innerText = "用户名应为3-6为数字组成";
+            return false;
+        }
         if(name == "" ||pass == ""){
             error.innerHTML = "请输入用户名和密码";
-            return false
-        }else{
+            return false;
+        }
+
+        else{
             error.innerText = "";
             xmlhttp = new XMLHttpRequest();
             xmlhttp.onreadystatechange = function () {

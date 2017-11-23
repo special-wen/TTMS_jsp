@@ -23,6 +23,8 @@
     <script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 </head>
 <body>
+<jsp:include page="/me.jsp"></jsp:include>
+
 <!--导航-->
 
 <!--所有的演出厅-->
