@@ -26,14 +26,13 @@ public class BackEntry extends HttpServlet {
             obj.put("state",false);
         }else{
             obj.put("state",true);
+            hp.put("影厅管理","/mana/easy/studio.jsp");
+            hp.put("座位管理","/mana/easy/seat.jsp");
             if((Integer)session.getAttribute("type") == 1){
                 hp.put("员工管理","/mana/hard/employee.jsp");
                 hp.put("登陆用户管理","/mana/hard/user.jsp");
 
             }
-
-            hp.put("影厅管理","/mana/easy/studio.jsp");
-            hp.put("座位管理","/mana/easy/seat.jsp");
         }
         obj.put("entry",hp);
         response.getWriter().write(obj.toString());

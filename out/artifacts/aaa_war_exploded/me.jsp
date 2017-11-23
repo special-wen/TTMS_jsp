@@ -16,7 +16,7 @@
         <nav class="navbar navbar-default" role="navigation">
             <div class="container-fluid">
                 <ul class="nav nav-tabs" id = "navbar">
-                    <li><a href="#">那一年影院</a></li>
+                    <li class="active"><a href="#" >那一年影院</a></li>
                     <li class="nav navbar-nav navbar-right" id = "logout"><a href="/out"><span><i class="fa fa-sign-out" aria-hidden="true"></i></span>退出登录</a></li>
                     <li class="nav navbar-nav navbar-right" id = "user"></li>
                     <li class="nav navbar-nav navbar-right" id = "name"></li>

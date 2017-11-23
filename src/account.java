@@ -40,7 +40,7 @@ public class account extends HttpServlet {
             if(user != null && user.getEmp_pass().equals(pass)){
                 if(sate == user.getType()){
                     json.put("state", true);
-                    json.put("href","/me.jsp");
+                    json.put("href","/studio.jsp");
 
                     request.getSession().invalidate();
                     Employee emp = DAOFactory.creatEmployeeDAO().findEmployeeByNo(name);

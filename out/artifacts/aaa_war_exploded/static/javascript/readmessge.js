@@ -37,7 +37,6 @@ function get_back_entry() {
     xmlhttp.onreadystatechange=function () {
         if(xmlhttp.readyState==4 && xmlhttp.status==200){
             let json = JSON.parse(xmlhttp.responseText);
-            let top = document.getElementById("back_entry");
             if(json.state==true){
                 let ad,list;
                 let j = 0;
@@ -47,14 +46,10 @@ function get_back_entry() {
                     //创建li标签
                     list = document.createElement("li");
                     nav.appendChild(list);
-                    if(j == 0){
-                        list.setAttribute("class","active");
-                    }
                     ad = document.createElement('a');
                     ad.setAttribute('href',json[i]);
                     ad.innerHTML = i;
                     list.appendChild(ad);
-                    // top.appendChild(document.createElement('br'));
                     j++;
                 }
 
