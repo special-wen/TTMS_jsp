@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>座位管理</title>
     <!--<link rel="stylesheet" type="text/css" href="./Bootstrap/bootstrap.css">-->
-    <link rel="stylesheet" type="text/css" href="./font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="/static/css/seat.css">
     <!--<script src="./jquery/jquery.js"></script>-->
     <script src="/static/javascript/seat.js"></script>
@@ -15,8 +15,8 @@
     <script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 </head>
 <body>
-<jsp:include page="/me.jsp"></jsp:include>
 <!--座位管理-->
+<jsp:include page="/me.jsp"></jsp:include>
 <div class="row container">
     <!--需要操作的演出厅-->
     <div class="col-md-3">
@@ -32,7 +32,7 @@
     <div class="col-md-6">
         <div id = "screen">
             <p>屏幕</p>
-            <img src="./image/rectangle.png" alt="">
+            <img src="/static/image/rectangle.png" alt="">
         </div>
         <div id = "seat" ></div>
 

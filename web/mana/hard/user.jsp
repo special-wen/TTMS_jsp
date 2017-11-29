@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <title>人员管理</title>
     <!--<link rel="stylesheet" type="text/css" href="./Bootstrap/bootstrap.css">-->
-    <link rel="stylesheet" type="text/css" href="../font-awesome-4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="../css/user.css">
+    <link rel="stylesheet" type="text/css" href="/static/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/user.css">
     <!--<script src="./jquery/jquery.js"></script>-->
-    <script src="../javascript/user.js"></script>
+    <script src="/static/javascript/user.js"></script>
     <!--<script src="./Bootstrap/bootstrap.js"></script>-->
     <!--<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>-->
     <!--<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
@@ -186,58 +186,4 @@
     </div><!-- /.modal -->
 </div>
 </body>
-<script type="text/javascript">
-    $(document).ready(function()
-        {
-// Set specific variable to represent all iframe tags.
-            var iFrames = document.getElementsByTagName_r('iframe');
-
-// Resize heights.
-            function iResize()
-            {
-// Iterate through all iframes in the page.
-                for (var i = 0, j = iFrames.length; i < j; i++)
-                {
-// Set inline style to equal the body height of the iframed content.
-                    iFrames[i].style.height = iFrames[i].contentWindow.document.body.offsetHeight + 'px';
-                }
-            }
-
-// Check if browser is Safari or Opera.
-            if ($.browser.safari || $.browser.opera)
-            {
-// Start timer when loaded.
-                $('iframe').load(function()
-                    {
-                        setTimeout(iResize, 0);
-                    }
-                );
-
-// Safari and Opera need a kick-start.
-                for (var i = 0, j = iFrames.length; i < j; i++)
-                {
-                    var iSource = iFrames[i].src;
-                    iFrames[i].src = '';
-                    iFrames[i].src = iSource;
-                }
-            }
-            else
-            {
-// For other good browsers.
-                $('iframe').load(function()
-                    {
-// Set inline style to equal the body height of the iframed content.
-                        if(this.contentWindow.document.body.offsetHeight>1000)
-                        {
-                            this.style.height = 50 + 'px';//此处为最小高度的设置
-                        }else{
-                            this.style.height = this.contentWindow.document.body.offsetHeight + 'px';
-                        }
-                    }
-                );
-            }
-        }
-    );
-
-</script>
 </html>

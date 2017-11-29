@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <title>人员管理</title>
     <!--<link rel="stylesheet" type="text/css" href="./Bootstrap/bootstrap.css">-->
-    <link rel="stylesheet" type="text/css" href="../font-awesome-4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="../css/user.css">
+    <link rel="stylesheet" type="text/css" href="/static/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/user.css">
     <!--<script src="./jquery/jquery.js"></script>-->
-    <script src="../javascript/user.js"></script>
+    <script src="/static/javascript/user.js"></script>
     <!--<script src="./Bootstrap/bootstrap.js"></script>-->
     <!--<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>-->
     <!--<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
