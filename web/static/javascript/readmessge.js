@@ -17,7 +17,6 @@ function get_user_message(url) {
                 }
                 top.appendChild(head);
             }else{
-                //alert("dsd");
                 window.location.href = '/login.html?url='+url;
             }
             let name = document.getElementById("name");
@@ -41,11 +40,10 @@ function get_back_entry() {
                 let ad,list;
                 let j = 0;
                 json = json.entry;
-                console.log("hello"+json);
                 let nav = document.getElementById("navbar");
                 for(let i in json){
                     //创建li标签
-                    console.log(i);
+                    // console.log(i);
                     list = document.createElement("li");
                     nav.appendChild(list);
                     ad = document.createElement('a');
@@ -54,10 +52,9 @@ function get_back_entry() {
                     list.appendChild(ad);
                     j++;
                     console.log(123);
-                    alert("hello");
-                    console.log(123);
                     list.addEventListener('click',function listSelect() {
-                        console.log("hello world");
+                        alert("hello Lyt");
+
                     });
                 }
             }else{
