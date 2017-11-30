@@ -2,7 +2,6 @@
  * Created by zxw on 17-11-30.
  */
 'use strict';
-alert("Hello Lyt!");
 let xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange=function () {
     let path = window.location.pathname;
