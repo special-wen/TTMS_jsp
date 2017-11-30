@@ -2,19 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fade8653-9a97-4cb4-bf39-6bca313cf18f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/javascript/userMessage.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/login.html" afterPath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/mana/hard/user.jsp" afterPath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/mana/hard/user.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/me.jsp" afterPath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/me.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/css/login.css" afterPath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/css/login.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/javascript/readmessge.js" afterPath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/javascript/readmessge.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/account.java" afterPath="$PROJECT_DIR$/src/account.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/login.html" afterPath="$PROJECT_DIR$/web/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/mana/hard/user.jsp" afterPath="$PROJECT_DIR$/web/mana/hard/user.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/me.jsp" afterPath="$PROJECT_DIR$/web/me.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/static/css/login.css" afterPath="$PROJECT_DIR$/web/static/css/login.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/static/javascript/readmessge.js" afterPath="$PROJECT_DIR$/web/static/javascript/readmessge.js" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -64,8 +52,8 @@
       <file leaf-file-name="account.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/account.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="46" column="65" lean-forward="false" selection-start-line="46" selection-start-column="65" selection-end-line="46" selection-end-column="65" />
+            <state relative-caret-position="60">
+              <caret line="36" column="12" lean-forward="false" selection-start-line="36" selection-start-column="12" selection-end-line="36" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -1003,12 +991,12 @@
       <workItem from="1511933773735" duration="515000" />
       <workItem from="1512023512748" duration="284000" />
       <workItem from="1512024092726" duration="4895000" />
-      <workItem from="1512030111215" duration="3020000" />
+      <workItem from="1512030111215" duration="4484000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="137103000" />
+    <option name="totallyTimeSpent" value="138567000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1042,8 +1030,8 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289256" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289256" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28595042" sideWeight="0.4848255" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3371901" sideWeight="0.4969651" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28595042" sideWeight="0.4848255" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3371901" sideWeight="0.4969651" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16009104" sideWeight="0.46115702" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3559055" sideWeight="0.538843" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1439,8 +1427,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/account.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="46" column="65" lean-forward="false" selection-start-line="46" selection-start-column="65" selection-end-line="46" selection-end-column="65" />
+        <state relative-caret-position="60">
+          <caret line="36" column="12" lean-forward="false" selection-start-line="36" selection-start-column="12" selection-end-line="36" selection-end-column="12" />
           <folding />
         </state>
       </provider>
