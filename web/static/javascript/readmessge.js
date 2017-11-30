@@ -47,15 +47,11 @@ function get_back_entry() {
                     list = document.createElement("li");
                     nav.appendChild(list);
                     ad = document.createElement('a');
+                    // ad.setAttribute("data-toggle","tab");
                     ad.setAttribute('href',json[i]);
                     ad.innerHTML = i;
                     list.appendChild(ad);
                     j++;
-                    console.log(123);
-                    list.addEventListener('click',function listSelect() {
-                        alert("hello Lyt");
-
-                    });
                 }
             }else{
                 window.location.href = '/';

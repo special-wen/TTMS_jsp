@@ -39,8 +39,13 @@ public class account extends HttpServlet {
             user = iuser.findUserByNo(name);
             if(user != null && user.getEmp_pass().equals(pass)){
                 if(sate == user.getType()){
+
                     json.put("state", true);
-                    json.put("href","/me.jsp");
+                    if (sate == 1){
+                        json.put("href","/mana/hard/user.jsp");
+                    }else{
+                        json.put("href","/mana/easy/studio.jsp");
+                    }
 
                     request.getSession().invalidate();
                     Employee emp = DAOFactory.creatEmployeeDAO().findEmployeeByNo(name);
