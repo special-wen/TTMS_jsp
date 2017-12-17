@@ -32,7 +32,7 @@
             result += rs.getInt("emp_id") + " ";
             result += rs.getString("emp_no") + " ";
 
-//            System.out.println(result);
+            System.out.println(result);
         }
     }
     catch (Exception e)

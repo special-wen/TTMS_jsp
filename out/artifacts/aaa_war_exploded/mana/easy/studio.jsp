@@ -29,7 +29,7 @@
 
 <!--所有的演出厅-->
 <div id="table">
-    <table class="table table-striped " id = 'studio' onclick="studioRow(this)" >
+    <table class="table table-striped table-hover" id = 'studio' onclick="studioRow(this)" >
         <caption style="text-align: center">那一年影院演出厅</caption>
         <tr class="warning">
             <td>演出厅名称</td>

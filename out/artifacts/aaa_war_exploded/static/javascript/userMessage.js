@@ -1,6 +1,3 @@
-/**
- * Created by zxw on 17-11-30.
- */
 'use strict';
 let xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange=function () {

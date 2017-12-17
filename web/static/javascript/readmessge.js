@@ -10,7 +10,7 @@ function get_user_message(url) {
             let top = document.getElementById("user");
             if(json.login == true){
                 let head = document.createElement('img');
-                if(json.head_path == null){
+                if(json.head_path === ''){
                     head.setAttribute("src","/static/image/user.jpg");
                 }else{
                     head.setAttribute('src',json.head_path);

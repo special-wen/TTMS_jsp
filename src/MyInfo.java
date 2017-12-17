@@ -30,8 +30,8 @@ public class MyInfo extends HttpServlet {
             obj.put("login",false);
         }else{
             obj.put("login",true);
-            obj.put("emp_name",session.getAttribute("emp_name"));
             obj.put("emp_no",session.getAttribute("emp_no"));
+            obj.put("emp_name",session.getAttribute("emp_name"));
             obj.put("head_path",session.getAttribute("head_path"));
             obj.put("type",session.getAttribute("type"));
         }

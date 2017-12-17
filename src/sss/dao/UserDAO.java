@@ -25,7 +25,7 @@ public class UserDAO implements IUser {
         PreparedStatement pstmt = null;
         try
         {
-            String sql = "insert into user(emp_no, emp_pass, type, head_path) values(?,?,?,?)";
+            String sql = "insert into user(emp_no, e                                        mp_pass, type, head_path) values(?,?,?,?)";
             pstmt = con.prepareStatement(sql);
             pstmt.setString(1, user.getEmp_no());
             pstmt.setString(2, user.getEmp_pass());
