@@ -10,22 +10,37 @@
 <head>
     <meta charset="UTF-8">
     <title>演出厅管理</title>
-    <!--<link rel="stylesheet" type="text/css" href="./Bootstrap/bootstrap.css">-->
     <link rel="stylesheet" type="text/css" href="/static/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="/static/css/studio.css">
-    <!--<script src="./jquery/jquery.js"></script>-->
     <script src="/static/javascript/studio.js"></script>
-    <!--<script src="./Bootstrap/bootstrap.js"></script>-->
-    <!--<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>-->
-    <!--<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
     <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
     <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
     <script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="/static/javascript/userMessage.js"></script>
+    <script src="/static/javascript/readmessge.js"></script>
+    <script src="/static/javascript/message.js"></script>
+    <link rel="stylesheet" href="/static/css/me.css">
+    <script src="/static/javascript/manstu.js"></script>
 </head>
 <body>
-<jsp:include page="/me.jsp"></jsp:include>
 
 <!--导航-->
+
+<div id="usermessage">
+    <div id="header">
+        <nav class="navbar navbar-default" role="navigation">
+            <div class="container-fluid">
+                <ul class="nav nav-tabs" id = "navbar">
+                    <li class="nav navbar-nav navbar-right" id = "logout"><a href="/out"><span><i class="fa fa-sign-out" aria-hidden="true"></i></span>退出登录</a></li>
+                    <li class="nav navbar-nav navbar-right" id = "user"></li>
+                    <li class="nav navbar-nav navbar-right" id = "name"></li>
+                </ul>
+
+            </div>
+        </nav>
+    </div>
+</div>
+
 
 <!--所有的演出厅-->
 <div id="table">
@@ -33,43 +48,28 @@
         <caption style="text-align: center">那一年影院演出厅</caption>
         <tr class="warning">
             <td>演出厅名称</td>
-            <td>座位行</td>
-            <td>座位列</td>
+            <td>座位行数</td>
+            <td>座位列数</td>
+            <td>演出厅详情</td>
             <td>演出厅状态</td>
-            <td>演出厅简介</td>
         </tr>
-        <tbody>
-        <tr >
-            <td>1号演出厅</td>
-            <td>10</td>
-            <td>8</td>
-            <td>可用</td>
-            <td>巨幕演出厅</td>
-        </tr>
-        <tr >
-            <td>2号演出厅</td>
-            <td>8</td>
-            <td>6</td>
-            <td>维修中</td>
-            <td>3D环绕演出厅</td>
-        </tr>
-        <tr >
-            <td>3号演出厅</td>
-            <td>10</td>
-            <td>10</td>
-            <td>维修中</td>
-            <td>巨幕3D演出厅</td>
-        </tr>
-        <tr>
-            <td>4号演出厅</td>
-            <td>4</td>
-            <td>8</td>
-            <td>可用</td>
-            <td>小型演出厅</td>
-        </tr>
+        <tbody id="tbody">
         </tbody>
     </table>
+    <div id="test1"></div>
+
 </div>
+<div style="margin:0px 30px">第<u id="now_page">1</u>页
+    <button onclick="other_page(-1)"><</button>
+    <button onclick="other_page(1)">></button>
+    每页显示
+    <select id="each_nums" onchange="reset_get()">
+        <option value="5">5</option>
+        <option value="10">10</option>
+        <option value="15">15</option>
+    </select>
+</div>
+<li id="delete_now" style="display: none"></li>
 
 <!--演出厅的增删改查-->
 <div>
@@ -157,5 +157,10 @@
 </div>
 
 </body>
+<script>
+    message('./aboutMe.html');
+    get_user_message('/me.jsp');
+    account();
+</script>
 </html>
 

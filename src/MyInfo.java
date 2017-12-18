@@ -11,6 +11,7 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.Writer;
 import java.util.Collection;
+import java.util.HashMap;
 import java.util.Set;
 
 /**
@@ -29,11 +30,20 @@ public class MyInfo extends HttpServlet {
         if(session == null){
             obj.put("login",false);
         }else{
+            HashMap<String,String> mess = new HashMap<String,String >();
+            mess.put("用户编号",session.getAttribute("emp_no").toString());
+            mess.put("用户姓名",session.getAttribute("emp_name").toString());
+            mess.put("用户联系方式",session.getAttribute("emp_tel_num").toString() );
+            mess.put("住址",session.getAttribute("emp_addr").toString());
+            mess.put("邮件",session.getAttribute("emp_email").toString());
+
             obj.put("login",true);
             obj.put("emp_no",session.getAttribute("emp_no"));
             obj.put("emp_name",session.getAttribute("emp_name"));
             obj.put("head_path",session.getAttribute("head_path"));
             obj.put("type",session.getAttribute("type"));
+            obj.put("mess",mess);
+            System.out.println(obj.toString());
         }
         Writer out = response.getWriter();
         out.write(obj.toString());

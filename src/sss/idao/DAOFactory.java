@@ -1,6 +1,7 @@
 package sss.idao;
 
 import sss.dao.EmployeeDAO;
+import sss.dao.StudioDAO;
 import sss.dao.UserDAO;
 
 /**
@@ -15,4 +16,10 @@ public class DAOFactory
     }
 
     public static IUser createUserDAO() { return new UserDAO(); }
+
+    public static IStudio createStudioDAO() {
+        return new StudioDAO();
+    }
+
+
 }

@@ -3,22 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <title>人员管理</title>
-    <!--<link rel="stylesheet" type="text/css" href="./Bootstrap/bootstrap.css">-->
     <link rel="stylesheet" type="text/css" href="/static/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="/static/css/user.css">
-    <!--<script src="./jquery/jquery.js"></script>-->
     <script src="/static/javascript/user.js"></script>
-    <!--<script src="./Bootstrap/bootstrap.js"></script>-->
-    <!--<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>-->
-    <!--<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
     <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
     <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
     <script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-    <%--<script src="/static/javascript/userMessage.js"></script>--%>
+    <script src="/static/javascript/readmessge.js"></script>
+    <script src="/static/javascript/userMessage.js"></script>
+    <script src="/static/javascript/message.js"></script>
+    <link rel="stylesheet" href="/static/css/me.css">
 </head>
 <body>
-<jsp:include page="/me.jsp"></jsp:include>
-<%--<iframe src="/me.jsp" style="width: 100%;height: 50px;overflow: hidden"></iframe>--%>
+<div id="usermessage">
+<div id="header">
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <ul class="nav nav-tabs" id = "navbar">
+                <li class="nav navbar-nav navbar-right" id = "logout"><a href="/out"><span><i class="fa fa-sign-out" aria-hidden="true"></i></span>退出登录</a></li>
+                <li class="nav navbar-nav navbar-right" id = "user"></li>
+                <li class="nav navbar-nav navbar-right" id = "name"></li>
+            </ul>
+
+        </div>
+    </nav>
+</div>
+</div>
+
+
 <!--所有的演出厅-->
 <div id = "table">
     <table class="table table-striped " id = 'studio' onclick="studioRow(this)">
@@ -32,40 +44,40 @@
             <td >邮箱</td>
             <td >手机号</td>
         </tr>
-        <tr>
-            <td>王晶</td>
-            <td>女</td>
-            <td>系统管理员</td>
-            <td>wj123456</td>
-            <td>wangjing@qq.com</td>
-            <td>18200003578</td>
+        <%--<tr>--%>
+            <%--<td>王晶</td>--%>
+            <%--<td>女</td>--%>
+            <%--<td>系统管理员</td>--%>
+            <%--<td>wj123456</td>--%>
+            <%--<td>wangjing@qq.com</td>--%>
+            <%--<td>18200003578</td>--%>
 
-        </tr>
-        <tr >
-            <td>王一茹</td>
-            <td>女</td>
-            <td>售票员</td>
-            <td>wyr123456</td>
-            <td>wyru@qq.com</td>
-            <td>18800007436</td>
-        </tr>
-        <tr>
-            <td>刘凡</td>
-            <td>女</td>
-            <td>经理</td>
-            <td>lf123456</td>
-            <td>liufan@qq.com</td>
-            <td>15300007569</td>
-        </tr>
-        <tr>
-            <td>闵盼</td>
-            <td>女</td>
-            <td>经理</td>
-            <td>mp123456</td>
-            <td>minpan@qq.com</td>
-            <td>188000007243</td>
+        <%--</tr>--%>
+        <%--<tr >--%>
+            <%--<td>王一茹</td>--%>
+            <%--<td>女</td>--%>
+            <%--<td>售票员</td>--%>
+            <%--<td>wyr123456</td>--%>
+            <%--<td>wyru@qq.com</td>--%>
+            <%--<td>18800007436</td>--%>
+        <%--</tr>--%>
+        <%--<tr>--%>
+            <%--<td>刘凡</td>--%>
+            <%--<td>女</td>--%>
+            <%--<td>经理</td>--%>
+            <%--<td>lf123456</td>--%>
+            <%--<td>liufan@qq.com</td>--%>
+            <%--<td>15300007569</td>--%>
+        <%--</tr>--%>
+        <%--<tr>--%>
+            <%--<td>闵盼</td>--%>
+            <%--<td>女</td>--%>
+            <%--<td>经理</td>--%>
+            <%--<td>mp123456</td>--%>
+            <%--<td>minpan@qq.com</td>--%>
+            <%--<td>188000007243</td>--%>
 
-        </tr>
+        <%--</tr>--%>
         </tbody>
     </table>
 </div>
@@ -187,4 +199,9 @@
     </div><!-- /.modal -->
 </div>
 </body>
+<script>
+    message('./user.html');
+    get_user_message('/me.jsp');
+    account();
+</script>
 </html>

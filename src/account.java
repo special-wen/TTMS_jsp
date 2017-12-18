@@ -54,6 +54,9 @@ public class account extends HttpServlet {
                     session.setAttribute("emp_name",emp.getEmp_name());
                     session.setAttribute("type",user.getType());
                     session.setAttribute("head_path",user.getHead_path());
+                    session.setAttribute("emp_tel_num",emp.getEmp_tel_num());
+                    session.setAttribute("emp_addr",emp.getEmp_addr());
+                    session.setAttribute("emp_email",emp.getEmp_email());
                     String url = request.getParameter("url");
                     System.out.println(url);
                     if(url != null && !url.equals("")){

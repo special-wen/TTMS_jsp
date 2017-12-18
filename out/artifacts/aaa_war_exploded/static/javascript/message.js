@@ -12,13 +12,6 @@ function message(url) {
                     head.setAttribute('src',json.head_path);
                 }
                 top.appendChild(head);
-
-                // let table = document.getElementById("table");
-                // let rowLength = table.rows.length;
-                // alert(rowLength);
-                // for(let i in json){
-                //     alert(json[i]);
-                // }
             }else{
                 window.location.href = '/login.html?url='+url;
             }
@@ -31,11 +24,19 @@ function account() {
     let xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
         if(xmlhttp.readyState == 4 && xmlhttp.status == 200){
-            alert("about me");
             let json = JSON.parse(xmlhttp.responseText);
             if(json.login == true){
-                for(let i in json){
-                    // alert(json[i]);
+                let table = document.getElementById('table');
+                let length = table.rows.length;
+                json = json.mess;
+                let rows = 0;
+                let i;
+                for(i in json){
+                    if(rows <length){
+                        let cell = table.rows[rows].insertCell(1);
+                        cell.innerText = json[i];
+                        rows ++;
+                    }
                 }
             }
         }
