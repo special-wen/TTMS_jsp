@@ -75,7 +75,7 @@
 <div>
     <form class="navbar-form navbar-right" role="search">
         <div class="form-group">
-            <input type="text" class="form-control" placeholder="查找演出厅">
+            <input id="studio_name"     type="text" class="form-control" placeholder="查找演出厅">
         </div>
         <button type="submit" class="btn btn-default" ><i class="fa fa-search" aria-hidden="true"></i>查找</button>
         <button type="button" class="btn btn-default navbar-btn" data-toggle="modal" data-target="#myModal"><i class="fa fa-plus" aria-hidden="true"></i> 添加演出厅</button>
@@ -158,9 +158,11 @@
 
 </body>
 <script>
+    get_studio();
     message('./aboutMe.html');
     get_user_message('/me.jsp');
     account();
+
 </script>
 </html>
 

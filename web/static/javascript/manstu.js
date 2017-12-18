@@ -100,7 +100,7 @@ function reset_get() {
     document.getElementById('now_page').innerText = '1';
     get_studio();
 }
-get_studio();
+
 
 function del_studio() {
 
