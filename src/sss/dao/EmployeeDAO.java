@@ -3,6 +3,7 @@ package sss.dao;
 import sss.ConnectionManager;
 import sss.idao.IEmployee;
 import sss.model.Employee;
+import sss.model.Studio;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -29,7 +30,7 @@ public class EmployeeDAO implements IEmployee{
         PreparedStatement pstmt = null;
         try
         {
-            String sql = "insert into Employee(emp_no, emp_name, emp_tel_num, emp_addr, emp_email) values(?,?,?,?,?)";
+            String sql = "insert into employee(emp_no, emp_name, emp_tel_num, emp_addr, emp_email) values(?,?,?,?,?)";
             pstmt = con.prepareStatement(sql);
             pstmt.setString(1, employee.getEmp_no());
             pstmt.setString(2, employee.getEmp_name());
@@ -125,6 +126,51 @@ public class EmployeeDAO implements IEmployee{
             ConnectionManager.close(null, pstmt, con);
             return result;
         }
+    }
+
+    @Override
+    public ArrayList<Employee> findEmployeeAll(int offset, int nums) {
+        ArrayList<Employee> list = new ArrayList<Employee>();
+        Employee info = null;
+
+        Connection con = ConnectionManager.getInstance().getConnection();
+        PreparedStatement pstmt = null;
+        ResultSet rs = null;
+        try
+        {
+            // 获取所有用户数据
+            pstmt = con.prepareStatement("select * from employee limit ? , ?");
+            pstmt.setInt(1,offset);
+            pstmt.setInt(2,nums);
+            rs = pstmt.executeQuery();
+            while(rs.next())
+            {
+                info = new Employee();
+
+                info.setEmp_id(rs.getInt("emp_id"));
+                info.setEmp_no(rs.getString("emp_no"));
+                info.setEmp_name(rs.getString("emp_name"));
+                info.setEmp_tel_num(rs.getString("emp_tel_num"));
+                info.setEmp_addr(rs.getString("emp_addr"));
+                info.setEmp_email(rs.getString("emp_email"));
+                // 加入列表
+                list.add(info);
+            }
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+        }
+        finally
+        {
+            ConnectionManager.close(rs, pstmt, con);
+            return list;
+        }
+    }
+
+    @Override
+    public ArrayList<Employee> findEmployeeByName(String employeeName, int offset, int nums) {
+        return null;
     }
 
     /**

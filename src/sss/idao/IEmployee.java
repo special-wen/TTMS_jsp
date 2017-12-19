@@ -16,10 +16,10 @@ public interface IEmployee {
     public boolean update(Employee employee);
 
     // 查所有用户(一般用于和界面交互)
-    public ArrayList<Employee> findEmployeeAll();
+    public ArrayList<Employee> findEmployeeAll(int offset,int nums);
 
     // 根据用户名查(一般用于和界面交互)
-    public ArrayList<Employee> findEmployeeByName(String employeeName);
+    public ArrayList<Employee> findEmployeeByName(String employeeName,int offset,int nums);
 
     // 根据用户id查(一般用于数据内部关联操作)
     public Employee findEmployeeById(int employeeId);
