@@ -4,14 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <title>人员管理</title>
-    <!--<link rel="stylesheet" type="text/css" href="./Bootstrap/bootstrap.css">-->
     <link rel="stylesheet" type="text/css" href="/static/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="/static/css/user.css">
-    <!--<script src="./jquery/jquery.js"></script>-->
     <script src="/static/javascript/user.js"></script>
-    <!--<script src="./Bootstrap/bootstrap.js"></script>-->
-    <!--<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>-->
-    <!--<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
     <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
     <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
     <script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
@@ -23,57 +18,34 @@
 </head>
 <body>
 <jsp:include page="/me.jsp"></jsp:include>
-<%--<iframe src="/me.jsp" style="width: 100%;height: 50px;scrolling:no"></iframe>--%>
 <!--所有的演出厅-->
 <div id = "table">
     <table class="table table-striped " id = 'studio' onclick="studioRow(this)">
         <caption style="text-align: center">那一年影院人员</caption>
-        <tbody>
         <tr class="warning">
-            <td >姓名</td>
-            <td >性别</td>
-            <td >职位</td>
-            <td>登录密码</td>
-            <td >邮箱</td>
-            <td >手机号</td>
+            <td>登录帐号</td>
+            <td>姓名</td>
+            <td>联系方式</td>
+            <td>住址</td>
+            <td>邮箱</td>
         </tr>
-        <tr>
-            <td>王晶</td>
-            <td>女</td>
-            <td>系统管理员</td>
-            <td>wj123456</td>
-            <td>wangjing@qq.com</td>
-            <td>18200003578</td>
+        <tbody id ="tbody">
 
-        </tr>
-        <tr >
-            <td>王一茹</td>
-            <td>女</td>
-            <td>售票员</td>
-            <td>wyr123456</td>
-            <td>wyru@qq.com</td>
-            <td>18800007436</td>
-        </tr>
-        <tr>
-            <td>刘凡</td>
-            <td>女</td>
-            <td>经理</td>
-            <td>lf123456</td>
-            <td>liufan@qq.com</td>
-            <td>15300007569</td>
-        </tr>
-        <tr>
-            <td>闵盼</td>
-            <td>女</td>
-            <td>经理</td>
-            <td>mp123456</td>
-            <td>minpan@qq.com</td>
-            <td>188000007243</td>
-
-        </tr>
         </tbody>
     </table>
+    <div id = "test1"></div>
 </div>
+<div style="margin:0px 30px">第<u id="now_page">1</u>页
+    <button onclick="other_page(-1)"><</button>
+    <button onclick="other_page(1)">></button>
+    每页显示
+    <select id="each_nums" onchange="reset_get()">
+        <option value="5">5</option>
+        <option value="10">10</option>
+        <option value="15">15</option>
+    </select>
+</div>
+<li id="delete_now" style="display: none"></li>
 
 <!--人员的增删改查-->
 <div>
@@ -81,11 +53,11 @@
         <div class="form-group">
             <input type="text" class="form-control" placeholder="查找人员">
         </div>
-        <button type="submit" class="btn btn-default" ><i class="fa fa-search" aria-hidden="true"></i>查找</button>
-        <button type="button" class="btn btn-default navbar-btn" data-toggle="modal" data-target="#myModal"><i class="fa fa-plus" aria-hidden="true"></i> 添加人员</button>
-        <button type="button" class="btn btn-default navbar-btn" id = 'deleteStudio' onclick="removeStudio()"><i class="fa fa-minus" aria-hidden="true"></i> 删除人员</button>
-        <button type="button" class="btn btn-default navbar-btn" id="changeStudio" onclick="change()"  ><i class="fa fa-pencil-square-o" aria-hidden="true"></i> 修改人员信息</button>
     </form>
+    <button type="submit" class="btn btn-default" ><i class="fa fa-search" aria-hidden="true"></i>查找</button>
+    <button type="button" class="btn btn-default navbar-btn" data-toggle="modal" data-target="#myModal"><i class="fa fa-plus" aria-hidden="true"></i> 添加人员</button>
+    <button type="button" class="btn btn-default navbar-btn" id = 'deleteStudio' onclick="removeStudio()"><i class="fa fa-minus" aria-hidden="true"></i> 删除人员</button>
+    <button type="button" class="btn btn-default navbar-btn" id="changeStudio" onclick="change()"  ><i class="fa fa-pencil-square-o" aria-hidden="true"></i> 修改人员信息</button>
 </div>
 
 
@@ -103,26 +75,10 @@
             </div>
             <div class="modal-body">
                 <form role="form">
-                    姓名: <input type="text" name = "studioName" id="studioName" class="form-control"  pattern="^.{2,20}$" oninvalid="setCustomValidity('2-20个字符');"  placeholder="请输入需要添加的新用户" required/><br>
-                    性别：
-                    <div class="form-group">
-                        <select class="form-control" id = 'Sex'>
-                            <option value = 'boy' >男</option>
-                            <option value = 'girl'>女</option>
-                        </select>
-                    </div>
-                    职位:
-                    <div class="form-group">
-                        <select class="form-control" id = 'Job'>
-                            <option value = 'manager'>管理员</option>
-                            <option value = 'sealer'>售票员</option>
-                            <option value="boss">经理</option>
-                        </select>
-                    </div>
-                    登录密码：<input type="password" name = "sateCol" id = "pass" class="form-control" placeholder="请输入含有字母和数字的密码" required/><br>
-                    确认密码：<input type="password" name= "sat" id = "passAgain" class="form-control" placeholder="确认密码" onblur="check()" required/><span id = 'err'></span>
-                    邮箱: <input type="text" name="studioState"  id = "studioState" class="form-control" placeholder="请输入新用户的邮箱" onblur="check1()" required/><span id = 'email_err'></span><br>
-                    手机号: <input type="text" name="studioIntroduction" id = "studioIntroduction" class="form-control" placeholder="请输入新用户的手机号" onblur="check2()" required/><span id = 'phone_err'></span>
+                    姓名：<input type="text" name = "emp_name" id="emp_name" class="form-control" placeholder="请输入需要添加的人员信息" required/><br>
+                    手机号：<input type="text" name="emp_tel_num" id = "emp_tel_num" class="form-control" placeholder="请输入新用户的手机号" onblur="check2()" required/><span id = 'phone_err'></span>
+                    住址：<input type="text" name = "emp_addr" id = "emp_addr" class="form-control" placeholder="请输入用户住址" required><br>
+                    邮箱：<input type="text" name ="emp_email" id = "emp_email" class="form-control" placeholder="请输入新用户的邮箱" onblur="check1()" required/><span id = 'email_err'></span><br>
                     <div class="modal-footer">
                         <button class="btn btn-default" data-dismiss="modal">关闭</button>
                         <input class="btn btn-primary" type="submit" id = 'add' data-dismiss="modal" onclick="return addStudio()">
@@ -134,7 +90,7 @@
     </div>
 </div>
 
-<!--修改演出厅信息-->
+<!--修改人员信息-->
 <div class="modal fade" id = "myModals" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -148,26 +104,10 @@
             </div>
             <div class="modal-body">
                 <form role="form" id = "change">
-                    修改名称: <input type="text" name = "studioName"  class="form-control" id = "changeName" required/><br>
-                    修改性别：
-                    <div class="form-group" id = "changeRow">
-                        <select class="form-control" id = 'changeSex'>
-                            <option value = 'boy'>男</option>
-                            <option value = 'gil'>女</option>
-                        </select>
-                    </div>
-                    修改职位:
-                    <div class="form-group" id = "changeCol">
-                        <select class="form-control" id = 'changeJob'>
-                            <option value = 'manager'>管理员</option>
-                            <option value = 'sealer'>售票员</option>
-                            <option value="boss">经理</option>
-                        </select>
-                    </div>
-                    修改密码：<input type="password" name = "sateCol" id = "changePass" class="form-control" placeholder="请输入含有字母和数字的密码" required/><br>
-                    确认密码：<input type="password" name= "sat" id = "changeAgain" class="form-control" placeholder="确认密码">
-                    修改邮箱: <input type="text" name="studioState"  id = 'changeState' class="form-control"  required/><br>
-                    修改手机号: <input type="text" name="studioIntroduction"  class="form-control" id = 'changeInt'/>
+                    修改名字：<input type="text" name = "emp_name"  class="form-control" id = "changeName" disabled/><br>
+                    修改邮箱：<input type="text" name="emp_email"  id = 'changeEmail' class="form-control"  required/><br>
+                    修改住址：<input type="text" name = "emp_addr" id = "changeAddr" class="form-control" required/>
+                    修改手机号: <input type="text" name="emp_tel_num"  class="form-control" id = 'changeTel'/>
                     <!--<input type="submit" class="btn btn-primary "  onclick="add()">-->
                     <div class="modal-footer">
                         <button class="btn btn-default" data-dismiss="modal">关闭</button>

@@ -18,7 +18,7 @@
     <script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
     <script src="/static/javascript/userMessage.js"></script>
     <script src="/static/javascript/readmessge.js"></script>
-    <script src="/static/javascript/message.js"></script>
+    <%--<script src="/static/javascript/message.js"></script>--%>
     <link rel="stylesheet" href="/static/css/me.css">
     <script src="/static/javascript/manstu.js"></script>
 </head>
@@ -75,13 +75,14 @@
 <div>
     <form class="navbar-form navbar-right" role="search">
         <div class="form-group">
-            <input id="studio_name"     type="text" class="form-control" placeholder="查找演出厅">
+            <input id="studio_name" type="text" class="form-control" placeholder="查找演出厅">
         </div>
-        <button type="submit" class="btn btn-default" ><i class="fa fa-search" aria-hidden="true"></i>查找</button>
+    </form>
+        <button onclick="reset_get()">查找</button>
         <button type="button" class="btn btn-default navbar-btn" data-toggle="modal" data-target="#myModal"><i class="fa fa-plus" aria-hidden="true"></i> 添加演出厅</button>
         <button type="button" class="btn btn-default navbar-btn" id = 'deleteStudio' onclick="removeStudio()"><i class="fa fa-minus" aria-hidden="true"></i> 删除演出厅</button>
         <button type="button" class="btn btn-default navbar-btn" id="changeStudio" onclick="change()" data-toggle="modal" data-target="#myModals" ><i class="fa fa-pencil-square-o" aria-hidden="true"></i> 修改演出厅</button>
-    </form>
+
 </div>
 
 <!--演出厅添加信息-->
@@ -101,9 +102,8 @@
                     演出厅名称: <input type="text" name = "studioName" id="studioName" class="form-control" placeholder="请输入演出厅名称" onblur="check()" required/><br><span id = 'err'></span><br>
                     座位行数: <input type="text" name = "sateRow" id="sateRow" class="form-control" placeholder="请输入演出厅中座位的行数" onblur="check1()"required/><br><span id = 'err1'></span><br>
                     座位列数: <input type="text" name = "sateCol" id = "sateCol" class="form-control" placeholder="请输入演出厅的列数" onblur="check2()" required/><br><span id = 'err2'></span><br>
+                    演出厅详情: <input type="text" name="studioIntroduction" id = "studioIntroduction" class="form-control" placeholder="请输入演出厅简介"/><br>
                     演出厅状态: <input type="text" name="studioState" value="可用" id = "studioState" class="form-control" onblur="check3()" required/><br><span id = 'err3'></span><br>
-                    演出厅简介: <input type="text" name="studioIntroduction" id = "studioIntroduction" class="form-control" placeholder="请输入演出厅简介"/>
-
                 </form>
                 <div class="modal-footer">
                     <button class="btn btn-default" data-dismiss="modal">关闭</button>
@@ -113,6 +113,7 @@
         </div>
     </div>
 </div>
+
 
 <!--修改演出厅信息-->
 <div class="modal fade" id = "myModals" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -128,6 +129,7 @@
             </div>
             <div class="modal-body">
                 <form role="form" id = "change">
+                    演出厅id: <input type="text" name = "studioNo" class="form-control" id = "studio_no" disabled><br>
                     演出厅名称: <input type="text" name = "studioName"  class="form-control" id = "changeName" onblur="check4()"required/><span id = 'err4'></span><br>
                     座位行数: <input type="text" name = "sateRow"  class="form-control" id = "changeRow" onblur="check5()" required/><span id = 'err5'></span><br>
                     座位列数: <input type="text" name = "sateCol"  class="form-control" id = "changeCol" onblur="check6()" required/><span id = 'err6'></span><br>
@@ -136,7 +138,7 @@
                 </form>
                 <div class="modal-footer">
                     <button class="btn btn-default" data-dismiss="modal">关闭</button>
-                    <button class="btn btn-primary " data-dismiss="modal">提交更改</button>
+                    <button class="btn btn-primary " data-dismiss="modal" onclick="putStudio()">提交更改</button>
                 </div>
             </div>
         </div>
@@ -159,9 +161,9 @@
 </body>
 <script>
     get_studio();
-    message('./aboutMe.html');
+//    message('./aboutMe.html');
     get_user_message('/me.jsp');
-    account();
+//    account();
 
 </script>
 </html>

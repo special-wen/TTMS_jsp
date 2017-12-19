@@ -28,17 +28,20 @@ public class studioServer extends HttpServlet {
         try {
             s.setStudio_name(request.getParameter("studio_name"));
             s.setStudio_row_count(Integer.valueOf(request.getParameter("studio_rows")));
-            s.setStudio_col_count(Integer.valueOf(request.getParameter("studio.cols")));
+            s.setStudio_col_count(Integer.valueOf(request.getParameter("studio_cols")));
             s.setStudio_introduction(request.getParameter("studio_detial"));
             s.setStudio_flag(Integer.valueOf(request.getParameter("flag")));
         }catch (Exception e){
+            System.out.println("信息获取失败");
             json.put("state",false);
             out.write(json.toString());
             return;
         }
         if (DAOFactory.createStudioDAO().insert(s)){
             json.put("state",true);
+            out.write(json.toString());
         }else {
+            System.out.println("插入数据失败");
             json.put("state",false);
             out.write(json.toString());
         }

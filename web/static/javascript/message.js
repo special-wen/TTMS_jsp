@@ -20,27 +20,3 @@ function message(url) {
     xmlhttp.open('GET','/MyInfo');
     xmlhttp.send();
 }
-function account() {
-    let xmlhttp = new XMLHttpRequest();
-    xmlhttp.onreadystatechange = function () {
-        if(xmlhttp.readyState == 4 && xmlhttp.status == 200){
-            let json = JSON.parse(xmlhttp.responseText);
-            if(json.login == true){
-                let table = document.getElementById('table');
-                let length = table.rows.length;
-                json = json.mess;
-                let rows = 0;
-                let i;
-                for(i in json){
-                    if(rows <length){
-                        let cell = table.rows[rows].insertCell(1);
-                        cell.innerText = json[i];
-                        rows ++;
-                    }
-                }
-            }
-        }
-    };
-    xmlhttp.open('GET','/MyInfo');
-    xmlhttp.send();
-}

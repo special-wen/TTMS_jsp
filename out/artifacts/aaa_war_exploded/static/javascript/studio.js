@@ -1,29 +1,41 @@
 'use strict'
 let number = 0;
+
 //添加演出厅
 function addStudio() {
     let studioAdd = document.getElementById('studio');
-
+    let flag;
     let name = document.getElementById('studioName').value;
     let row = document.getElementById('sateRow').value;
     let col = document.getElementById('sateCol').value;
-    let state = document.getElementById('studioState').value;
     let introduction = document.getElementById('studioIntroduction').value;
+    let state = document.getElementById('studioState').value;
+    if(state == '可用'){
+        flag = 1;
+    }else {
+        flag = 0;
+    }
 
-    let newRow = studioAdd.insertRow();
 
-    let studioName = newRow.insertCell();
-    let seatRow = newRow.insertCell();
-    let seatCell = newRow.insertCell();
-    let studioState = newRow.insertCell();
-    let studioInroduction = newRow.insertCell();
-
-    studioName.innerText = name;
-    seatRow.innerText = row;
-    seatCell.innerText = col;
-    studioState.innerText = state;
-    studioInroduction.innerText = introduction;
-
+    let xml = new XMLHttpRequest();
+    xml.onreadystatechange = function () {
+        if(xml.readyState == 4 && xml.status == 200){
+            let json = JSON.parse(xml.responseText);
+            if (json.state){
+                // alert("刷新");
+                get_studio();
+            }else{
+                alert("失败，请重试！");
+            }
+        }
+    };
+    let sss = window.location.search;
+    let method = 'POST';
+    let data = 'studio_name='+name+'&studio_rows='+row+'&studio_cols='+col+'&stuio_detial='+introduction+'&flag='+flag;
+    xml.open(method,'/api/studio');
+    xml.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+    xml.send(data);
+    // alert('sdfdfdfdfdf');
 }
 
 
@@ -75,8 +87,24 @@ function deleteRow(row) {
 function removeStudio() {
     let row = number;
     if(row > 0){
-        console.log(row);
-        deleteRow(row);
+        // console.log(row);
+        // let id = document.getElementById('delete_now').innerText;
+        let mess = [];
+        mess = changeRow(row);
+        let id = mess[0];
+        let xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function () {
+            if(xhr.readyState == 4 && xhr.status == 200){
+                if(JSON.parse(xhr.responseText).status){
+                    get_studio();
+                }else{
+                    alert("删除失败！");
+                }
+            }
+        };
+        xhr.open('DELETE','/api/studio');
+        xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+        xhr.send('id='+id);
     }else{
         let changeButton = document.getElementById('deleteStudio');
         changeButton.setAttribute('data-toggle', 'modal');
@@ -105,11 +133,12 @@ function change() {
     if(number > 0){
         let change = [];
         let array = changeRow(number);
-        change[0] = document.getElementById('changeName');
-        change[1] = document.getElementById('changeRow');
-        change[2] = document.getElementById('changeCol');
-        change[3] = document.getElementById('changeState');
-        change[4] = document.getElementById('changeInt');
+        change[0] = document.getElementById('studio_no');
+        change[1] = document.getElementById('changeName');
+        change[2] = document.getElementById('changeRow');
+        change[3] = document.getElementById('changeCol');
+        change[4] = document.getElementById('changeState');
+        change[5] = document.getElementById('changeInt');
         let len = array.length;
         for(let i = 0;i<len;i++){
             change[i].value = array[i];
@@ -120,23 +149,62 @@ function change() {
         let changeButton = document.getElementById('changeStudio');
         changeButton.setAttribute('data-toggle', 'modal');
         changeButton.setAttribute('data-target', '#error');
-        let text = document.getElementById('waring')
+        let text = document.getElementById('waring');
         text.innerHTML = '请选择需要修改的地方！'
     }
 
 }
 
+
+function putStudio() {
+    let studio_no = document.getElementById('studio_no').value;
+    let studio_name = document.getElementById('changeName').value;
+    let studio_row = document.getElementById('changeRow').value;
+    let studio_col = document.getElementById('changeCol').value;
+    let studio_state = document.getElementById('changeState').value;
+    let studio_int = document.getElementById('changeInt').value;
+
+    if(studio_state == "可用"){
+        studio_state = 1;
+    }else{
+        studio_state = 0;
+    }
+    let xml = new XMLHttpRequest();
+    xml.onreadystatechange = function () {
+        if(xml.readyState == 4 && xml.status == 200){
+            let json = JSON.parse(xml.responseText);
+            if (json.state){
+                // alert("刷新");
+                get_studio();
+            }else{
+                alert("失败，请重试！");
+            }
+        }
+    };
+    let sss = window.location.search;
+    let method = 'PUT';
+    let data = 'studio_name='+studio_name+'&studio_rows='+studio_row+'&studio_cols='+studio_col+'&stuio_detial='+studio_int+'&flag='+studio_state+'&id='+studio_no;
+    xml.open(method,'/api/studio');
+    xml.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+    xml.send(data);
+    // alert('sdfdfdfdfdf');
+}
+
+
+
 function check() {
     let aaa = document.getElementById('studioName').value;
-
-
     console.log(aaa);
     if(/^.{2,20}$/.test(aaa)){
-        document.getElementById('err').innerHTML = 'err:演出厅名称为2～20个字符！';
+        document.getElementById('err').innerHTML = '';
+        // alert("正确");
     }
     else{
-        document.getElementById('err').innerHTML = '';
+        // alert("格式错误");
+        document.getElementById('err').innerHTML = 'err:演出厅名称为2～20个字符！';
+
     }
+    alert(aaa);
 }
 
 
@@ -144,19 +212,24 @@ function check1() {
     let aaa = document.getElementById('sateRow').value;
     console.log(aaa);
     if(/^([1-9])|(1[0-5])$/.test(aaa)){
-        document.getElementById('err1').innerHTML = 'err:演出厅中座位的行数最多为15！';
-    }else{
         document.getElementById('err1').innerHTML = '';
+        // alert("正确");
+    }else{
+        // alert("格式错误");
+
+        document.getElementById('err1').innerHTML = 'err:演出厅中座位的行数最多为15！';
     }
+    // alert(aaa);
 }
 
 function check2() {
     let aaa = document.getElementById('sateCol').value;
     console.log(aaa);
     if(/^([1-9])|(1[0-5])$/.test(aaa)){
-        document.getElementById('err2').innerHTML = 'err:演出厅列数最多为15！';
-    }else{
         document.getElementById('err2').innerHTML = '';
+    }else{
+        document.getElementById('err2').innerHTML = 'err:演出厅列数最多为15！';
+
     }
 }
 
@@ -164,9 +237,10 @@ function check3() {
     let aaa = document.getElementById('studioState').value;
     console.log(aaa);
     if(/^.{2,10}$/.test(aaa)){
-        document.getElementById('err3').innerHTML = 'err:演出厅状态最多为10个字符！';
-    }else{
         document.getElementById('err3').innerHTML = '';
+    }else{
+        document.getElementById('err3').innerHTML = 'err:演出厅状态最多为10个字符！';
+
     }
 }
 
@@ -174,9 +248,9 @@ function check4() {
     let aaa = document.getElementById('changeName').value;
     console.log(aaa);
     if(/^.{2,20}$/.test(aaa)){
-        document.getElementById('err4').innerHTML = 'err:演出厅名称为2～20个字符！';
-    }else{
         document.getElementById('err4').innerHTML = '';
+    }else{
+        document.getElementById('err4').innerHTML = 'err:演出厅名称为2～20个字符！';
     }
 }
 
@@ -185,9 +259,9 @@ function check5() {
     let aaa = document.getElementById('changeRow').value;
     console.log(aaa);
     if(/^([1-9])|(1[0-5])$/.test(aaa)){
-        document.getElementById('err5').innerHTML = 'err:演出厅中座位的行数最多为15！';
-    }else{
         document.getElementById('err5').innerHTML = '';
+    }else{
+        document.getElementById('err5').innerHTML = 'err:演出厅中座位的行数最多为15！';
     }
 }
 
@@ -195,9 +269,9 @@ function check6() {
     let aaa = document.getElementById('changeCol').value;
     console.log(aaa);
     if(/^([1-9])|(1[0-5])$/.test(aaa)){
-        document.getElementById('err6').innerHTML = 'err:演出厅列数最多15！';
-    }else{
         document.getElementById('err6').innerHTML = '';
+    }else{
+        document.getElementById('err6').innerHTML = 'err:演出厅列数最多15！';
     }
 }
 
@@ -205,9 +279,9 @@ function check7() {
     let aaa = document.getElementById('changeState').value;
     console.log(aaa);
     if(/^.{2,10}$/.test(aaa)){
-        document.getElementById('err3').innerHTML = 'err:演出厅状态最多为10个字符！';
-    }else{
         document.getElementById('err3').innerHTML = '';
+    }else{
+        document.getElementById('err3').innerHTML = 'err:演出厅状态最多为10个字符！';
     }
 }
 
