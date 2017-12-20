@@ -24,11 +24,11 @@
 <div class="row container">
     <!--需要操作的演出厅-->
     <div class="col-md-3">
-        <ul class="nav nav-pills nav-stacked">
-            <li class="active"><a href="#">1号演出厅</a></li>
-            <li><a href="#">2号演出厅</a></li>
-            <li><a href="#">3号演出厅</a></li>
-            <li><a href="#">4号演出厅</a></li>
+        <ul class="nav nav-pills nav-stacked" id = "left">
+            <%--<li><a href="#">1号演出厅</a></li>--%>
+            <%--<li><a href="#">2号演出厅</a></li>--%>
+            <%--<li><a href="#">3号演出厅</a></li>--%>
+            <%--<li><a href="#">4号演出厅</a></li>--%>
         </ul>
     </div>
 
@@ -95,5 +95,7 @@
 
 
 </body>
-
+<script>
+    studioSeat();
+</script>
 </html>

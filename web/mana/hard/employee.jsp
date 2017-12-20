@@ -57,9 +57,9 @@
         </div>
     </form>
     <button class="btn btn-default" onclick="reset_get()"><i class="fa fa-search" aria-hidden="true"></i>查找</button>
-    <button type="button" class="btn btn-default navbar-btn" data-toggle="modal" data-target="#myModal"><i class="fa fa-plus" aria-hidden="true"></i> 添加人员</button>
-    <button type="button" class="btn btn-default navbar-btn" id = 'deleteStudio' onclick="removeStudio()"><i class="fa fa-minus" aria-hidden="true"></i> 删除人员</button>
-    <button type="button" class="btn btn-default navbar-btn" id="changeStudio" onclick="change()"  ><i class="fa fa-pencil-square-o" aria-hidden="true"></i> 修改人员信息</button>
+    <button class="btn btn-default navbar-btn" data-toggle="modal" data-target="#myModal"><i class="fa fa-plus" aria-hidden="true"></i> 添加人员</button>
+    <button class="btn btn-default navbar-btn" id = 'deleteStudio' onclick="removeEmployee()"><i class="fa fa-minus" aria-hidden="true"></i> 删除人员</button>
+    <button class="btn btn-default navbar-btn" data-toggle="modal" data-target="#myModals" id="changeEmp" onclick="change()"  ><i class="fa fa-pencil-square-o" aria-hidden="true"></i> 修改人员信息</button>
 </div>
 
 
@@ -107,17 +107,18 @@
             </div>
             <div class="modal-body">
                 <form role="form" id = "change">
-                    修改名字：<input type="text" name = "emp_name"  class="form-control" id = "changeName" disabled/><br>
+                    用户登录id：<input type="text" name = "emp_no" class="form-control" id = "changeno" disabled/><br>
+                    用户姓名：<input type="text" name = "emp_name" class="form-control" id = "changeName" disabled/><br>
+                    修改手机号: <input type="text" name="emp_tel_num"  class="form-control" id = 'changeTel'/></br>
+                    修改住址：<input type="text" name = "emp_addr" id = "changeAddr" class="form-control" required/><br>
                     修改邮箱：<input type="text" name="emp_email"  id = 'changeEmail' class="form-control"  required/><br>
-                    修改住址：<input type="text" name = "emp_addr" id = "changeAddr" class="form-control" required/>
-                    修改手机号: <input type="text" name="emp_tel_num"  class="form-control" id = 'changeTel'/>
                     <!--<input type="submit" class="btn btn-primary "  onclick="add()">-->
-                    <div class="modal-footer">
-                        <button class="btn btn-default" data-dismiss="modal">关闭</button>
-                        <!--<input type="submit" value="提交并更改">-->
-                        <button type = 'submit' class="btn btn-primary "  onclick="add()">提交并更改</button>
-                    </div>
                 </form>
+                <div class="modal-footer">
+                    <button class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <!--<input type="submit" value="提交并更改">-->
+                    <button class="btn btn-primary " data-dismiss="modal" onclick="putEmployee()">提交并更改</button>
+                </div>
             </div>
         </div>
     </div>

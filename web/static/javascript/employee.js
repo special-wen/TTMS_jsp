@@ -72,7 +72,7 @@ function addEmp() {
 
 //鼠标点击事件
 function studioRow(obj) {
-    let table = document.getElementById('studio');
+    let table = document.getElementById('employee');
     let length = table.rows.length;
 
     for(let i = 0;i<length;i++){
@@ -111,13 +111,12 @@ function studioRow(obj) {
 //删除某一行
 function deleteRow(row) {
     let deleteRow = document.getElementById('employee');
-    //let length = deleteRow.rows.length;
     deleteRow.deleteRow(row);
 
 }
 
-//删除演出厅
-function removeStudio() {
+//删除用户
+function removeEmployee() {
     let row = number;
     if(row == 0){
         console.log('aaa');
@@ -128,7 +127,23 @@ function removeStudio() {
         text.innerHTML = '请选择需要修改的地方！'
     }
     else{
-        deleteRow(row);
+        let emp = []
+        emp = changeRow(row);
+        let id = emp[0];
+        alert(id);
+        let xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function () {
+            if(xhr.readyState == 4 && xhr.status == 200){
+                if(JSON.parse(xhr.responseText).status){
+                    get_emp();
+                }else {
+                    alert("删除失败！");
+                }
+            }
+        };
+        xhr.open('DELETE','/api/employee');
+        xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+        xhr.send('id='+id);
     }
 }
 
@@ -136,68 +151,38 @@ function removeStudio() {
 //获取选中行的信息
 function changeRow(number) {
     let array = [];
-    let table = document.getElementById('studio');
+    let table = document.getElementById('employee');
     let length = table.rows.length;
-    //console.log(length);
+    console.log(length);
     if(number != 0){
         for(let i = 0;i<length+1;i++){
-            array[i] = table.rows[number].cells[i].innerHTML;
+            array[i] = table.rows[number].cells[i].innerText;
         }
-        console.log(array);
         return array
     }
-    else{
-        console.log('aaa');
-    }
-
 }
 
 //将信息添加在修改信息的相应位置
 function change() {
-
-//当选中需要修改的内容时
     if(number >0){
-        let changeButton = document.getElementById('changeStudio');
-        changeButton.setAttribute('data-toggle', 'modal');
-        changeButton.setAttribute('data-target', '#myModals');
+
         let change = [];
+        let aaa = [];
+
         let array = changeRow(number);
-        change[0] = document.getElementById('changeName').value;
-        change[4] = document.getElementById('changeAgain').value;
-        change[5] = document.getElementById('changeState').value;
-        change[6] = document.getElementById('changeInt').value;
-
+        change[0] = document.getElementById("changeno");
+        change[1] = document.getElementById("changeName");
+        change[2] = document.getElementById("changeTel");
+        change[3] = document.getElementById("changeAddr");
+        change[4] = document.getElementById("changeEmail");
         console.log(array[1]);
-        //设置所选中的性别为默认
-        if (array[1] == '男'){
-            document.getElementById('changeSex').value = 'boy';
-        }else{
-            document.getElementById('changeSex').value = 'gil';
+        let len = array.length;
+        for(let i = 0 ;i<len-1;i++){
+            change[i].value = array[i+1];
+            aaa[i] = array[i+1];
         }
-        if(array[2] == '管理员'){
-            document.getElementById('changeJob').value = 'manager';
-        }else if(array[2] == '售票员'){
-            document.getElementById('changeJob').value = 'sealer';
-        }else{
-            document.getElementById('changeJob').value = 'boss';
-        }
-
-        document.getElementById('changeName').value = array[0];
-        document.getElementById('changePass').value = array[3];
-        document.getElementById('changeAgain').value = array[3];
-        document.getElementById('changeState').value = array[4];
-        document.getElementById('changeInt').value = array[5];
-        change[0] = array[0];
-
-        change[1] = array[1];
-        change[2] = array[2];
-        change[3] = array[3];
-        change[4] = array[3];
-        change[5] = array[4];
-        change[6] = array[5];
-
         console.log(change);
-        return change;
+        return aaa;
     }
 //当没有选中内容时
     else{
@@ -210,39 +195,34 @@ function change() {
 
 }
 
-//获取修改框中的信息
-function modify() {
-    let modifyMessage = [];
-    modifyMessage[0] = document.getElementById('changeName').value;
-
-    let changeSex = document.getElementById('changeSex');
-    let indexSex = changeSex.selectedIndex;
-    modifyMessage[1] = changeSex.options[indexSex].value;
-
-    let changeJob = document.getElementById('changeJob');
-    let index = changeJob.selectedIndex;
-    modifyMessage[2] = changeJob.options[index].value;
-
-    modifyMessage[3] = document.getElementById('changePass').value;
-    modifyMessage[4] = document.getElementById('changeAgain').value;
-    modifyMessage[5] = document.getElementById('changeState').value;
-    modifyMessage[6] = document.getElementById('changeInt').value;
-    return modifyMessage;
+function putEmployee() {
+    let aa = [];
+    aa = changeRow(number);
+    console.log(aa);
+    let emp_id = aa[0];
+    let emp_no = document.getElementById("changeno").value;
+    let emp_name = document.getElementById("changeName").value;
+    let emp_tel_nums = document.getElementById("changeTel").value;
+    let emp_addr = document.getElementById("changeAddr").value;
+    let emp_email = document.getElementById("changeEmail").value;
+    let xml = new XMLHttpRequest();
+    xml.onreadystatechange = function () {
+        if(xml.readyState == 4 && xml.responseText){
+            let json = JSON.parse(xml.responseText);
+            if(json.state){
+                get_emp();
+            }else{
+                alert("失败，请重试！");
+            }
+        }
+    };
+    let sss = window.location.search;
+    let method = 'PUT';
+    let data = 'emp_no='+emp_no+'&emp_name='+emp_name+'&emp_tel_num='+emp_tel_nums+'&emp_addr='+emp_addr+'&emp_email='+emp_email+'&emp_id='+emp_id;
+    xml.open(method,'/api/employee');
+    xml.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+    xml.send(data);
 }
 
-//修改用户信息
-function add() {
-
-    let newMessage = modify();
-
-    console.log(newMessage);
-    let studioAdd = document.getElementById('studio');
-    for(let i = 0;i<=3;i++){
-        studioAdd.rows[number].cells[i].innerHTML = newMessage[i];
-    }
-    studioAdd.rows[number].cells[4].innerHTML = newMessage[5];
-    studioAdd.rows[number].cells[5].innerHTML = newMessage[6];
-
-}
 
 

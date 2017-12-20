@@ -1,4 +1,31 @@
 'use strict'
+
+function studioSeat() {
+    let xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function () {
+        if(xhr.readyState == 4 && xhr.status == 200){
+            let res = JSON.parse(xhr.responseText);
+            if (res.status == false){
+                alert("没有演出厅");
+                return;
+            }
+
+            let left = document.getElementById('left');
+            left.innerText = '';
+            let json = res.object;
+
+        }
+    };
+    xhr.open('');
+}
+
+
+
+
+
+
+
+
 let row,col;
 
 let array = new Array();

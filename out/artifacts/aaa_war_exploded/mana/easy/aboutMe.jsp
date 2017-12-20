@@ -76,9 +76,12 @@
                     </h4>
                 </div>
                 <div class="modal-body">
-                    <form id="uploadForm" enctype="multipart/form-data">
-                        <input id="file" type="file" name="file"/>
-                        <button id="upload" type="button">upload</button>
+                    <form action="upload.jsp" method="post" enctype="multipart/form-data">
+
+                        上传的图片:
+                        <input type="file" name="pic">
+                        <input type="submit" value="上传">
+
                     </form>
                 </div>
                 <div class="modal-footer">

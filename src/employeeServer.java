@@ -97,6 +97,7 @@ public class employeeServer extends HttpServlet {
             int offset = (page-1) * nums;
             ArrayList<Employee>list = null;
             String name = request.getParameter("name");
+            String emp_no = request.getParameter("emp_no");
             System.out.println(name+1);
             if(name == null || name.equals("")){
                 System.out.println(name+"rtytrfg");
@@ -135,7 +136,6 @@ public class employeeServer extends HttpServlet {
         Writer out = response.getWriter();
         JSONObject json = new JSONObject();
         int id;
-
         BufferedReader br = new BufferedReader(new InputStreamReader(request.getInputStream()));
         String s = null;
         String data = "";
@@ -144,7 +144,7 @@ public class employeeServer extends HttpServlet {
 
         }
         data = data.substring(0,data.length()-1);
-        System.out.println(data);
+        System.out.println(data+"adfdfdfdfdfdfddfdfdfd");
         HashMap<String,String> hm = new HashMap<String,String>();
         try {
             String listp[] = data.split("&");
@@ -155,10 +155,9 @@ public class employeeServer extends HttpServlet {
         }catch (Exception e){
 
         }
-
         try {
             id = Integer.valueOf(hm.get("id"));
-
+            System.out.println(id+"aaaaaaaaaaaaaaaaaaaaaa");
         }
         catch (java.lang.Exception e){
             System.out.print("err");
@@ -209,26 +208,22 @@ public class employeeServer extends HttpServlet {
         try{
             emp.setEmp_id(Integer.valueOf(hm.get("emp_id")));
             emp.setEmp_no(hm.get("emp_no"));
-            emp.setEmp_name(hm.get("studio_name"));
-
+            emp.setEmp_name(hm.get("emp_name"));
+            emp.setEmp_tel_num(hm.get("emp_tel_num"));
+            emp.setEmp_addr(hm.get("emp_addr"));
+            emp.setEmp_email(hm.get("emp_email"));
         }catch (Exception e){
             e.printStackTrace();
             json.put("state",false);
             out.write(json.toString());
             return;
         }
-
-//        if(hm.get("studio_detial") != null){
-//
-//        }
-
         if(DAOFactory.creatEmployeeDAO().update(emp)){
             json.put("state",true);
         }else{
             json.put("state",false);
         }
         out.write(json.toString());
-
 
     }
 }

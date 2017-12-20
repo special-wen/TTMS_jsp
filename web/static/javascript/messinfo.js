@@ -56,6 +56,19 @@ function butInfo() {
     emp_tel.setAttribute('placeholder',mesInfo[4]);
 }
 
+//根据员工登录帐号查找员工id
+function findId() {
+    let mesInfo = info();
+    let emp_no = mesInfo[0];
+    let emp_name = mesInfo[1];
+    let emp_addr = mesInfo[2];
+    let emp_email = mesInfo[3];
+    let emp_tel = mesInfo[4];
+
+    
+
+}
+
 function changeInfo() {
 //    let mesInfo = butInfo();
     let emp_no = document.getElementById('emp_no').value;
@@ -78,8 +91,6 @@ function changeInfo() {
     };
     let sss = window.location.search;
     let method = 'PUT';
-
-
 }
 
 

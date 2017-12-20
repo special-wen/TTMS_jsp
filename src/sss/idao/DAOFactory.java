@@ -1,6 +1,7 @@
 package sss.idao;
 
 import sss.dao.EmployeeDAO;
+import sss.dao.SeatDAO;
 import sss.dao.StudioDAO;
 import sss.dao.UserDAO;
 
@@ -21,5 +22,7 @@ public class DAOFactory
         return new StudioDAO();
     }
 
-
+    public static ISeat createSeatDAO(){
+        return new SeatDAO();
+    }
 }

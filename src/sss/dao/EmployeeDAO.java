@@ -170,7 +170,47 @@ public class EmployeeDAO implements IEmployee{
 
     @Override
     public ArrayList<Employee> findEmployeeByName(String employeeName, int offset, int nums) {
-        return null;
+        if(employeeName == null || employeeName.equals(""))
+            return null;
+
+        ArrayList<Employee> list = new ArrayList<Employee>();
+        Employee info = null;
+
+        Connection con = ConnectionManager.getInstance().getConnection();
+        PreparedStatement pstmt = null;
+        try
+        {
+            String sql = "select * from employee where employee_name like ? limit ? , ?";
+            pstmt = con.prepareStatement(sql);
+            pstmt.setString(1, "%" + employeeName + "%");// 拼接模糊查询串
+            pstmt.setInt(2,offset);
+            pstmt.setInt(3,nums);
+            System.out.print(pstmt);
+            ResultSet rs = pstmt.executeQuery();
+
+            while(rs.next())
+            {
+                // 如果有值的话再实例化
+                info = new Employee();
+                info.setEmp_id(rs.getInt("emp_id"));
+                info.setEmp_no(rs.getString("emp_no"));
+                info.setEmp_name(rs.getString("emp_name"));
+                info.setEmp_tel_num(rs.getString("emp_tel_num"));
+                info.setEmp_addr(rs.getString("emp_addr"));
+                info.setEmp_email(rs.getString("emp_email"));
+            }
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+        }
+        finally
+        {
+            // 关闭连接
+            ConnectionManager.close(null, pstmt, con);
+            return list;
+        }
+
     }
 
     /**
