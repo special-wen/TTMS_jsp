@@ -5,7 +5,7 @@ import java.io.Serializable;
 /**
  * Created by zxw on 17-11-19.
  */
-public class Employee implements Serializable{
+public class Employee extends User implements Serializable{
     private int emp_id;
     private String emp_no;
     private String emp_name;

@@ -1,6 +1,6 @@
 'use strict'
 let number = 0;
-//添加演出厅
+
 function check(){
     let pass = document.getElementById('pass').value;
     let passAgain = document.getElementById('passAgain').value;
@@ -36,47 +36,88 @@ function check2(){
     }
 }
 
-function addStudio() {
+//显示所有信息
+function get_user() {
+    let each_nums = document.getElementById('each_nums').value;
+    let now_page = document.getElementById('now_page').innerText;
+    let user_no = document.getElementById('user_no').value;
+    let xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function () {
+        if(xhr.readyState == 4 && xhr.status == 200){
+            let res = JSON.parse(xhr.responseText);
+            if(res.status == false) {
+                document.getElementById('now_page').innerText =parseInt(now_page)-1;
+                alert("已到最后一页!");
+                return ;
+            }
+
+            let tbody = document.getElementById('tbody');
+            tbody.innerText = '';
+            let json = res.object;
+            for(let i = 0;i<json.length;i++){
+                let tr = document.createElement('tr');
+                let td0 = document.createElement('td');
+                td0.innerText = json[i][0];
+                // td0.setAttribute('style','display: none;');
+                let td1 = document.createElement('td');
+                td1.innerText = json[i][1];
+                let td2 = document.createElement('td');
+                if(json[i][2] == 1){
+                    td2.innerText = "超级管理员";
+                }else {
+                    td2.innerText = "普通管理员"
+                }
+
+
+                tr.appendChild(td0);
+                tr.appendChild(td1);
+                tr.appendChild(td2);
+
+                tbody.appendChild(tr);
+            }
+
+
+        }
+    };
+    xhr.open('GET','/api/user?page='+now_page+'&nums='+each_nums+'&name='+user_no);
+    xhr.send();
+}
+
+
+//添加登录用户
+function addUser() {
     //alert("34234");
-    let studioAdd = document.getElementById('studio');
-
-    let name = document.getElementById('studioName').value;
-
-    let sex = document.getElementById ('Sex');
-    let indexSex = sex.selectedIndex;
-
-    let row = sex.options[indexSex].value;
-    //alert(row);
-
+    let user_no = document.getElementById('user_name').value;
     let job = document.getElementById('Job');
     let indexJob = job.selectedIndex;
-    let col = job.options[indexJob].value;
-    //alert(col);
+    let type = job.options[indexJob].value;
+    alert(type);
+    if (type == 'manager'){
+        type =1;
+    }else {
+        type = 0;
+    }
+    let user_pass = document.getElementById('pass').value;
+    let passAgain = document.getElementById('passAgain').value;
+    let head_path = '';
+    let xml = new XMLHttpRequest();
+    xml.onreadystatechange = function () {
+        if(xml.readyState == 4 && xml.status == 200){
+            let json = JSON.parse(xml.responseText);
+            if(json.state){
+                get_user();
+            }else{
+                alert("失败，请重试！");
+            }
+        };
+        let sss = window.location.search;
+        let method = 'POST';
+        let data = 'emp_no='+user_no+'&emp_pass='+user_pass+'&type='+job+'&head_path='+head_path;
+        xml.open(method,'/api/user');
+        xml.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+        xml.send(data);
 
-    let pass = document.getElementById('pass').value;
-    // let passAgain = document.getElementById('passAgain').value;
-
-    let state = document.getElementById('studioState').value;
-    let introduction = document.getElementById('studioIntroduction').value;
-
-    let newRow = studioAdd.insertRow();
-
-    let studioName = newRow.insertCell();
-    let seatRow = newRow.insertCell();
-    let seatCell = newRow.insertCell();
-    let setPass = newRow.insertCell();
-    let studioState = newRow.insertCell();
-    let studioInroduction = newRow.insertCell();
-
-    studioName.innerText = name;
-    seatRow.innerText = row;
-    seatCell.innerText = col;
-    setPass.innerHTML = pass;
-    studioState.innerText = state;
-    studioInroduction.innerText = introduction;
-    console.log('12');
-    //alert("231");
-    return false;
+    }
 
 }
 
