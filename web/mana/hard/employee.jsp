@@ -22,26 +22,29 @@
 <jsp:include page="/me.jsp"></jsp:include>
 <!--所有的演出厅-->
 <div id = "table">
-    <table class="table table-striped " id = 'employee' onclick="studioRow(this)">
-        <caption style="text-align: center">那一年影院人员</caption>
-        <tr class="warning">
-            <td>登录帐号</td>
-            <td>姓名</td>
-            <td>联系方式</td>
-            <td>住址</td>
-            <td>邮箱</td>
-        </tr>
-        <tbody id ="tbody">
+        <table class="table table-striped " id = 'employee' onclick="studioRow(this)" style="text-align: center">
+            <caption style="text-align: center">那一年影院人员</caption>
+            <tr class="warning">
+                <td>登录帐号</td>
+                <td>姓名</td>
+                <td>联系方式</td>
+                <td>住址</td>
+                <td>邮箱</td>
+            </tr>
+            <tbody id ="tbody">
 
-        </tbody>
-    </table>
-    <div id = "test1"></div>
+            </tbody>
+        </table>
+        <div id = "test1"></div>
+
 </div>
-<div style="margin:0px 30px">第<u id="now_page">1</u>页
-    <button onclick="other_page(-1)"><</button>
-    <button onclick="other_page(1)">></button>
+<div style="margin:0px 30px;font-size: 18px;text-align: center">
+    <button class="btn btn-default" onclick="other_page(-1)"><</button>
+    第<u id="now_page">1</u>页
+
+    <button class="btn btn-default"onclick="other_page(1)">></button>
     每页显示
-    <select id="each_nums" onchange="reset_get()">
+    <select class="form-control" id="each_nums" style="width: 100px;display: inline-block" onchange="reset_get()">
         <option value="5">5</option>
         <option value="10">10</option>
         <option value="15">15</option>
@@ -50,17 +53,20 @@
 <li id="delete_now" style="display: none"></li>
 
 <!--人员的增删改查-->
-<div>
-    <form class="navbar-form navbar-right" role="search">
-        <div class="form-group">
-            <input type="text" id = "employee_name" value="" class="form-control" placeholder="查找人员">
-        </div>
-    </form>
-    <button class="btn btn-default" onclick="reset_get()"><i class="fa fa-search" aria-hidden="true"></i>查找</button>
-    <button class="btn btn-default navbar-btn" data-toggle="modal" data-target="#myModal"><i class="fa fa-plus" aria-hidden="true"></i> 添加人员</button>
-    <button class="btn btn-default navbar-btn" id = 'deleteStudio' onclick="removeEmployee()"><i class="fa fa-minus" aria-hidden="true"></i> 删除人员</button>
-    <button class="btn btn-default navbar-btn" data-toggle="modal" data-target="#myModals" id="changeEmp" onclick="change()"  ><i class="fa fa-pencil-square-o" aria-hidden="true"></i> 修改人员信息</button>
-</div>
+
+    <div style="float: right">
+        <form class="navbar-form navbar-left" role="search">
+            <div class="form-group">
+                <input type="text" id = "employee_name" value="" class="form-control" placeholder="查找人员">
+            </div>
+        </form>
+        <button class="btn btn-default" onclick="reset_get()"><i class="fa fa-search" aria-hidden="true"></i>查找</button>
+        <button class="btn btn-default navbar-btn" data-toggle="modal" data-target="#myModal"><i class="fa fa-plus" aria-hidden="true"></i> 添加人员</button>
+        <button class="btn btn-default navbar-btn" id = 'deleteStudio' onclick="removeEmployee()"><i class="fa fa-minus" aria-hidden="true"></i> 删除人员</button>
+        <button class="btn btn-default navbar-btn" data-toggle="modal" data-target="#myModals" id="changeEmp" onclick="change()"  ><i class="fa fa-pencil-square-o" aria-hidden="true"></i> 修改人员信息</button>
+    </div>
+
+
 
 
 <!--人员添加信息-->

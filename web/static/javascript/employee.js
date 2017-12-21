@@ -3,38 +3,46 @@
  */
 'use strict';
 let number = 0;
-function check(){
-    let pass = document.getElementById('pass').value;
-    let passAgain = document.getElementById('passAgain').value;
-    let a = /^[a-zA-Z0-9]{6,20}$/.test(pass);
-    //let b = /^[a-zA-Z0-9]{6,20}$/.test(passAgain);
-    if(pass == passAgain){
-        if(!a){
-            document.getElementById('err').innerHTML = '密码需要6～20位的任意字母和数字组合'
-            return false;
-        }else{
-            document.getElementById('err').innerHTML = '';
-            return true;
-        }
-    }else{
-        document.getElementById('err').innerHTML = '两次输入的密码不一致';
-        return false;
-    }
-}
+// function check(){
+//     let pass = document.getElementById('pass').value;
+//     let passAgain = document.getElementById('passAgain').value;
+//     let a = /^[a-zA-Z0-9]{6,20}$/.test(pass);
+//     //let b = /^[a-zA-Z0-9]{6,20}$/.test(passAgain);
+//     if(pass == passAgain){
+//         if(!a){
+//             document.getElementById('err').innerHTML = '密码需要6～20位的任意字母和数字组合'
+//             return false;
+//         }else{
+//             document.getElementById('err').innerHTML = '';
+//             return true;
+//         }
+//     }else{
+//         document.getElementById('err').innerHTML = '两次输入的密码不一致';
+//         return false;
+//     }
+// }
 
 function check1() {
-    var sss = document.getElementById('studioState');
+    var sss = document.getElementById('changeEmail');
+    var ssss = document.getElementById('emp_email');
     var reg=/^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(\.[a-zA-Z0-9_-])+/;
-    if(! reg.test(sss.value)) {
+    if(! reg.test(sss.value) || ! reg.test(ssss.value)) {
         document.getElementById('email_err').innerHTML = '邮箱格式不正确';
+        return false;
+    }else {
+        return true;
     }
 }
 
 function check2(){
-    var sss = document.getElementById('studioIntroduction');
+    var sss = document.getElementById('emp_tel_num');
+    var ssss = document.getElementById('changeTel');
     var reg= /^((0\d{2,3}-\d{7,8})|(1[3584]\d{9}))$/;
-    if(! reg.test(sss.value)) {
+    if(! reg.test(sss.value) || !reg.test(ssss.value)) {
         document.getElementById('phone_err').innerHTML = '手机号格式不正确';
+        return false;
+    }else {
+        return true;
     }
 }
 
@@ -47,6 +55,13 @@ function addEmp() {
     let emp_tel_num = document.getElementById('emp_tel_num').value;
     let emp_addr = document.getElementById('emp_addr').value;
     let emp_email = document.getElementById('emp_email').valie;
+
+    if(check1() && check2()){
+
+    }else {
+        alert("格式输入有误！");
+        return false;
+    }
 
     let xml = new XMLHttpRequest();
     xml.onreadystatechange = function () {
@@ -152,7 +167,7 @@ function removeEmployee() {
 function changeRow(number) {
     let array = [];
     let table = document.getElementById('employee');
-    let length = table.rows.length;
+    let length = table.rows.item(0).cells.length;
     console.log(length);
     if(number != 0){
         for(let i = 0;i<length+1;i++){
@@ -205,6 +220,13 @@ function putEmployee() {
     let emp_tel_nums = document.getElementById("changeTel").value;
     let emp_addr = document.getElementById("changeAddr").value;
     let emp_email = document.getElementById("changeEmail").value;
+    if(check1() && check2()){
+
+    }else {
+        alert("格式输入有误！");
+        return false;
+    }
+
     let xml = new XMLHttpRequest();
     xml.onreadystatechange = function () {
         if(xml.readyState == 4 && xml.responseText){

@@ -46,11 +46,12 @@
     </table>
 </div>
 
-<div style="margin:0px 30px">第<u id="now_page">1</u>页
-    <button onclick="other_page(-1)"><</button>
-    <button onclick="other_page(1)">></button>
+<div style="margin:0px 30px;font-size: 18px;text-align: center">
+    <button class="btn" onclick="other_page(-1)"><</button>
+    第<u id="now_page">1</u>页
+    <button class="btn" onclick="other_page(1)">></button>
     每页显示
-    <select id="each_nums" onchange="reset_get()">
+    <select class="form-control" id="each_nums" onchange="reset_get()" style="width: 100px;display: inline-block">
         <option value="5">5</option>
         <option value="10">10</option>
         <option value="15">15</option>
@@ -60,14 +61,14 @@
 
 <!--人员的增删改查-->
 <div>
-    <form class="navbar-form navbar-right" role="search">
+    <form class="navbar-form navbar-left" role="search">
         <div class="form-group">
             <input type="text" class="form-control" id = "user_no" placeholder="查找人员">
         </div>
     </form>
-    <button class="btn btn-default" ><i class="fa fa-search" aria-hidden="true"></i>查找</button>
+    <button class="btn btn-default" ><i class="fa fa-search" aria-hidden="true" ></i>查找</button>
     <button class="btn btn-default navbar-btn" data-toggle="modal" data-target="#myModal"><i class="fa fa-plus" aria-hidden="true"></i> 添加可登录人员</button>
-    <button class="btn btn-default navbar-btn" id = 'deleteStudio' onclick="removeStudio()"><i class="fa fa-minus" aria-hidden="true"></i> 删除可人员</button>
+    <button class="btn btn-default navbar-btn" id = 'deleteStudio' onclick="removeUser()"><i class="fa fa-minus" aria-hidden="true"></i> 删除可登录人员</button>
     <button class="btn btn-default navbar-btn" id="changeStudio" onclick="change()"  ><i class="fa fa-pencil-square-o" aria-hidden="true"></i> 修改登录人员信息</button>
 </div>
 
@@ -130,14 +131,14 @@
                             <option value="boss">经理</option>
                         </select>
                     </div>
-                    修改密码：<input type="password" name = "sateCol" id = "changePass" class="form-control" placeholder="请输入含有字母和数字的密码" required/><br>
-                    确认密码：<input type="password" name= "sat" id = "changeAgain" class="form-control" placeholder="确认密码">
+                    修改密码：<input type="text" name = "sateCol" id = "user_pass" class="form-control" placeholder="请输入含有字母和数字的密码" required/><br>
+                    确认密码：<input type="text" name= "sat" id = "user_passA" class="form-control" placeholder="确认密码">
 
                 </form>
                 <div class="modal-footer">
                     <button class="btn btn-default" data-dismiss="modal">关闭</button>
                     <!--<input type="submit" value="提交并更改">-->
-                    <button class="btn btn-primary" onclick="add()">提交并更改</button>
+                    <button class="btn btn-primary" data-dismiss="modal" onclick="putUser()">提交并更改</button>
                 </div>
             </div>
         </div>

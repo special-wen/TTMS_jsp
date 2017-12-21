@@ -90,12 +90,13 @@ public class UserDAO implements IUser{
         PreparedStatement pstmt = null;
         try
         {
-            String sql = "update user set emp_pass=?,type=?where emp_no=?";
+            String sql = "update user set emp_pass=?,type=?,head_path=? where emp_no=?";
             pstmt = con.prepareStatement(sql);
             pstmt.setString(1, user.getEmp_pass());
             pstmt.setInt(2, user.getType());
-            pstmt.setString(3,user.getEmp_no());
-
+            pstmt.setString(3,user.getHead_path());
+            pstmt.setString(4,user.getEmp_no());
+            System.out.println(pstmt);
             pstmt.executeUpdate();
             result = true;
         }
@@ -168,7 +169,7 @@ public class UserDAO implements IUser{
                 info = new User();
                 info.setEmp_no(rs.getString("emp_no"));
                 info.setEmp_pass(rs.getString("emp_pass"));
-                info.setType(rs.getInt("emp_type"));
+                info.setType(rs.getInt("type"));
             }
         }
         catch(Exception e)

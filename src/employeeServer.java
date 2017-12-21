@@ -10,6 +10,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -60,6 +61,7 @@ public class employeeServer extends HttpServlet {
         int nums = 10;
         Writer out = response.getWriter();
         int id;
+        String emp_no;
         if(request.getParameter("id") != null){
             try {
                 id = Integer.valueOf(request.getParameter("id"));
@@ -97,13 +99,12 @@ public class employeeServer extends HttpServlet {
             int offset = (page-1) * nums;
             ArrayList<Employee>list = null;
             String name = request.getParameter("name");
-            String emp_no = request.getParameter("emp_no");
+            emp_no = request.getParameter("emp_no");
             System.out.println(name+1);
             if(name == null || name.equals("")){
                 System.out.println(name+"rtytrfg");
                 list = DAOFactory.creatEmployeeDAO().findEmployeeAll(offset,nums);
                 System.out.println(name+"rtytrfg");
-
             }
             else{
                 list = DAOFactory.creatEmployeeDAO().findEmployeeByName(name,offset,nums);
@@ -114,8 +115,7 @@ public class employeeServer extends HttpServlet {
                 out.write(json.toString());
                 return;
             }
-            for (Employee emp : list
-                    ){
+            for (Employee emp : list){
                 jsonArr = new JSONArray();
                 jsonArr.add(String.valueOf(emp.getEmp_id()));
                 jsonArr.add(emp.getEmp_no());
@@ -130,6 +130,7 @@ public class employeeServer extends HttpServlet {
             out.write(json.toString());
         }
     }
+
     protected void doDelete(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/json; charset=utf-8");
         request.setCharacterEncoding("UTF-8");
@@ -189,7 +190,6 @@ public class employeeServer extends HttpServlet {
         String data = "";
         while((s = br.readLine()) != null) {
             data = data.concat(s).concat("\n");
-
         }
         data = data.substring(0,data.length()-1);
         System.out.println(data);
@@ -203,15 +203,24 @@ public class employeeServer extends HttpServlet {
                 }
                 hm.put(z[0], z[1]);
             }
-        }catch (Exception e){}
+        }catch (Exception e){
+
+        }
+        String no = hm.get("emp_no");
+        emp = DAOFactory.creatEmployeeDAO().findEmployeeByNo(no);
 
         try{
-            emp.setEmp_id(Integer.valueOf(hm.get("emp_id")));
+            //emp.setEmp_id(Integer.valueOf(hm.get("emp_id")));
             emp.setEmp_no(hm.get("emp_no"));
             emp.setEmp_name(hm.get("emp_name"));
             emp.setEmp_tel_num(hm.get("emp_tel_num"));
             emp.setEmp_addr(hm.get("emp_addr"));
             emp.setEmp_email(hm.get("emp_email"));
+            HttpSession session = request.getSession(false);
+            session.setAttribute("emp_name",hm.get("emp_name"));
+            session.setAttribute("emp_tel_num",hm.get("emp_tel_num"));
+            session.setAttribute("emp_addr",hm.get("emp_addr"));
+            session.setAttribute("emp_email",hm.get("emp_email"));
         }catch (Exception e){
             e.printStackTrace();
             json.put("state",false);
@@ -224,6 +233,6 @@ public class employeeServer extends HttpServlet {
             json.put("state",false);
         }
         out.write(json.toString());
+        }
 
     }
-}

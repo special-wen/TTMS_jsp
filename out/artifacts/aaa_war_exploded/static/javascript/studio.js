@@ -15,7 +15,12 @@ function addStudio() {
     }else {
         flag = 0;
     }
+    if(check() && check1() && check2() && check3() && check4() && check5() && check6() && check7() ){
 
+    }else {
+        alert("格式输入有误！");
+        return false;
+    }
 
     let xml = new XMLHttpRequest();
     xml.onreadystatechange = function () {
@@ -169,6 +174,12 @@ function putStudio() {
     }else{
         studio_state = 0;
     }
+    if(check() && check1() && check2() && check3() && check4() && check5() && check6() && check7() ){
+
+    }else {
+        alert("格式输入有误！");
+        return false;
+    }
     let xml = new XMLHttpRequest();
     xml.onreadystatechange = function () {
         if(xml.readyState == 4 && xml.status == 200){
@@ -187,7 +198,6 @@ function putStudio() {
     xml.open(method,'/api/studio');
     xml.setRequestHeader("Content-type","application/x-www-form-urlencoded");
     xml.send(data);
-    // alert('sdfdfdfdfdf');
 }
 
 
@@ -198,13 +208,14 @@ function check() {
     if(/^.{2,20}$/.test(aaa)){
         document.getElementById('err').innerHTML = '';
         // alert("正确");
+        return true;
     }
     else{
         // alert("格式错误");
         document.getElementById('err').innerHTML = 'err:演出厅名称为2～20个字符！';
-
+        return false;
     }
-    alert(aaa);
+    // alert(aaa);
 }
 
 
@@ -214,10 +225,12 @@ function check1() {
     if(/^([1-9])|(1[0-5])$/.test(aaa)){
         document.getElementById('err1').innerHTML = '';
         // alert("正确");
+        return true;
     }else{
         // alert("格式错误");
 
         document.getElementById('err1').innerHTML = 'err:演出厅中座位的行数最多为15！';
+        return false;
     }
     // alert(aaa);
 }
@@ -227,9 +240,10 @@ function check2() {
     console.log(aaa);
     if(/^([1-9])|(1[0-5])$/.test(aaa)){
         document.getElementById('err2').innerHTML = '';
+        return true;
     }else{
         document.getElementById('err2').innerHTML = 'err:演出厅列数最多为15！';
-
+        return false;
     }
 }
 
@@ -238,8 +252,10 @@ function check3() {
     console.log(aaa);
     if(/^.{2,10}$/.test(aaa)){
         document.getElementById('err3').innerHTML = '';
+        return true;
     }else{
         document.getElementById('err3').innerHTML = 'err:演出厅状态最多为10个字符！';
+        return false;
 
     }
 }
@@ -249,8 +265,10 @@ function check4() {
     console.log(aaa);
     if(/^.{2,20}$/.test(aaa)){
         document.getElementById('err4').innerHTML = '';
+        return true;
     }else{
         document.getElementById('err4').innerHTML = 'err:演出厅名称为2～20个字符！';
+        return false;
     }
 }
 
@@ -260,8 +278,10 @@ function check5() {
     console.log(aaa);
     if(/^([1-9])|(1[0-5])$/.test(aaa)){
         document.getElementById('err5').innerHTML = '';
+        return true;
     }else{
         document.getElementById('err5').innerHTML = 'err:演出厅中座位的行数最多为15！';
+        return false;
     }
 }
 
@@ -270,8 +290,10 @@ function check6() {
     console.log(aaa);
     if(/^([1-9])|(1[0-5])$/.test(aaa)){
         document.getElementById('err6').innerHTML = '';
+        return true;
     }else{
         document.getElementById('err6').innerHTML = 'err:演出厅列数最多15！';
+        return false;
     }
 }
 
@@ -280,8 +302,10 @@ function check7() {
     console.log(aaa);
     if(/^.{2,10}$/.test(aaa)){
         document.getElementById('err3').innerHTML = '';
+        return true;
     }else{
         document.getElementById('err3').innerHTML = 'err:演出厅状态最多为10个字符！';
+        return false;
     }
 }
 

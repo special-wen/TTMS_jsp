@@ -29,7 +29,7 @@ public class userServer extends HttpServlet {
         User user = new User();
         try {
             user.setEmp_no(request.getParameter("emp_no"));
-            user.setEmp_pass(request.getParameter("user_pass"));
+            user.setEmp_pass(request.getParameter("emp_pass"));
             user.setType(Integer.parseInt(request.getParameter("type")));
             user.setHead_path(request.getParameter("head_path"));
 //
@@ -127,7 +127,7 @@ public class userServer extends HttpServlet {
         request.setCharacterEncoding("UTF-8");
         Writer out = response.getWriter();
         JSONObject json = new JSONObject();
-        int id;
+        String id;
         BufferedReader br = new BufferedReader(new InputStreamReader(request.getInputStream()));
         String s = null;
         String data = "";
@@ -148,7 +148,7 @@ public class userServer extends HttpServlet {
 
         }
         try {
-            id = Integer.valueOf(hm.get("id"));
+            id = hm.get("id");
             System.out.println(id+"aaaaaaaaaaaaaaaaaaaaaa");
         }
         catch (java.lang.Exception e){
@@ -157,7 +157,7 @@ public class userServer extends HttpServlet {
             out.write(json.toString());
             return ;
         }
-        if(DAOFactory.creatEmployeeDAO().delete(id)){
+        if(DAOFactory.createUserDAO().delete(id)){
             json.put("status",true);
             out.write(json.toString());
         }else{
@@ -173,8 +173,7 @@ public class userServer extends HttpServlet {
         Writer out = response.getWriter();
         JSONObject json = new JSONObject();
 
-        Employee emp = new Employee();
-        emp.setEmp_addr("");
+        User user = new User();
 
         BufferedReader br = new BufferedReader(new InputStreamReader(request.getInputStream()));
         String s = null;
@@ -198,22 +197,22 @@ public class userServer extends HttpServlet {
         }catch (Exception e){}
 
         try{
-            emp.setEmp_id(Integer.valueOf(hm.get("emp_id")));
-            emp.setEmp_no(hm.get("emp_no"));
-            emp.setEmp_name(hm.get("emp_name"));
-            emp.setEmp_tel_num(hm.get("emp_tel_num"));
-            emp.setEmp_addr(hm.get("emp_addr"));
-            emp.setEmp_email(hm.get("emp_email"));
+            user.setEmp_no(hm.get("emp_no"));
+            user.setEmp_pass(hm.get("emp_pass"));
+            user.setType(Integer.valueOf(hm.get("type")));
+            user.setHead_path(hm.get("head_path"));
         }catch (Exception e){
             e.printStackTrace();
+            System.out.println("失败");
             json.put("state",false);
             out.write(json.toString());
             return;
         }
-        if(DAOFactory.creatEmployeeDAO().update(emp)){
+        if(DAOFactory.createUserDAO().update(user)){
             json.put("state",true);
         }else{
             json.put("state",false);
+            System.out.println("无法插入");
         }
         out.write(json.toString());
 
