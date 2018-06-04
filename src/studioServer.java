@@ -32,16 +32,21 @@ public class studioServer extends HttpServlet {
             s.setStudio_introduction(request.getParameter("studio_detial"));
             s.setStudio_flag(Integer.valueOf(request.getParameter("flag")));
         }catch (Exception e){
-            System.out.println("信息获取失败");
+            System.out.println("演出厅信息获取失败");
             json.put("state",false);
             out.write(json.toString());
             return;
         }
         if (DAOFactory.createStudioDAO().insert(s)){
+            System.out.println("演出厅插入数据成功");
+
+            System.out.println(s);
             json.put("state",true);
+            System.out.println(s.getStudio_id());
+//            json.put("studio_id",s.getStudio_id());
             out.write(json.toString());
         }else {
-            System.out.println("插入数据失败");
+            System.out.println("演出厅插入数据失败");
             json.put("state",false);
             out.write(json.toString());
         }

@@ -22,25 +22,50 @@ function addStudio() {
         return false;
     }
 
+    let method = 'POST';
+    let data = 'studio_name='+name+'&studio_rows='+row+'&studio_cols='+col+'&stuio_detial='+introduction+'&flag='+flag;
+
+
+
     let xml = new XMLHttpRequest();
     xml.onreadystatechange = function () {
         if(xml.readyState == 4 && xml.status == 200){
             let json = JSON.parse(xml.responseText);
             if (json.state){
-                // alert("刷新");
+                alert("刷新");
                 get_studio();
             }else{
                 alert("失败，请重试！");
             }
         }
     };
+
     let sss = window.location.search;
-    let method = 'POST';
-    let data = 'studio_name='+name+'&studio_rows='+row+'&studio_cols='+col+'&stuio_detial='+introduction+'&flag='+flag;
+
+
     xml.open(method,'/api/studio');
     xml.setRequestHeader("Content-type","application/x-www-form-urlencoded");
     xml.send(data);
-    // alert('sdfdfdfdfdf');
+
+
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function () {
+        if(xhr.readyState == 4 && xhr.status == 200){
+            let json = JSON.parse(xhr.responseText);
+            if (json.state){
+                alert("座位插入成功！");
+                // get_studio();
+            }else{
+                alert("座位插入失败，请重试！");
+            }
+        }
+    };
+
+
+    xhr.open(method,'/api/seat');
+    xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+    xhr.send(data);
+
 }
 
 

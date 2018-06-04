@@ -4,6 +4,7 @@ import sss.ConnectionManager;
 import sss.idao.IStudio;
 import sss.model.Studio;
 
+import java.sql.Array;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -16,6 +17,7 @@ public class StudioDAO implements IStudio {
     @Override
     public boolean insert(Studio studio) {
         boolean result = false;
+
         if(studio == null)
             return result;
 
