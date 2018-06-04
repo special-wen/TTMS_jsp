@@ -67,9 +67,11 @@ function get_user() {
                 td1.innerText = json[i][1];
                 let td2 = document.createElement('td');
                 if(json[i][2] == 1){
-                    td2.innerText = "超级管理员";
+                    td2.innerText = "管理员";
+                }else if(json[i][2] == 0){
+                    td2.innerText = "经理";
                 }else {
-                    td2.innerText = "普通管理员"
+                    td2.innerHTML = "售票员";
                 }
 
                 tr.appendChild(td0);

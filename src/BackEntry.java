@@ -26,12 +26,20 @@ public class BackEntry extends HttpServlet {
             obj.put("state",false);
         }else{
             obj.put("state",true);
-            hp.put("个人信息","/mana/easy/aboutMe.jsp");
-            hp.put("影厅管理","/mana/easy/studio.jsp");
-            hp.put("座位管理","/mana/easy/seat.jsp");
+            //管理员可以访问url：
             if((Integer)session.getAttribute("type") == 1){
-                hp.put("员工管理","/mana/hard/employee.jsp");
-                hp.put("登陆用户管理","/mana/hard/user.jsp");
+                hp.put("员工管理","/mana/employee.jsp");
+                hp.put("登陆用户管理","/mana/user.jsp");
+                hp.put("个人信息","/mana/aboutMe.jsp");
+                hp.put("影厅管理","/mana/studio.jsp");
+                hp.put("座位管理","/mana/seat.jsp");
+            }
+            //经理可以访问的url:
+            else if ((Integer)session.getAttribute("type") == 0){
+
+            }
+            //售票可以访问的url：
+            else {
 
             }
         }

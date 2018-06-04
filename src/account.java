@@ -22,12 +22,19 @@ public class account extends HttpServlet {
         String pass = request.getParameter("password");
         String select = request.getParameter("select");
         int sate;
+        //管理员
         if(select.equals("administrator")){
             sate = 1;
-        }else{
+        }
+        //经理
+        else if (select.equals("manager")){
             sate = 0;
         }
-        System.out.println(name+pass);
+        //售票员
+        else {
+            sate = -1;
+        }
+        System.out.println(name+pass+sate);
         JSONObject json = new JSONObject();
         if(name==null || name.equals("") || pass == null || pass.equals("")){
             json.put("state",false);
@@ -42,9 +49,16 @@ public class account extends HttpServlet {
 
                     json.put("state", true);
                     if (sate == 1){
-                        json.put("href","/mana/hard/user.jsp");
-                    }else{
-                        json.put("href","/mana/easy/studio.jsp");
+                        json.put("href","/mana/user.jsp");
+                    }
+                    //经理访问的
+                    else if (sate == 0){
+                        json.put("href","");
+//                        json.put("href","/mana/easy/studio.jsp");
+                    }
+                    //售票员访问的
+                    else {
+                        json.put("href","");
                     }
 
                     request.getSession().invalidate();

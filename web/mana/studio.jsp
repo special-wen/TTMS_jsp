@@ -5,7 +5,7 @@
   Time: 下午7:49
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page pageEncoding="UTF-8" isErrorPage="false" errorPage="../../error.jsp"%>
+<%@ page pageEncoding="UTF-8" isErrorPage="false" errorPage="../error.jsp"%>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -73,7 +73,7 @@
 </div>
 <li id="delete_now" style="display: none"></li>
 
-<!--演出厅的增删改查-->
+<!--演出厅的增删改查以及座位管理-->
 <div style="float: right">
     <form class="navbar-form navbar-left" role="search">
         <div class="form-group">
@@ -84,6 +84,7 @@
         <button type="button" class="btn btn-default navbar-btn" data-toggle="modal" data-target="#myModal"><i class="fa fa-plus" aria-hidden="true"></i> 添加演出厅</button>
         <button type="button" class="btn btn-default navbar-btn" id = 'deleteStudio' onclick="removeStudio()"><i class="fa fa-minus" aria-hidden="true"></i> 删除演出厅</button>
         <button type="button" class="btn btn-default navbar-btn" id="changeStudio" onclick="change()" data-toggle="modal" data-target="#myModals" ><i class="fa fa-pencil-square-o" aria-hidden="true"></i> 修改演出厅</button>
+        <button type="button" class="btn btn-default navbar-btn" id = "seat" onclick="seat()"><i class="fa fa-cog" aria-hidden="true" ></i>座位管理</button>
 
 </div>
 
@@ -163,9 +164,8 @@
 </body>
 <script>
     get_studio();
-//    message('./aboutMe.html');
+
     get_user_message('/me.jsp');
-//    account();
 
 </script>
 </html>

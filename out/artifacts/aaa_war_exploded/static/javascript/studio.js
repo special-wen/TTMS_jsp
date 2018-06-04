@@ -15,7 +15,7 @@ function addStudio() {
     }else {
         flag = 0;
     }
-    if(check() && check1() && check2() && check3() && check4() && check5() && check6() && check7() ){
+    if(check() && check1() && check2() && check3() ){
 
     }else {
         alert("格式输入有误！");
@@ -160,7 +160,15 @@ function change() {
 
 }
 
-
+//记录选择的是什么演出厅
+function seat() {
+    let row = number;
+    var seat = [];
+    seat = changeRow(row);
+    // console.log(seat[0]);
+    localStorage.setItem("studio_id",seat[0]);
+    window.location.href = 'http://localhost:9999/mana/seat.jsp';
+}
 function putStudio() {
     let studio_no = document.getElementById('studio_no').value;
     let studio_name = document.getElementById('changeName').value;
@@ -201,7 +209,7 @@ function putStudio() {
 }
 
 
-
+//添加演出厅名称
 function check() {
     let aaa = document.getElementById('studioName').value;
     console.log(aaa);
@@ -218,7 +226,7 @@ function check() {
     // alert(aaa);
 }
 
-
+//添加演出厅行数
 function check1() {
     let aaa = document.getElementById('sateRow').value;
     console.log(aaa);
@@ -235,6 +243,7 @@ function check1() {
     // alert(aaa);
 }
 
+//添加演出厅列数
 function check2() {
     let aaa = document.getElementById('sateCol').value;
     console.log(aaa);
@@ -247,6 +256,7 @@ function check2() {
     }
 }
 
+//添加演出厅状态
 function check3() {
     let aaa = document.getElementById('studioState').value;
     console.log(aaa);

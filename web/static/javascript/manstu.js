@@ -23,6 +23,7 @@ function get_studio() {
                 let tr = document.createElement('tr');
                 let td0 = document.createElement('td');
                 td0.innerText = json[i][0];
+                console.log(json[i][0]);
                 td0.setAttribute('style','display: none;');
                 let td1 = document.createElement('td');
                 td1.innerText = json[i][1];

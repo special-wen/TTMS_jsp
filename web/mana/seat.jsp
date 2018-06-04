@@ -96,6 +96,7 @@
 
 </body>
 <script>
-    studioSeat();
+    // studioSeat();
+    createState()
 </script>
 </html>
