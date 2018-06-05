@@ -10,6 +10,11 @@ import java.util.ArrayList;
 public interface ISeat {
     //增
     public boolean insert(Seat seat);
+    //删
+    //改
+    //查  更具影厅id查找座位信息
+
+
 //    public boolean update(Seat seat);
 
     //查找所有座位

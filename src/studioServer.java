@@ -1,6 +1,7 @@
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import sss.idao.DAOFactory;
+import sss.model.Seat;
 import sss.model.Studio;
 
 import javax.servlet.ServletException;
@@ -25,6 +26,7 @@ public class studioServer extends HttpServlet {
         Writer out = response.getWriter();
         JSONObject json = new JSONObject();
         Studio s = new Studio();
+        Seat seat = new Seat();
         try {
             s.setStudio_name(request.getParameter("studio_name"));
             s.setStudio_row_count(Integer.valueOf(request.getParameter("studio_rows")));
@@ -37,13 +39,15 @@ public class studioServer extends HttpServlet {
             out.write(json.toString());
             return;
         }
-        if (DAOFactory.createStudioDAO().insert(s)){
+        int aa = DAOFactory.createStudioDAO().insert(s);
+        if (aa != -1){
             System.out.println("演出厅插入数据成功");
-
-            System.out.println(s);
             json.put("state",true);
-            System.out.println(s.getStudio_id());
-//            json.put("studio_id",s.getStudio_id());
+            seat.setStudio_id(aa);
+            seat.setSeat_row(s.getStudio_row_count());
+            seat.setSeat_column(s.getStudio_col_count());
+            seat.setSeat_status(0);
+            DAOFactory.createSeatDAO().insert(seat);
             out.write(json.toString());
         }else {
             System.out.println("演出厅插入数据失败");

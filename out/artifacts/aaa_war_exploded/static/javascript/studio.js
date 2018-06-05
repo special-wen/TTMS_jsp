@@ -32,7 +32,6 @@ function addStudio() {
         if(xml.readyState == 4 && xml.status == 200){
             let json = JSON.parse(xml.responseText);
             if (json.state){
-                alert("刷新");
                 get_studio();
             }else{
                 alert("失败，请重试！");
@@ -42,29 +41,9 @@ function addStudio() {
 
     let sss = window.location.search;
 
-
     xml.open(method,'/api/studio');
     xml.setRequestHeader("Content-type","application/x-www-form-urlencoded");
     xml.send(data);
-
-
-    var xhr = new XMLHttpRequest();
-    xhr.onreadystatechange = function () {
-        if(xhr.readyState == 4 && xhr.status == 200){
-            let json = JSON.parse(xhr.responseText);
-            if (json.state){
-                alert("座位插入成功！");
-                // get_studio();
-            }else{
-                alert("座位插入失败，请重试！");
-            }
-        }
-    };
-
-
-    xhr.open(method,'/api/seat');
-    xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-    xhr.send(data);
 
 }
 
@@ -192,7 +171,7 @@ function seat() {
     seat = changeRow(row);
     // console.log(seat[0]);
     localStorage.setItem("studio_id",seat[0]);
-    window.location.href = 'http://localhost:9999/mana/seat.jsp';
+    window.location.href = 'http://localhost:9999/admin/seat.jsp';
 }
 function putStudio() {
     let studio_no = document.getElementById('studio_no').value;
