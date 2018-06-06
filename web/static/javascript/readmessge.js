@@ -9,6 +9,8 @@ function get_user_message(url) {
             let json = JSON.parse(xmlhttp.responseText);
             let top = document.getElementById("user");
             if(json.login == true){
+                //常见一个img便签
+                //document.createElement('')
                 let head = document.createElement('img');
                 if(json.head_path === ''){
                     head.setAttribute("src","/static/image/user.jpg");

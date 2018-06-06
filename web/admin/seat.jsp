@@ -86,7 +86,11 @@
 
 </body>
 <script>
+    aa();
+    bb();
+
     // studioSeat();
-    createState()
+    // createState();
+
 </script>
 </html>

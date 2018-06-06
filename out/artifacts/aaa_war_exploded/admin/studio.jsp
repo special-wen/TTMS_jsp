@@ -54,6 +54,7 @@
             <td>演出厅状态</td>
         </tr>
         <tbody id="tbody">
+
         </tbody>
     </table>
     <div id="test1"></div>

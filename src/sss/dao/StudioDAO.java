@@ -124,7 +124,7 @@ public class StudioDAO implements IStudio {
         ResultSet rs = null;
         try
         {
-            // 获取所有用户数据
+            // 获取所有数据
             pstmt = con.prepareStatement("select * from studio where studio_id = ?");
             pstmt.setInt(1,id);
             rs = pstmt.executeQuery();
