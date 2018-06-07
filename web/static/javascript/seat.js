@@ -3,15 +3,18 @@
 
 //添加座位
 // array[i][j] = 0 座位正常
-// array[i][j] = 1 座位选中
 // array[i][j] = -1 座位坏掉
-// array[i][j] = 2 改为过道
+// array[i][j] = 1 改为过道
+
+var changRow = 0;
+var changeCol = 0;
 
 var row;
 var col;
 var array = new Array();
 var flag_aa = 0;
 var flag_bb = 0;
+var seat_status = 0;
 
 
 
@@ -67,11 +70,15 @@ function bb() {
 }
 
 function createState(){
-
-    for (let i = 1;i<=col;i++){
+    alert(row);
+    alert(col);
+    var count = 0;
+    for (let i = 1;i<=row;i++){
+        count++;
+        console.log(count);
         var div1 = document.createElement('div');
         div1.setAttribute("id","div"+i);
-        for (let j = 1;j<= row;j++){
+        for (let j = 1;j<= col;j++){
             // var div = document.getElementById("div");
 
             var oneSeat = document.createElement('div');
@@ -89,26 +96,49 @@ function createState(){
                 seatImage.style.height = "42px";
                 seatImage.style.width = "42px";
             }
-            // console.log(array[i-1]+[j-1]);
-
+            console.log(array[i-1][j-1]);
+            seatImage.setAttribute("id","img"+j+i);
             if (array[i-1][j-1] == 0){
                 seatImage.src = '/static/image/seat.png';
             }else if (array[i-1][j-1] == 1){
-                seatImage.src = '/static/image/select.png';
+                seatImage.src = '/static/image/aisle.png';
             }else if (array[i-1][j-1] == -1){
                 seatImage.src = '/static/image/broken.png';
-            }else {
-                seatImage.src = '/static/image/aisle.png';
             }
             oneSeat.appendChild(seatImage);
             oneSeat.appendChild(num);
             div1.appendChild(oneSeat);
             document.getElementById('seat').appendChild(div1);
-            // seatImage.setAttribute('data-toggle', 'modal');
-            // seatImage.setAttribute('data-target', '#myModal');
-            seatImage.setAttribute('onclick','change(this)');
+            seatImage.setAttribute('data-toggle', 'modal');
+            seatImage.setAttribute('data-target', '#myModal');
+            seatImage.addEventListener('click',function changeSate() {
+                changRow = i;
+                changeCol =j;
+                let where = document.getElementById('title');
+                where.innerHTML = '请选择第' + j + '行第' + i + '列状态：';
+            });
 
-
+            let changeBtn = document.getElementById('update');
+            changeBtn.onclick = function changeState() {
+                let seatState = document.getElementById('seatState');
+                let newSeat = document.getElementById("img"+changeCol+changRow);
+                let index = seatState.selectedIndex;
+                let value = seatState.options[index].value;
+                if (value == 'active'){
+                    seat_status = 0;
+                    newSeat.src = '/static/image/seat.png';
+                    console.log("active");
+                }else if (value == 'broken'){
+                    seat_status = -1;
+                    newSeat.src = '/static/image/broken.png';
+                    console.log("broken");
+                }else if (value == 'aisle'){
+                    seat_status = 1;
+                    newSeat.src = '/static/image/aisle.png';
+                    console.log("aisle");
+                }
+                change();
+            }
         }
 
         var br = document.createElement('br');
@@ -117,98 +147,38 @@ function createState(){
     }
     var seatWidth = document.getElementById('seat');
     if (col < 5 || row < 5){
-        seatWidth.style.width = (80+42) * col +80;
+        seatWidth.style.width = (80+42) * row +80;
     }else {
-        seatWidth.style.width = (32+60)* col +60;
+        seatWidth.style.width = (32+60)* row +60;
     }
 }
 
-function change() {
-    // alert("aaaa");
-    alert(this);
-    //获取到行列
-    //发送请求
-    //返回
-    //重新绘制
+function change()   {
+    let xml = new XMLHttpRequest();
+    xml.onreadystatechange = function () {
+        if (xml.readyState == 4 && xml.status == 200){
+            let json = JSON.parse(xml.responseText);
+            if (json.state){
+                var seat = document.getElementById("seat");
+                // seat.empty();
+                // aa();
+                // bb();
+            }else {
+                alert("失败刷新重试");
+            }
+        }
+    };
+    let studio_id = localStorage.getItem("studio_id");
+    let method = 'PUT';
+    let data = 'studio_id='+studio_id+'&seat_row='+changRow+'&seat_column='+changeCol+'&seat_status='+seat_status;
+    alert(data);
+    xml.open(method,'/api/seat');
+    xml.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+    xml.send(data);
 
 }
 
 
-
-
-
-
-// seatImage.addEventListener('click', function getState() {
-//     row = i;
-//     col = j;
-//     array[i-1][j-1] = 1;
-//     let where = document.getElementById('title');
-//     where.innerHTML = '请选择第' + i + '行第' + j + '列状态：';
-//     seatImage.src = '/static/image/select.png';
-//     seatImage.setAttribute("id", "sate"+i+j);
-//
-//     console.log(row, col);
-// });
-// let change = document.getElementById('update');
-// change.onclick = function changeState() {
-//     let imageId = "sate"+row+col;
-//     let newState = document.getElementById(imageId);
-//     let seatState = document.getElementById('seatState');
-//     let index = seatState.selectedIndex;
-//     let value = seatState.options[index].value;
-//     if(value == 'active'){
-//         array[row-1][col-1] = 0;
-//         newState.src = '/static/image/seat.png';
-//         console.log('active');
-//     } else if(value == 'broken'){
-//         array[row-1][col-1] = -1;
-//         newState.src = '/static/image/broken.png';
-//         console.log('broken');
-//     }
-//     else if(value == 'aisle'){
-//         array[row-1][col-1] = 2;
-//         newState.src = '/static/image/aisle.png';
-//         console.log('aisle');
-//     }
-// }
-//
-
-
-
-
-    // for(let i = 1;i<=8;i++){
-    //     for(let j = 1;j<=8;j++) {
-    //         let one = document.createElement('div');
-    //         document.getElementById('seat').appendChild(one);
-    //         one.setAttribute('class', 'oneDiv');
-    //         let sateImage = document.createElement('img');
-    //         let num = document.createElement('span');
-    //         num.innerText = i + ',' + j;
-    //         sateImage.setAttribute("class", "sate");
-    //         sateImage.setAttribute("id", "sate"+i+j);
-    //         sateImage.setAttribute('data-toggle', 'modal');
-    //         sateImage.setAttribute('data-target', '#myModal');
-    //         sateImage.src = '/static/image/seat.png';
-
-    //         one.appendChild(sateImage);
-    //         one.ap
-
-
-
-
-
-    // for(let i = 1;i<=8;i++){
-    //     for(let j = 1;j<=8;j++) {
-    //         let one = document.createElement('div');
-    //         document.getElementById('seat').appendChild(one);
-    //         one.setAttribute('class', 'oneDiv');
-    //         let sateImage = document.createElement('img');
-    //         let num = document.createElement('span');
-    //         num.innerText = i + ',' + j;
-    //         sateImage.setAttribute("class", "sate");
-    //         sateImapendChild(num);
-    //
-    //     }
 
 
 

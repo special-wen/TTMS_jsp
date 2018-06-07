@@ -83,21 +83,6 @@ function butInfo() {
     document.getElementById('emp_addr').value = mesInfo[2];
     document.getElementById('emp_email').value = mesInfo[3];
     document.getElementById('emp_tel').value = mesInfo[4];
-    // alert(document.getElementById('emp_tel').value);
-    // let len = mesInfo.length;
-    // for(let i = 0;i<len;i++){
-    //     emp[i] = mesInfo[i];
-    // }
-    // emp_no =mesInfo[0];
-    // emp_name = mesInfo[1];
-    // emp_addr= mesInfo[2];
-    // emp_email= mesInfo[3];
-    // emp_tel = mesInfo[4];
-    // emp_no.setAttribute('placeholder',mesInfo[0]);
-    // emp_name.setAttribute('placeholder',mesInfo[1]);
-    // emp_addr.setAttribute('placeholder',mesInfo[2]);
-    // emp_email.setAttribute('placeholder',mesInfo[3]);
-    // emp_tel.setAttribute('placeholder',mesInfo[4]);
 }
 
 function changeInfo() {

@@ -94,18 +94,27 @@ public class SeatDAO implements ISeat {
         Connection con = ConnectionManager.getInstance().getConnection();
         PreparedStatement pstmt = null;
         try {
-            String sql = "update seat set seat_status=? where seat_id = ?";
+            String sql = "update seat set seat_status=? where studio_id=? and seat_row=? and seat_column=?";
             pstmt = con.prepareStatement(sql);
             pstmt.setInt(1,seat.getSeat_status());
-            pstmt.setInt(2,seat.getSeat_id());
+            pstmt.setInt(2,seat.getStudio_id());
+            pstmt.setInt(3,seat.getSeat_row());
+            pstmt.setInt(4,seat.getSeat_column());
+
+            System.out.println(pstmt.toString());
+            pstmt.executeUpdate();
+
+            result = true;
 
         }catch (Exception e){
             e.printStackTrace();
         }
         finally {
             ConnectionManager.close(null,pstmt,con);
+            System.out.println(result);
             return result;
         }
+
     }
 }
 

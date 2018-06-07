@@ -13,6 +13,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.Writer;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 /**
  * Created by zxw on 17-12-20.
@@ -63,9 +64,35 @@ public class seatServer extends HttpServlet {
 
         Seat seat = new Seat();
 
+        BufferedReader br = new BufferedReader(new InputStreamReader(request.getInputStream()));
+        String s = null;
+        String data = "";
+        while ((s = br.readLine())!=null){
+            data = data.concat(s).concat("\n");
+        }
+        data = data.substring(0,data.length()-1);
+        System.out.println(data);
+        HashMap<String,String>hm = new HashMap<String, String>();
         try{
-            seat.setSeat_id(Integer.valueOf(request.getParameter("seat_id")));
-            seat.setSeat_status(Integer.valueOf(request.getParameter("seat_status")));
+            String listp[] = data.split("&");
+            for (String x:listp){
+                String z[] = x.split("=");
+                if (z.length == 1){
+                    continue;
+                }
+                hm.put(z[0],z[1]);
+            }
+        }catch (Exception e){
+
+        }
+        System.out.println(hm);
+        System.out.println(hm.get("studio_id"));
+        try{
+            seat.setStudio_id(Integer.valueOf(hm.get("studio_id")));
+            seat.setSeat_row(Integer.valueOf(hm.get("seat_row")));
+            seat.setSeat_column(Integer.valueOf(hm.get("seat_column")));
+            seat.setSeat_status(Integer.valueOf(hm.get("seat_status")));
+            System.out.println(seat.getSeat_row());
         }catch (Exception e){
             e.printStackTrace();
             json.put("state",false);
