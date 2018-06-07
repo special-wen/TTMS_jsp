@@ -8,6 +8,14 @@
     overflow: hidden;
 }
 
+.div1{
+    overflow: hidden;
+}
+
+.oneSeat{
+    float: left;
+}
+
 #screen{
     width:160px;
     margin: 0 auto;

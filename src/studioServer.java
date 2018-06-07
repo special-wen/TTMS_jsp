@@ -153,9 +153,9 @@ public class studioServer extends HttpServlet {
             for (String x : listp) {
                 String z[] = x.split("=");
                 hm.put(z[0], z[1]);
+
             }
         }catch (Exception e){
-
         }
 
 
@@ -169,12 +169,16 @@ public class studioServer extends HttpServlet {
             out.write(json.toString());
             return ;
         }
-        if(DAOFactory.createStudioDAO().delete(id)){
-            json.put("status",true);
-            out.write(json.toString());
-        }else{
+        if (DAOFactory.createSeatDAO().delete(id)){
+            if (DAOFactory.createStudioDAO().delete(id)){
+                json.put("status",true);
+                out.write(json.toString());
+
+            }
+
+        } else{
             json.put("status",false);
-            System.out.print("serr");
+            System.out.print("err");
             out.write(json.toString());
         }
     }

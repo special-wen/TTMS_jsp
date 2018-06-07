@@ -25,8 +25,6 @@ function aa() {
     xml.onreadystatechange = function(){
         if (xml.readyState == 4 && xml.status == 200){
             let res = JSON.parse(xml.responseText);
-
-            // alert(res.object[2]);
             row = res.object[2];
             col = res.object[3];
             flag_aa = 1;
@@ -70,52 +68,43 @@ function bb() {
 }
 
 function createState(){
-    alert(row);
-    alert(col);
-    var count = 0;
-    for (let i = 1;i<=row;i++){
-        count++;
-        console.log(count);
-        var div1 = document.createElement('div');
-        div1.setAttribute("id","div"+i);
-        for (let j = 1;j<= col;j++){
-            // var div = document.getElementById("div");
+    for (let i = 1;i<=row;i++) {
+        var div = document.createElement("div");
+        div.setAttribute("class","div1");
 
+        for (let j = 1; j <= col; j++) {
             var oneSeat = document.createElement('div');
-            oneSeat.setAttribute('class','oneSeat');
+            oneSeat.setAttribute('class', 'oneSeat');
             oneSeat.style.paddingLeft = '60px';
             oneSeat.style.paddingTop = '28px';
-            // oneSeat.style.cssFloat = left;
             let seatImage = document.createElement('img');
             let num = document.createElement('span');
-            num.setAttribute('class','number');
-            num.innerText = j + ',' + i;
-            seatImage.setAttribute('class','seatImg');
+            num.setAttribute('class', 'number');
+            num.innerText = i + ',' + j;
+            seatImage.setAttribute('class', 'seatImg');
             if (col < 5 || row < 5){
                 oneSeat.style.paddingLeft = '80px';
                 seatImage.style.height = "42px";
                 seatImage.style.width = "42px";
             }
-            console.log(array[i-1][j-1]);
-            seatImage.setAttribute("id","img"+j+i);
-            if (array[i-1][j-1] == 0){
+            seatImage.setAttribute("id", "img" + j + i);
+            if (array[i - 1][j - 1] == 0) {
                 seatImage.src = '/static/image/seat.png';
-            }else if (array[i-1][j-1] == 1){
+            } else if (array[i - 1][j - 1] == 1) {
                 seatImage.src = '/static/image/aisle.png';
-            }else if (array[i-1][j-1] == -1){
+            } else if (array[i - 1][j - 1] == -1) {
                 seatImage.src = '/static/image/broken.png';
             }
             oneSeat.appendChild(seatImage);
             oneSeat.appendChild(num);
-            div1.appendChild(oneSeat);
-            document.getElementById('seat').appendChild(div1);
+            div.appendChild(oneSeat);
             seatImage.setAttribute('data-toggle', 'modal');
             seatImage.setAttribute('data-target', '#myModal');
-            seatImage.addEventListener('click',function changeSate() {
+            seatImage.addEventListener('click', function changeSate() {
                 changRow = i;
-                changeCol =j;
+                changeCol = j;
                 let where = document.getElementById('title');
-                where.innerHTML = '请选择第' + j + '行第' + i + '列状态：';
+                where.innerHTML = '请选择第' + i + '行第' + j + '列状态：';
             });
 
             let changeBtn = document.getElementById('update');
@@ -139,17 +128,15 @@ function createState(){
                 }
                 change();
             }
-        }
 
-        var br = document.createElement('br');
-        div1.appendChild(br);
-        div1.style.cssFloat = "left";
+            document.getElementById("seat").appendChild(div);
+        }
     }
     var seatWidth = document.getElementById('seat');
     if (col < 5 || row < 5){
-        seatWidth.style.width = (80+42) * row +80;
+        seatWidth.style.width = (80+42) * col +80;
     }else {
-        seatWidth.style.width = (32+60)* row +60;
+        seatWidth.style.width = (32+60)* col +60;
     }
 }
 
@@ -171,7 +158,6 @@ function change()   {
     let studio_id = localStorage.getItem("studio_id");
     let method = 'PUT';
     let data = 'studio_id='+studio_id+'&seat_row='+changRow+'&seat_column='+changeCol+'&seat_status='+seat_status;
-    alert(data);
     xml.open(method,'/api/seat');
     xml.setRequestHeader("Content-type","application/x-www-form-urlencoded");
     xml.send(data);

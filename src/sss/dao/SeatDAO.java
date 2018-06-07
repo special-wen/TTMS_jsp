@@ -30,7 +30,7 @@ public class SeatDAO implements ISeat {
         try {
             for (int i = 1; i <= seat.getSeat_row(); i++) {
                 for (int j = 1; j <= seat.getSeat_column(); j++) {
-                    String sql = "insert into seat(studio_id,seat_row,seat_column,seat_status) values (?,?,?,?)";
+                    String sql = "insert into sea         t(studio_id,seat_row,seat_column,seat_status) values (?,?,?,?)";
                     pstmt = con.prepareStatement(sql);
                     pstmt.setInt(1, seat.getStudio_id());
                     pstmt.setInt(2, i);
@@ -115,6 +115,33 @@ public class SeatDAO implements ISeat {
             return result;
         }
 
+    }
+
+    @Override
+    public boolean delete(int studio_id){
+        System.out.println("删除的座位的studio_id是：");
+        boolean result = false;
+        if (studio_id<=1){
+            return result;
+        }
+        Connection con = ConnectionManager.getInstance().getConnection();
+        PreparedStatement pstmt = null;
+        try {
+            //删除所有
+            String sql = "delete from seat where studio_id=?";
+
+            pstmt = con.prepareStatement(sql);
+            pstmt.setInt(1,studio_id);
+            pstmt.executeUpdate();
+            ConnectionManager.close(null,pstmt,con);
+            result = true;
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        finally {
+            ConnectionManager.close(null,pstmt,con);
+            return result;
+        }
     }
 }
 

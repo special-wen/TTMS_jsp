@@ -12,6 +12,7 @@ public interface ISeat {
     public boolean insert(Seat seat);
 
     //删
+    public boolean delete(int studio_id);
 
     //改
     public boolean update(Seat seat);

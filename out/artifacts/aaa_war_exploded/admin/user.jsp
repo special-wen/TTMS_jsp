@@ -60,7 +60,7 @@
 <li id="delete_now" style="display: none"></li>
 
 <!--人员的增删改查-->
-<div>
+<div style="float: right">
     <form class="navbar-form navbar-left" role="search">
         <div class="form-group">
             <input type="text" class="form-control" id = "user_no" placeholder="查找人员">
