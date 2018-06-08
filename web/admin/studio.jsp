@@ -12,6 +12,7 @@
     <title>演出厅管理</title>
     <link rel="stylesheet" type="text/css" href="/static/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="/static/css/studio.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/user.css">
     <script src="/static/javascript/studio.js"></script>
     <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
     <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
@@ -46,14 +47,14 @@
 <div id="table">
     <table class="table table-striped table-hover" id = 'studio' onclick="studioRow(this)" >
         <caption style="text-align: center">那一年影院演出厅</caption>
-        <tr class="warning">
+        <tr class="warning" style="text-align: center">
             <td>演出厅名称</td>
             <td>座位行数</td>
             <td>座位列数</td>
             <td>演出厅详情</td>
             <td>演出厅状态</td>
         </tr>
-        <tbody id="tbody">
+        <tbody id="tbody" style="text-align: center">
 
         </tbody>
     </table>
@@ -62,7 +63,7 @@
 </div>
 <div style="margin:0px 30px;font-size: 18px;text-align: center">
     <button type = "button" class="btn btn-default navbar-btn"onclick="other_page(-1)"><</button>
-    第<u id="now_page">1</u>页
+    第<u id="now_page">1</u>页/<sanp id = "pages"></sanp>
 
     <button type = "button" class="btn btn-default navbar-btn"onclick="other_page(1)">></button>
     每页显示
@@ -71,6 +72,7 @@
         <option value="10">10</option>
         <option value="15">15</option>
     </select>
+
 </div>
 <li id="delete_now" style="display: none"></li>
 
@@ -148,15 +150,12 @@
         </div>
     </div>
 </div>
-
-<!--<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#error"></button>-->
-
 <div class="modal fade" id="error" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="alert alert-warning">
-            <a href="#" class="close" data-dismiss="alert">
-                &times;
-            </a>
+            <%--<a href="#" class="close" data-dismiss="alert">--%>
+                <%--&times;--%>
+            <%--</a>--%>
             <strong>警告</strong><p id = 'waring'></p>
         </div>
     </div><!-- /.modal -->
@@ -164,8 +163,8 @@
 
 </body>
 <script>
+    getStudioCount();
     get_studio();
-
     get_user_message('/me.jsp');
 
 </script>

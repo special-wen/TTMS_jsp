@@ -11,13 +11,41 @@
   <component name="ChangeListManager">
     <list default="true" id="fade8653-9a97-4cb4-bf39-6bca313cf18f" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/css/seat.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/css/seat.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/javascript/seat.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/javascript/seat.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sss/dao/SeatDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sss/dao/SeatDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sss/idao/ISeat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sss/idao/ISeat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/studioServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/studioServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/static/css/seat.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/css/seat.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/static/javascript/seat.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/javascript/seat.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/WEB-INF/classes/employeeServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/WEB-INF/classes/employeeServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/WEB-INF/classes/sss/dao/EmployeeDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/WEB-INF/classes/sss/dao/EmployeeDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/WEB-INF/classes/sss/dao/UserDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/WEB-INF/classes/sss/dao/UserDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/WEB-INF/classes/sss/idao/IUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/WEB-INF/classes/sss/idao/IUser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/WEB-INF/classes/userServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/WEB-INF/classes/userServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/admin/employee.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/admin/employee.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/admin/studio.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/admin/studio.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/admin/user.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/admin/user.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/manager.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/javascript/empList.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/javascript/empList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/javascript/employee.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/javascript/employee.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/javascript/manstu.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/javascript/manstu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/javascript/readmessge.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/javascript/readmessge.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/javascript/studio.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/javascript/studio.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/javascript/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/javascript/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/aaa/employeeServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/aaa/employeeServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/aaa/sss/dao/EmployeeDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/aaa/sss/dao/EmployeeDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/aaa/sss/dao/UserDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/aaa/sss/dao/UserDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/aaa/sss/idao/IUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/aaa/sss/idao/IUser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/aaa/userServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/aaa/userServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/employeeServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/employeeServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sss/dao/EmployeeDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sss/dao/EmployeeDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sss/dao/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sss/dao/UserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sss/idao/IUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sss/idao/IUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/userServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/userServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/admin/employee.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin/employee.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/admin/studio.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin/studio.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/admin/user.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin/user.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/manager.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/static/javascript/empList.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/javascript/empList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/static/javascript/employee.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/javascript/employee.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/static/javascript/manstu.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/javascript/manstu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/static/javascript/readmessge.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/javascript/readmessge.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/static/javascript/studio.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/javascript/studio.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/static/javascript/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/javascript/user.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -40,28 +68,44 @@
     <favorites_list name="TTMS_jsp" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="user.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/admin/user.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-684" />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="studio.jsp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web/admin/studio.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="249">
-              <caret line="78" column="40" selection-start-line="78" selection-start-column="29" selection-end-line="78" selection-end-column="40" />
-              <folding>
-                <element signature="n#div#4;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#5;n#body#0;n#html#0;n#!!top" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.5">
+      <split-first>
+        <leaf>
+          <file leaf-file-name="studioServer.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/studioServer.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="364">
+                  <caret line="48" column="35" lean-forward="true" selection-start-line="48" selection-start-column="35" selection-end-line="48" selection-end-column="35" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                    <element signature="method#doGet#0;class#studioServer#0" />
+                    <element signature="e#2579#2589#0" expanded="true" />
+                    <element signature="method#doPut#0;class#studioServer#0" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="userServer.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/userServer.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="398">
+                  <caret line="98" column="16" selection-start-line="98" selection-start-column="16" selection-end-line="98" selection-end-column="16" />
+                  <folding>
+                    <element signature="method#doDelete#0;class#userServer#0" />
+                    <element signature="method#doPut#0;class#userServer#0" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -84,6 +128,7 @@
       <find>studio_name</find>
       <find>console</find>
       <find>alert</find>
+      <find>reset</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -98,10 +143,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/web/login.html" />
-        <option value="$PROJECT_DIR$/web/database.jsp" />
-        <option value="$PROJECT_DIR$/web/mana/easy/aboutme.js" />
-        <option value="$PROJECT_DIR$/src/message.java" />
         <option value="$PROJECT_DIR$/src/MyInfo.java" />
         <option value="$PROJECT_DIR$/web/mana/easy/model.jsp" />
         <option value="$PROJECT_DIR$/web/me.jsp" />
@@ -111,22 +152,14 @@
         <option value="$PROJECT_DIR$/web/static/javascript/message.js" />
         <option value="$PROJECT_DIR$/src/myInfoServer.java" />
         <option value="$PROJECT_DIR$/src/sss/idao/IEmployee.java" />
-        <option value="$PROJECT_DIR$/web/static/javascript/empList.js" />
         <option value="$PROJECT_DIR$/web/mana/easy/seat.jsp" />
         <option value="$PROJECT_DIR$/src/sss/model/Employee.java" />
-        <option value="$PROJECT_DIR$/src/sss/dao/EmployeeDAO.java" />
-        <option value="$PROJECT_DIR$/src/sss/idao/IUser.java" />
-        <option value="$PROJECT_DIR$/src/sss/dao/UserDAO.java" />
-        <option value="$PROJECT_DIR$/src/userServer.java" />
         <option value="$PROJECT_DIR$/web/mana/hard/user.jsp" />
         <option value="$PROJECT_DIR$/web/mana/easy/studio.jsp" />
         <option value="$PROJECT_DIR$/web/mana/hard/employee.jsp" />
-        <option value="$PROJECT_DIR$/src/employeeServer.java" />
         <option value="$PROJECT_DIR$/web/mana/easy/aboutMe.jsp" />
-        <option value="$PROJECT_DIR$/web/static/javascript/employee.js" />
         <option value="$PROJECT_DIR$/web/administrator.jsp" />
         <option value="$PROJECT_DIR$/web/studio.jsp" />
-        <option value="$PROJECT_DIR$/web/static/javascript/user.js" />
         <option value="$PROJECT_DIR$/web/mana/studio.jsp" />
         <option value="$PROJECT_DIR$/web/mana/seat.jsp" />
         <option value="$PROJECT_DIR$/src/sss/idao/DAOFactory.java" />
@@ -135,13 +168,9 @@
         <option value="$PROJECT_DIR$/src/account.java" />
         <option value="$PROJECT_DIR$/src/sss/Filter/Useradmin.java" />
         <option value="$PROJECT_DIR$/src/BackEntry.java" />
-        <option value="$PROJECT_DIR$/web/static/javascript/studio.js" />
-        <option value="$PROJECT_DIR$/web/static/javascript/readmessge.js" />
         <option value="$PROJECT_DIR$/web/static/javascript/userMessage.js" />
         <option value="$PROJECT_DIR$/src/sss/dao/StudioDAO.java" />
         <option value="$PROJECT_DIR$/web/admin/seat.jsp" />
-        <option value="$PROJECT_DIR$/web/admin/studio.jsp" />
-        <option value="$PROJECT_DIR$/web/static/javascript/manstu.js" />
         <option value="$PROJECT_DIR$/web/static/javascript/messinfo.js" />
         <option value="$PROJECT_DIR$/src/seatServer.java" />
         <option value="$PROJECT_DIR$/web/static/css/seat.css" />
@@ -149,6 +178,22 @@
         <option value="$PROJECT_DIR$/src/sss/idao/ISeat.java" />
         <option value="$PROJECT_DIR$/src/sss/dao/SeatDAO.java" />
         <option value="$PROJECT_DIR$/src/studioServer.java" />
+        <option value="$PROJECT_DIR$/web/manager.jsp" />
+        <option value="$PROJECT_DIR$/web/account.jsp" />
+        <option value="$PROJECT_DIR$/web/static/javascript/studio.js" />
+        <option value="$PROJECT_DIR$/web/static/javascript/readmessge.js" />
+        <option value="$PROJECT_DIR$/web/static/javascript/manstu.js" />
+        <option value="$PROJECT_DIR$/src/employeeServer.java" />
+        <option value="$PROJECT_DIR$/src/sss/dao/EmployeeDAO.java" />
+        <option value="$PROJECT_DIR$/src/sss/idao/IUser.java" />
+        <option value="$PROJECT_DIR$/src/sss/dao/UserDAO.java" />
+        <option value="$PROJECT_DIR$/web/static/javascript/empList.js" />
+        <option value="$PROJECT_DIR$/web/admin/employee.jsp" />
+        <option value="$PROJECT_DIR$/web/static/javascript/employee.js" />
+        <option value="$PROJECT_DIR$/web/admin/studio.jsp" />
+        <option value="$PROJECT_DIR$/web/admin/user.jsp" />
+        <option value="$PROJECT_DIR$/web/static/javascript/user.js" />
+        <option value="$PROJECT_DIR$/src/userServer.java" />
       </list>
     </option>
   </component>
@@ -192,6 +237,8 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -239,20 +286,7 @@
               <item name="TTMS_jsp" type="b2602c69:ProjectViewProjectNode" />
               <item name="TTMS_jsp" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="META-INF" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TTMS_jsp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TTMS_jsp" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TTMS_jsp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TTMS_jsp" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TTMS_jsp" type="b2602c69:ProjectViewProjectNode" />
@@ -261,18 +295,10 @@
               <item name="static" type="462c0819:PsiDirectoryNode" />
               <item name="javascript" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="TTMS_jsp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TTMS_jsp" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -863,12 +889,14 @@
       <workItem from="1528203999369" duration="647000" />
       <workItem from="1528243970094" duration="20651000" />
       <workItem from="1528330200784" duration="14600000" />
-      <workItem from="1528344987000" duration="2984000" />
+      <workItem from="1528344987000" duration="3293000" />
+      <workItem from="1528417016446" duration="15096000" />
+      <workItem from="1528436457658" duration="2763000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="357455000" />
+    <option name="totallyTimeSpent" value="375623000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -896,15 +924,15 @@
       <window_info id="UI Designer" order="4" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.516692" side_tool="true" weight="0.21322314" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="8" sideWeight="0.4969651" weight="0.30921054" />
+      <window_info anchor="bottom" id="Messages" order="8" sideWeight="0.4969651" weight="0.30833334" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info id="Image Layers" order="5" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" weight="0.32833335" />
       <window_info anchor="right" id="Capture Analysis" order="7" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.32833335" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.48330805" weight="0.5372807" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4969651" weight="0.51666665" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4280992" visible="true" weight="0.2099359" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.48330805" visible="true" weight="0.19298245" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4969651" weight="0.51644737" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4280992" weight="0.18482906" />
       <window_info id="Web" order="6" sideWeight="0.57190084" side_tool="true" weight="0.19195752" />
       <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info id="Favorites" order="7" side_tool="true" />
@@ -963,7 +991,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="19" />
+      <option name="time" value="21" />
     </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
@@ -971,29 +999,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/sss/dao/StudioDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1843">
-          <caret line="166" column="71" selection-start-line="166" selection-start-column="71" selection-end-line="166" selection-end-column="71" />
-          <folding>
-            <element signature="method#insert#0;class#StudioDAO#0" />
-            <element signature="method#delete#0;class#StudioDAO#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/seatServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="58" lean-forward="true" selection-start-line="58" selection-end-line="58" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#doGet#0;class#seatServer#0" />
-            <element signature="e#2619#2635#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/static/javascript/manstu.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -1006,34 +1011,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="440">
           <caret line="208" selection-start-line="208" selection-end-line="208" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sss/idao/IEmployee.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="26" column="20" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/static/javascript/employee.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="57" lean-forward="true" selection-start-line="57" selection-end-line="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sss/dao/UserDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2413">
-          <caret line="135" column="23" selection-start-line="135" selection-start-column="23" selection-end-line="135" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sss/dao/EmployeeDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5510">
-          <caret line="349" column="20" selection-start-line="349" selection-start-column="20" selection-end-line="349" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -1054,39 +1031,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/administrator.jsp" />
-    <entry file="file://$PROJECT_DIR$/web/account.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-82" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/error.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-248" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/manager.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-285" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/employeeServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3614">
-          <caret line="26" column="61" selection-start-line="26" selection-start-column="61" selection-end-line="26" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sss/model/User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
           <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/static/javascript/user.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1092">
-          <caret line="73" column="40" selection-start-line="73" selection-start-column="40" selection-end-line="73" selection-end-column="40" />
         </state>
       </provider>
     </entry>
@@ -1104,31 +1052,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="7" lean-forward="true" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="84" column="36" selection-start-line="84" selection-start-column="36" selection-end-line="84" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/MyInfo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
           <caret line="42" column="61" selection-start-line="42" selection-start-column="61" selection-end-line="42" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/me.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="14" lean-forward="true" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -1167,20 +1094,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/static/javascript/readmessge.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="19" column="38" lean-forward="true" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sss/idao/IUser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="22" column="27" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sss/model/Studio.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-419">
@@ -1202,31 +1115,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/static/javascript/manstu.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1043">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/static/javascript/messinfo.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-492">
           <caret line="84" column="58" selection-start-line="84" selection-start-column="58" selection-end-line="84" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/admin/seat.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="426">
-          <caret line="88" column="5" lean-forward="true" selection-start-line="88" selection-start-column="5" selection-end-line="88" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/userServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="21" column="53" selection-start-line="21" selection-start-column="53" selection-end-line="21" selection-end-column="53" />
         </state>
       </provider>
     </entry>
@@ -1260,9 +1152,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1008">
           <caret line="103" column="26" lean-forward="true" selection-start-line="102" selection-start-column="12" selection-end-line="103" selection-end-column="26" />
-          <folding>
-            <element signature="method#insert#0;class#StudioDAO#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1273,20 +1162,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/static/javascript/studio.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3648">
-          <caret line="210" selection-start-line="210" selection-end-line="211" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sss/idao/ISeat.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="14" column="34" lean-forward="true" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1294,40 +1173,229 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="87">
           <caret line="121" column="44" selection-start-line="121" selection-start-column="44" selection-end-line="121" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/account.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/database.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="24" column="19" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="84" column="36" selection-start-line="84" selection-start-column="36" selection-end-line="84" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/me.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/static/javascript/readmessge.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="627">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sss/dao/EmployeeDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="216" lean-forward="true" selection-start-line="216" selection-end-line="216" />
           <folding>
-            <element signature="method#insert#0;class#SeatDAO#0" />
-            <element signature="method#findSeatStateByStudioId#0;class#SeatDAO#0" />
-            <element signature="method#update#0;class#SeatDAO#0" />
+            <element signature="e#5055#5065#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/studioServer.java">
+    <entry file="file://$PROJECT_DIR$/src/sss/idao/IEmployee.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="933">
-          <caret line="178" column="10" selection-start-line="178" selection-start-column="10" selection-end-line="178" selection-end-column="10" />
+        <state relative-caret-position="298">
+          <caret line="21" column="31" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/employeeServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="127" column="21" selection-start-line="127" selection-start-column="21" selection-end-line="127" selection-end-column="21" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#doGet#0;class#studioServer#0" />
-            <element signature="e#2579#2589#0" expanded="true" />
-            <element signature="method#doPut#0;class#studioServer#0" />
-            <element signature="e#7516#7531#0" expanded="true" />
+            <element signature="method#doPost#0;class#employeeServer#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sss/idao/IUser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="25" column="56" lean-forward="true" selection-start-line="25" selection-start-column="56" selection-end-line="25" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sss/dao/UserDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="242" column="40" selection-start-line="242" selection-start-column="40" selection-end-line="242" selection-end-column="40" />
+          <folding>
+            <element signature="method#insert#0;class#UserDAO#0" />
+            <element signature="method#delete#0;class#UserDAO#0" />
+            <element signature="method#update#0;class#UserDAO#0" />
+            <element signature="method#findUserAll#0;class#UserDAO#0" />
+            <element signature="method#findUserById#0;class#UserDAO#0" />
+            <element signature="method#findUserByNo#0;class#UserDAO#0" />
+            <element signature="e#6328#6334#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/static/javascript/studio.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="272" column="9" selection-start-line="272" selection-start-column="9" selection-end-line="272" selection-end-column="9" />
+          <folding>
+            <element signature="n#!!block;n#studioRow#0" />
+            <element signature="n#!!block;n#changeRow#0" />
+            <element signature="n#!!block;n#change#0" />
+            <element signature="n#!!block;n#putStudio#0" />
+            <element signature="n#!!block;n#check#0" />
+            <element signature="n#!!block;n#check1#0" />
+            <element signature="n#!!block;n#check2#0" />
+            <element signature="n#!!block;n#check4#0" />
+            <element signature="n#!!block;n#check5#0" />
+            <element signature="n#!!block;n#check6#0" />
+            <element signature="n#!!block;n#check7#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/static/javascript/manstu.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="14" column="33" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/static/javascript/empList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="686">
+          <caret line="108" column="38" selection-start-line="108" selection-start-column="38" selection-end-line="108" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/static/javascript/employee.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="266" column="27" selection-start-line="266" selection-start-column="27" selection-end-line="266" selection-end-column="27" />
+          <folding>
+            <element signature="n#!!block;n#studioRow#0" />
+            <element signature="n#!!block;n#deleteRow#0" />
+            <element signature="n#!!block;n#removeEmployee#0" />
+            <element signature="n#!!block;n#changeRow#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/static/css/user.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/admin/seat.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="88" column="5" lean-forward="true" selection-start-line="88" selection-start-column="5" selection-end-line="88" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/admin/employee.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="23" column="93" lean-forward="true" selection-start-line="23" selection-start-column="93" selection-end-line="23" selection-end-column="93" />
+          <folding>
+            <element signature="n#style#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#caption#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/admin/studio.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="551">
+          <caret line="56" column="51" selection-start-line="56" selection-start-column="51" selection-end-line="56" selection-end-column="51" />
+          <folding>
+            <element signature="n#style#0;n#tr#0;n#table#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#tbody#0;n#table#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/admin/user.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-684" />
+        <state relative-caret-position="529">
+          <caret line="163" column="10" selection-start-line="163" selection-start-column="10" selection-end-line="163" selection-end-column="10" />
+          <folding>
+            <element signature="n#style#0;n#caption#0;n#table#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#tr#0;n#table#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#tbody#0;n#table#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/admin/studio.jsp">
+    <entry file="file://$PROJECT_DIR$/web/static/javascript/user.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="78" column="40" selection-start-line="78" selection-start-column="29" selection-end-line="78" selection-end-column="40" />
+        <state relative-caret-position="-38">
+          <caret line="72" selection-start-line="72" selection-end-line="72" />
           <folding>
-            <element signature="n#div#4;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#5;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#!!block;n#check#0" />
+            <element signature="e#647#649#0" />
+            <element signature="n#!!block;n#other_page#0" />
+            <element signature="n#!!block;n#putUser#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/studioServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="48" column="35" lean-forward="true" selection-start-line="48" selection-start-column="35" selection-end-line="48" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#doGet#0;class#studioServer#0" />
+            <element signature="e#2579#2589#0" expanded="true" />
+            <element signature="method#doPut#0;class#studioServer#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/userServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="398">
+          <caret line="98" column="16" selection-start-line="98" selection-start-column="16" selection-end-line="98" selection-end-column="16" />
+          <folding>
+            <element signature="method#doDelete#0;class#userServer#0" />
+            <element signature="method#doPut#0;class#userServer#0" />
           </folding>
         </state>
       </provider>

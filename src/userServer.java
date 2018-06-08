@@ -68,7 +68,6 @@ public class userServer extends HttpServlet {
                 return;
             }
             User user = DAOFactory.createUserDAO().findUserById(id);
-//            User user = DAOFactory.createUserDAO().findUserById(id);
             if(user != null){
                 json.put("status",false);
                 jsonArr = new JSONArray();
@@ -96,21 +95,19 @@ public class userServer extends HttpServlet {
             String name = request.getParameter("name");
             System.out.println(name+1);
             if(name == null || name.equals("")){
-                System.out.println(name+"rtytrfg");
                 list = DAOFactory.createUserDAO().findUserAll(offset,nums);
-                System.out.println(name+"34343344343");
+
             }
             else{
-//                list = DAOFactory.createUserDAO().findUserById(name);
-//                System.out.println(name);
+                list = DAOFactory.createUserDAO().findUserByName(name,offset,nums);
+                System.out.println(name);
             }
             if (list.size() == 0){
                 json.put("status",false);
                 out.write(json.toString());
                 return;
             }
-            for (User user : list
-                    ){
+            for (User user : list){
                 jsonArr = new JSONArray();
                 jsonArr.add(user.getEmp_no());
                 jsonArr.add(user.getEmp_pass());

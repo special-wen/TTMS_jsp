@@ -220,5 +220,34 @@ public class UserDAO implements IUser{
         }
     }
 
-
+    @Override
+    public ArrayList<User> findUserByName(String userName,int offset,int nums){
+        System.out.println("需要模糊查找的id:"+userName);
+        if (userName == null || userName.equals(""))
+            return null;
+        ArrayList<User> list = new ArrayList<User>();
+        User info = null;
+        Connection con = ConnectionManager.getInstance().getConnection();
+        PreparedStatement pstmt = null;
+        try {
+            String sql = "select * from user where emp_no like ? limit ? , ?";
+            pstmt = con.prepareStatement(sql);
+            pstmt.setString(1, "%" + userName + "%");// 拼接模糊查询串
+            pstmt.setInt(2,offset);
+            pstmt.setInt(3,nums);
+            ResultSet rs = pstmt.executeQuery();
+            while (rs.next()){
+                info = new User();
+                info.setEmp_no(rs.getString("emp_no"));
+                info.setEmp_pass(rs.getString("emp_pass"));
+                info.setType(rs.getInt("type"));
+                list.add(info);
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }finally {
+            ConnectionManager.close(null,pstmt,con);
+            return list;
+        }
+    }
 }

@@ -33,6 +33,7 @@ function addStudio() {
             let json = JSON.parse(xml.responseText);
             if (json.state){
                 get_studio();
+                getStudioCount();
             }else{
                 alert("失败，请重试！");
             }
@@ -44,7 +45,6 @@ function addStudio() {
     xml.open(method,'/api/studio');
     xml.setRequestHeader("Content-type","application/x-www-form-urlencoded");
     xml.send(data);
-
 }
 
 
@@ -106,6 +106,7 @@ function removeStudio() {
             if(xhr.readyState == 4 && xhr.status == 200){
                 if(JSON.parse(xhr.responseText).status){
                     get_studio();
+                    getStudioCount();
                 }else{
                     alert("删除失败！");
                 }
@@ -167,11 +168,19 @@ function change() {
 //记录选择的是什么演出厅
 function seat() {
     let row = number;
-    var seat = [];
-    seat = changeRow(row);
-    // console.log(seat[0]);
-    localStorage.setItem("studio_id",seat[0]);
-    window.location.href = 'http://localhost:9999/admin/seat.jsp';
+    if (row >= 1){
+        var seat = [];
+        seat = changeRow(row);
+        localStorage.setItem("studio_id",seat[0]);
+        window.location.href = 'http://localhost:9999/admin/seat.jsp';
+    }else{
+        let changeButton = document.getElementById('seat');
+        changeButton.setAttribute('data-toggle', 'modal');
+        changeButton.setAttribute('data-target', '#error');
+        let text = document.getElementById('waring');
+        text.innerHTML = '请选择需要管理座位的演出厅的地方！'
+    }
+
 }
 function putStudio() {
     let studio_no = document.getElementById('studio_no').value;

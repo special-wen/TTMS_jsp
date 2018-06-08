@@ -1,5 +1,6 @@
 'use strict'
 let number = 0;
+var each_nums = 0;
 function check(){
     let pass = document.getElementById('pass').value;
     let passAgain = document.getElementById('passAgain').value;
@@ -40,15 +41,36 @@ function check(){
 //         return true;
 //     }
 // }
+function getUserCount() {
+    let xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4 && xhr.status == 200){
+            let res = JSON.parse((xhr.responseText));
+            if (res.status == false){
+                alert("获取登录用户失败");
+            }else {
+                var userCount = res.object.length;
+                console.log("登录用户总数:"+userCount);
+                var pagesCount = Math.ceil(userCount/each_nums);
+                var pages = document.getElementById("pages");
+                pages.innerText = "共"+pagesCount+"页";
+                console.log("登录用户的总页数："+pagesCount);
+            }
+        }
+    };
+    xhr.open('GET','/api/user');
+    xhr.send();
+}
 //显示所有信息
 function get_user() {
-    let each_nums = document.getElementById('each_nums').value;
+    each_nums = document.getElementById('each_nums').value;
     let now_page = document.getElementById('now_page').innerText;
     let user_no = document.getElementById('user_no').value;
     let xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function () {
         if(xhr.readyState == 4 && xhr.status == 200){
             let res = JSON.parse(xhr.responseText);
+            console.log(res);
             if(res.status == false) {
                 document.getElementById('now_page').innerText =parseInt(now_page)-1;
                 alert("已到最后一页!");
@@ -130,6 +152,7 @@ function addUser() {
             let json = JSON.parse(xml.responseText);
             if (json.state) {
                 get_user();
+                getUserCount()
             } else {
                 alert("失败，请重试！");
             }
@@ -144,7 +167,11 @@ function addUser() {
         xml.send(data);
 }
 
-
+function reset_get() {
+    document.getElementById('now_page').innerText = '1';
+    get_user();
+    getUserCount();
+}
 //鼠标点击事件
 function studioRow(obj) {
     let table = document.getElementById('loginUser');
@@ -214,6 +241,7 @@ function removeUser() {
           if(xhr.readyState == 4 && xhr.status == 200){
               if (JSON.parse(xhr.responseText).status){
                   get_user();
+                  getUserCount()
               }else {
                   alert("删除失败");
               }

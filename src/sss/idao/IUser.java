@@ -22,6 +22,9 @@ public interface IUser {
     // 查所有用户(一般用于和界面交互)
     public ArrayList<User> findUserAll(int offset, int nums);
 
+    //模糊查找
+    public ArrayList<User> findUserByName(String userName,int offset,int nums);
+
     public User findUserById(String emp_no);
 
     User findUserByNo(String name);

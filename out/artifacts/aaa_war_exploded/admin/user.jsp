@@ -34,12 +34,13 @@
 <div id = "table">
     <table class="table table-striped " id="loginUser" onclick="studioRow(this)">
         <caption style="text-align: center">那一年影院人员</caption>
-        <tr class="warning">
+        <tr class="warning" style="text-align: center">
+            <td>员工姓名</td>
             <td>登录帐号</td>
             <td>登录密码</td>
             <td>权限</td>
         </tr>
-        <tbody id = "tbody">
+        <tbody id = "tbody" style="text-align: center">
 
 
         </tbody>
@@ -47,9 +48,9 @@
 </div>
 
 <div style="margin:0px 30px;font-size: 18px;text-align: center">
-    <button class="btn" onclick="other_page(-1)"><</button>
-    第<u id="now_page">1</u>页
-    <button class="btn" onclick="other_page(1)">></button>
+    <button class="btn btn-default navbar-btn" onclick="other_page(-1)"><</button>
+    第<u id="now_page">1</u>页/<sanp id = "pages"></sanp>
+    <button class="btn btn-default navbar-btn" onclick="other_page(1)">></button>
     每页显示
     <select class="form-control" id="each_nums" onchange="reset_get()" style="width: 100px;display: inline-block">
         <option value="5">5</option>
@@ -66,7 +67,7 @@
             <input type="text" class="form-control" id = "user_no" placeholder="查找人员">
         </div>
     </form>
-    <button class="btn btn-default" ><i class="fa fa-search" aria-hidden="true" ></i>查找</button>
+    <button class="btn btn-default" onclick="reset_get()" ><i class="fa fa-search" aria-hidden="true" ></i>查找</button>
     <button class="btn btn-default navbar-btn" data-toggle="modal" data-target="#myModal"><i class="fa fa-plus" aria-hidden="true"></i> 添加可登录人员</button>
     <button class="btn btn-default navbar-btn" id = 'deleteStudio' onclick="removeUser()"><i class="fa fa-minus" aria-hidden="true"></i> 删除可登录人员</button>
     <button class="btn btn-default navbar-btn" id="changeStudio" onclick="change()"  ><i class="fa fa-pencil-square-o" aria-hidden="true"></i> 修改登录人员信息</button>
@@ -149,9 +150,6 @@
 <div class="modal fade" id="error" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="alert alert-warning">
-            <a href="#" class="close" data-dismiss="alert">
-                &times;
-            </a>
             <strong>警告</strong><p id = 'waring'></p>
         </div>
     </div><!-- /.modal -->
@@ -160,6 +158,8 @@
 <script>
 //    message('./user.html');
     get_user_message('/me.jsp');
+    getUserCount();
+
 //    account();
     get_user();
 </script>
