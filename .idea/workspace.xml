@@ -9,44 +9,7 @@
     <bookmark url="file://$PROJECT_DIR$/src/account.java" line="84" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fade8653-9a97-4cb4-bf39-6bca313cf18f" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/WEB-INF/classes/employeeServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/WEB-INF/classes/employeeServer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/WEB-INF/classes/sss/dao/EmployeeDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/WEB-INF/classes/sss/dao/EmployeeDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/WEB-INF/classes/sss/dao/UserDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/WEB-INF/classes/sss/dao/UserDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/WEB-INF/classes/sss/idao/IUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/WEB-INF/classes/sss/idao/IUser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/WEB-INF/classes/userServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/WEB-INF/classes/userServer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/admin/employee.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/admin/employee.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/admin/studio.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/admin/studio.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/admin/user.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/admin/user.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/manager.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/javascript/empList.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/javascript/empList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/javascript/employee.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/javascript/employee.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/javascript/manstu.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/javascript/manstu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/javascript/readmessge.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/javascript/readmessge.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/javascript/studio.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/javascript/studio.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/javascript/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/javascript/user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/aaa/employeeServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/aaa/employeeServer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/aaa/sss/dao/EmployeeDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/aaa/sss/dao/EmployeeDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/aaa/sss/dao/UserDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/aaa/sss/dao/UserDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/aaa/sss/idao/IUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/aaa/sss/idao/IUser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/aaa/userServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/aaa/userServer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/employeeServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/employeeServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sss/dao/EmployeeDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sss/dao/EmployeeDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sss/dao/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sss/dao/UserDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sss/idao/IUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sss/idao/IUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/userServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/userServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/admin/employee.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin/employee.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/admin/studio.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin/studio.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/admin/user.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin/user.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/manager.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/static/javascript/empList.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/javascript/empList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/static/javascript/employee.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/javascript/employee.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/static/javascript/manstu.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/javascript/manstu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/static/javascript/readmessge.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/javascript/readmessge.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/static/javascript/studio.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/javascript/studio.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/static/javascript/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/javascript/user.js" afterDir="false" />
-    </list>
+    <list default="true" id="fade8653-9a97-4cb4-bf39-6bca313cf18f" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -68,44 +31,23 @@
     <favorites_list name="TTMS_jsp" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
-      <split-first>
-        <leaf>
-          <file leaf-file-name="studioServer.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/studioServer.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="364">
-                  <caret line="48" column="35" lean-forward="true" selection-start-line="48" selection-start-column="35" selection-end-line="48" selection-end-column="35" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                    <element signature="method#doGet#0;class#studioServer#0" />
-                    <element signature="e#2579#2589#0" expanded="true" />
-                    <element signature="method#doPut#0;class#studioServer#0" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="userServer.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/userServer.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="398">
-                  <caret line="98" column="16" selection-start-line="98" selection-start-column="16" selection-end-line="98" selection-end-column="16" />
-                  <folding>
-                    <element signature="method#doDelete#0;class#userServer#0" />
-                    <element signature="method#doPut#0;class#userServer#0" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf>
+      <file leaf-file-name="studioServer.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/studioServer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="361">
+              <caret line="19" column="17" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#doGet#0;class#studioServer#0" />
+                <element signature="e#2579#2589#0" expanded="true" />
+                <element signature="method#doPut#0;class#studioServer#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -177,7 +119,6 @@
         <option value="$PROJECT_DIR$/web/static/javascript/seat.js" />
         <option value="$PROJECT_DIR$/src/sss/idao/ISeat.java" />
         <option value="$PROJECT_DIR$/src/sss/dao/SeatDAO.java" />
-        <option value="$PROJECT_DIR$/src/studioServer.java" />
         <option value="$PROJECT_DIR$/web/manager.jsp" />
         <option value="$PROJECT_DIR$/web/account.jsp" />
         <option value="$PROJECT_DIR$/web/static/javascript/studio.js" />
@@ -194,6 +135,7 @@
         <option value="$PROJECT_DIR$/web/admin/user.jsp" />
         <option value="$PROJECT_DIR$/web/static/javascript/user.js" />
         <option value="$PROJECT_DIR$/src/userServer.java" />
+        <option value="$PROJECT_DIR$/src/studioServer.java" />
       </list>
     </option>
   </component>
@@ -891,12 +833,12 @@
       <workItem from="1528330200784" duration="14600000" />
       <workItem from="1528344987000" duration="3293000" />
       <workItem from="1528417016446" duration="15096000" />
-      <workItem from="1528436457658" duration="2763000" />
+      <workItem from="1528436457658" duration="2879000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="375623000" />
+    <option name="totallyTimeSpent" value="375739000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -909,7 +851,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -930,9 +871,9 @@
       <window_info anchor="bottom" id="Java Enterprise" order="13" weight="0.32833335" />
       <window_info anchor="right" id="Capture Analysis" order="7" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.32833335" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.48330805" visible="true" weight="0.19298245" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4969651" weight="0.51644737" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4280992" weight="0.18482906" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.48330805" weight="0.5975877" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.4969651" visible="true" weight="0.27302632" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4280992" visible="true" weight="0.18482906" />
       <window_info id="Web" order="6" sideWeight="0.57190084" side_tool="true" weight="0.19195752" />
       <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info id="Favorites" order="7" side_tool="true" />
@@ -1376,26 +1317,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/userServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-255">
+          <caret line="98" selection-start-line="98" selection-end-line="98" />
+          <folding>
+            <element signature="method#doDelete#0;class#userServer#0" />
+            <element signature="method#doPut#0;class#userServer#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/studioServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="48" column="35" lean-forward="true" selection-start-line="48" selection-start-column="35" selection-end-line="48" selection-end-column="35" />
+        <state relative-caret-position="361">
+          <caret line="19" column="17" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#doGet#0;class#studioServer#0" />
             <element signature="e#2579#2589#0" expanded="true" />
             <element signature="method#doPut#0;class#studioServer#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/userServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="398">
-          <caret line="98" column="16" selection-start-line="98" selection-start-column="16" selection-end-line="98" selection-end-column="16" />
-          <folding>
-            <element signature="method#doDelete#0;class#userServer#0" />
-            <element signature="method#doPut#0;class#userServer#0" />
           </folding>
         </state>
       </provider>

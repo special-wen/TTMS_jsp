@@ -3,6 +3,7 @@
  */
 'use strict';
 var each_nums = 0;
+//获取登录用户的页数
 function getEmpCount() {
     let xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function () {
