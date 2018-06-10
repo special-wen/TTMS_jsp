@@ -88,7 +88,13 @@
             </div>
             <div class="modal-body">
                 <form role="form">
-                    用户登录帐号：<input type="text" name = "studioName" id="user_name" class="form-control"  pattern="^.{2,20}$" oninvalid="setCustomValidity('2-20个字符');"  placeholder="请输入需要添加的新用户" required/><br>
+                    选择需要添加的员工
+                    <div class="form-group">
+                        <select class="form-control" id="empName">
+
+                        </select>
+                    </div>
+                    <%--用户登录帐号：<input type="text" name = "studioName" id="user_name" class="form-control"  pattern="^.{2,20}$" oninvalid="setCustomValidity('2-20个字符');"  placeholder="请输入需要添加的新用户" required/><br>--%>
                     用户登录权限：
                     <div class="form-group">
                         <select class="form-control" id = 'Job'>
@@ -157,10 +163,35 @@
 </body>
 <script>
 //    message('./user.html');
+getEmpnotUser();
     get_user_message('/me.jsp');
     getUserCount();
 
 //    account();
     get_user();
+    function getEmpnotUser() {
+        let emp = document.getElementById("empName");
+        let xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function(){
+            if(xhr.readyState == 4 && xhr.status == 200){
+                let res = xhr.responseText;
+                let json = JSON.parse(res);
+                if(json.status){
+                    emp.innerHTML = "<option selected>*</option>";
+                    for(let x of json.object){
+                        let c = document.createElement('option');
+                        c.setAttribute('value',x[0]);
+                        c.innerText = x[1];
+                        emp.appendChild(c);
+                    }
+                }
+
+
+            }
+        }
+        xhr.open("GET","/api/adduser");
+        xhr.send()
+
+    }
 </script>
 </html>

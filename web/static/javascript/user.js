@@ -4,7 +4,7 @@ var each_nums = 0;
 function check(){
     let pass = document.getElementById('pass').value;
     let passAgain = document.getElementById('passAgain').value;
-    let a = /^[0-9]{6,20}$/.test(pass);
+    let a = /^[0-9a-zA-Z]{6,20}$/.test(pass);
     //let b = /^[a-zA-Z0-9]{6,20}$/.test(passAgain);
     if(pass == passAgain){
         if(!a){
@@ -83,23 +83,25 @@ function get_user() {
             for(let i = 0;i<json.length;i++){
                 let tr = document.createElement('tr');
                 let td0 = document.createElement('td');
-                td0.innerText = json[i][0];
+                td0.innerText = json[i][3];
                 // td0.setAttribute('style','display: none;');
                 let td1 = document.createElement('td');
-                td1.innerText = json[i][1];
+                td1.innerText = json[i][0];
                 let td2 = document.createElement('td');
+                td2.innerText = json[i][1];
+                let td3 = document.createElement('td');
                 if(json[i][2] == 1){
-                    td2.innerText = "管理员";
+                    td3.innerText = "管理员";
                 }else if(json[i][2] == 0){
-                    td2.innerText = "经理";
+                    td3.innerText = "经理";
                 }else {
-                    td2.innerHTML = "售票员";
+                    td3.innerHTML = "售票员";
                 }
 
                 tr.appendChild(td0);
                 tr.appendChild(td1);
                 tr.appendChild(td2);
-
+                tr.appendChild(td3);
                 tbody.appendChild(tr);
             }
 
@@ -125,7 +127,11 @@ function other_page(offset) {
 //添加登录用户
 function addUser() {
     //alert("34234");
-    let user_no = document.getElementById('user_name').value;
+    // let user_no = document.getElementById('user_name').value;
+    let empName = document.getElementById('empName');
+    let indexeN = empName.selectedIndex;
+    let emp_no = empName.options[indexeN].value;
+    alert(emp_no);
     let job = document.getElementById('Job');
     let indexJob = job.selectedIndex;
     let type = job.options[indexJob].value;
@@ -160,7 +166,7 @@ function addUser() {
     };
         let sss = window.location.search;
         let method = 'POST';
-        let data = 'emp_no='+user_no+'&emp_pass='+user_pass+'&type='+type+'&head_path='+head_path;
+        let data = 'emp_no='+emp_no+'&emp_pass='+user_pass+'&type='+type+'&head_path='+head_path;
         console.log(data);
         xml.open(method,'/api/user');
         xml.setRequestHeader("Content-type","application/x-www-form-urlencoded");

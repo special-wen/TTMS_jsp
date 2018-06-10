@@ -1,6 +1,7 @@
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import sss.idao.DAOFactory;
+import sss.model.EmpUser;
 import sss.model.Employee;
 import sss.model.User;
 
@@ -91,7 +92,7 @@ public class userServer extends HttpServlet {
 
             }
             int offset = (page-1) * nums;
-            ArrayList<User> list = null;
+            ArrayList<EmpUser> list = null;
             String name = request.getParameter("name");
             System.out.println(name+1);
             if(name == null || name.equals("")){
@@ -107,11 +108,12 @@ public class userServer extends HttpServlet {
                 out.write(json.toString());
                 return;
             }
-            for (User user : list){
+            for (EmpUser user : list){
                 jsonArr = new JSONArray();
                 jsonArr.add(user.getEmp_no());
                 jsonArr.add(user.getEmp_pass());
                 jsonArr.add(user.getType());
+                jsonArr.add(user.getEmp_name());
                 all.add(jsonArr);
             }
             json.put("status",true);
