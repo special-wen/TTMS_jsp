@@ -30,6 +30,7 @@ function get_studio() {
         xhr.onreadystatechange = function () {
             if(xhr.readyState == 4 && xhr.status == 200){
                 let res = JSON.parse(xhr.responseText);
+                console.log(res.object);
                 if(res.status == false) {
                     document.getElementById('now_page').innerText =parseInt(now_page)-1;
                     alert("已到最后一页!");
@@ -71,6 +72,8 @@ function get_studio() {
             }
         };
         xhr.open('GET','/api/studio?page='+now_page+'&nums='+each_nums+'&name='+studio_name);
+
+
         xhr.send();
 }
 

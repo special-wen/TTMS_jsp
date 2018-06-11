@@ -35,11 +35,13 @@ public class seatServer extends HttpServlet {
         int id = Integer.valueOf(request.getParameter("id"));
         ArrayList<Seat> list = null;
         list = DAOFactory.createSeatDAO().findSeatStateByStudioId(id);
+        System.out.println(list);
         if (list.size() == 0){
             json.put("status",false);
             out.write(json.toString());
             return;
         }
+        System.out.println(list.size());
         for (Seat s:list){
             jsonarr = new JSONArray();
             jsonarr.add(s.getStudio_id());

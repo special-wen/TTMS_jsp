@@ -43,10 +43,12 @@ function aa() {
 //获取座位状态
 function bb() {
     let studio_id = localStorage.getItem("studio_id");
+    // console.log(studio_id);
     let xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function () {
         if (xhr.readyState == 4 && xhr.status == 200){
             let res = JSON.parse(xhr.responseText);
+            // console.log(res);
             let json = res.object;
             flag_bb = 1;
             for(let i = 0;i<row;i++){
@@ -55,12 +57,16 @@ function bb() {
                     array[i][j] = 1;
                 }
             }
+
             for(let i of json){
                 array[i[2]-1][i[3]-1] = i[4];
+
             }
             if (flag_aa == 1){
                 createState();
             }
+            console.log('json:'+json[0]);
+            console.log(array[0][0]);
         }
     }
     xhr.open('GET','/api/seat?id='+studio_id);

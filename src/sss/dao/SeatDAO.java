@@ -30,7 +30,7 @@ public class SeatDAO implements ISeat {
         try {
             for (int i = 1; i <= seat.getSeat_row(); i++) {
                 for (int j = 1; j <= seat.getSeat_column(); j++) {
-                    String sql = "insert into sea         t(studio_id,seat_row,seat_column,seat_status) values (?,?,?,?)";
+                    String sql = "insert into seat(studio_id,seat_row,seat_column,seat_status) values (?,?,?,?)";
                     pstmt = con.prepareStatement(sql);
                     pstmt.setInt(1, seat.getStudio_id());
                     pstmt.setInt(2, i);
@@ -59,13 +59,14 @@ public class SeatDAO implements ISeat {
         Connection con = ConnectionManager.getInstance().getConnection();
         PreparedStatement pstmt = null;
         ResultSet rs = null;
-
         try {
             //获取座位信息
             pstmt = con.prepareStatement("select * from seat where studio_id = ?");
             pstmt.setInt(1, id);
             System.out.println(id);
             rs = pstmt.executeQuery();
+            //System.out.println(rs.next());
+
             while (rs.next()) {
                 info = new Seat();
                 info.setStudio_id(rs.getInt("studio_id"));
@@ -73,7 +74,7 @@ public class SeatDAO implements ISeat {
                 info.setSeat_row(rs.getInt("seat_row"));
                 info.setSeat_column(rs.getInt("seat_column"));
                 info.setSeat_status(rs.getInt("seat_status"));
-
+                System.out.println("列：" + rs.getInt("seat_column"));
                 list.add(info);
             }
         } catch (Exception e) {
