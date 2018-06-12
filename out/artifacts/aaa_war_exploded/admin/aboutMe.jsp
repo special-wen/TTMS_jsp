@@ -76,11 +76,14 @@
                     </h4>
                 </div>
                 <div class="modal-body">
-                    <form action="upload.jsp" method="post" enctype="multipart/form-data">
+                    <form action="/head" method="post" enctype="multipart/form-data" onload="findId()">
+
 
                         上传的图片:
-                        <input type="file" name="pic">
-                        <input type="submit" value="上传">
+                        <input type="text" id = 'emp_id' name="emp_id" style="display: none">
+                        <input type="file" id = 'file' name = 'head'>
+                        <ul style="color: red" id = 'file_error'></ul>
+                        <input type="submit" value="上传" onclick="get_emp()">
 
                     </form>
                 </div>

@@ -2,6 +2,7 @@
  * Created by zxw on 17-12-18.
  */
 'use strict';
+let emp_no = 0;
 //个人信息显示
 function check1() {
     var ssss = document.getElementById('emp_email');
@@ -83,6 +84,8 @@ function butInfo() {
     document.getElementById('emp_addr').value = mesInfo[2];
     document.getElementById('emp_email').value = mesInfo[3];
     document.getElementById('emp_tel').value = mesInfo[4];
+
+    emp_no = mesInfo[0];
 }
 
 function changeInfo() {
@@ -126,4 +129,22 @@ function changeInfo() {
 
 
 //更改头像
+function butPath(){
+    findId(emp_no);
+    upload();
+}
 
+function findId(id) {
+    document.getElementById('emp_id').value = id;
+}
+function upload() {
+    let file  = document.getElementById('file').value;
+    if(/\.(jpg|png|gif|jpeg|png)$/.test(file)){
+        document.getElementById('file_error').innerText = "";
+        //alert("上传完成");
+        return true;
+    }
+    //alert("file="+file+"id="+id);
+    document.getElementById('file_error').innerText = "只能上传图片！";
+    return false;
+}

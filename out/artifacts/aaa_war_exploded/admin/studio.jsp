@@ -109,7 +109,8 @@
                     座位行数: <input type="text" name = "sateRow" id="sateRow" class="form-control" placeholder="请输入演出厅中座位的行数" onblur="check1()"required/><br><span id = 'err1'></span><br>
                     座位列数: <input type="text" name = "sateCol" id = "sateCol" class="form-control" placeholder="请输入演出厅的列数" onblur="check2()" required/><br><span id = 'err2'></span><br>
                     演出厅详情: <input type="text" name="studioIntroduction" id = "studioIntroduction" class="form-control" placeholder="请输入演出厅简介"/><br>
-                    演出厅状态: <input type="text" name="studioState" value="可用" id = "studioState" class="form-control" onblur="check3()" required/><br><span id = 'err3'></span><br>
+
+                    <%--演出厅状态: <input type="text" name="studioState" value="可用" id = "studioState" class="form-control" onblur="check3()" required/><br><span id = 'err3'></span><br>--%>
                 </form>
                 <div class="modal-footer">
                     <button class="btn btn-default" data-dismiss="modal">关闭</button>
@@ -139,7 +140,12 @@
                     演出厅名称: <input type="text" name = "studioName"  class="form-control" id = "changeName" onblur="check4()"required/><span id = 'err4'></span><br>
                     座位行数: <input type="text" name = "sateRow"  class="form-control" id = "changeRow" onblur="check5()" required/><span id = 'err5'></span><br>
                     座位列数: <input type="text" name = "sateCol"  class="form-control" id = "changeCol" onblur="check6()" required/><span id = 'err6'></span><br>
-                    演出厅状态: <input type="text" name="studioState"   class="form-control" id = 'changeInt' onblur="check7()" required/><span id = 'err7'></span><br>
+                    演出厅状态：<select class="form-control" name="orange" id="changeInt">
+                                <option value="normal" id = 'normal'>已生成座位</option>
+                                <option value="broken" id = 'broken' >已损坏</option>
+                              </select>
+                    <br>
+                    <%--演出厅状态: <input type="text" name="studioState"   class="form-control" id = 'changeInt' onblur="check7()" required/><span id = 'err7'></span><br>--%>
                     演出厅简介: <input type="text" name="studioIntroduction"  class="form-control" id = 'changeState'/>
                 </form>
                 <div class="modal-footer">

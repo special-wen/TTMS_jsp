@@ -57,9 +57,9 @@ function get_studio() {
 
                     let td5 = document.createElement('td');
                     if(json[i][5] == '1')
-                        td5.innerText = "空闲";
+                        td5.innerText = "已生成座位";
                     else
-                        td5.innerText = "占用";
+                        td5.innerText = "已损坏";
                     tr.appendChild(td0);
                     tr.appendChild(td1);
                     tr.appendChild(td2);

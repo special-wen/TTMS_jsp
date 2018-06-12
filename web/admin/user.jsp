@@ -104,7 +104,7 @@
                         </select>
                     </div>
                     登录密码：<input type="password" name = "sateCol" id = "pass" class="form-control" placeholder="请输入含有字母和数字的密码" required/><br>
-                    确认密码：<input type="password" name= "sat" id = "passAgain" class="form-control" placeholder="确认密码" onblur="check()" required/><span id = 'err'></span>
+                    确认密码：<input type="password" name= "sat" id = "passAgain" class="form-control" placeholder="确认密码" onblur="check()" required/><span id = 'err'></span><br>
                 </form>
                 <div class="modal-footer">
                     <button class="btn btn-default" data-dismiss="modal">关闭</button>
@@ -138,8 +138,8 @@
                             <option value="boss">经理</option>
                         </select>
                     </div>
-                    修改密码：<input type="text" name = "sateCol" id = "user_pass" class="form-control" placeholder="请输入含有字母和数字的密码" required/><br>
-                    确认密码：<input type="text" name= "sat" id = "user_passA" class="form-control" placeholder="确认密码">
+                    修改密码：<input type="text" name = "sateCol" id = "user_pass" class="form-control" placeholder="请输入含有字母和数字的密码" ><br>
+                    确认密码：<input type="text" name= "sat" id = "user_passA" class="form-control" placeholder="确认密码" onblur="check1()"><span id = 'err1'></span><br>
 
                 </form>
                 <div class="modal-footer">
@@ -164,12 +164,12 @@
 <script>
 //    message('./user.html');
 getEmpnotUser();
-    get_user_message('/me.jsp');
-    getUserCount();
+get_user_message('/me.jsp');
+getUserCount();
 
 //    account();
-    get_user();
-    function getEmpnotUser() {
+get_user();
+function getEmpnotUser() {
         let emp = document.getElementById("empName");
         let xhr = new XMLHttpRequest();
         xhr.onreadystatechange = function(){
