@@ -129,22 +129,20 @@ function changeInfo() {
 
 
 //更改头像
-function butPath(){
-    findId(emp_no);
-    upload();
-}
-
-function findId(id) {
-    document.getElementById('emp_id').value = id;
-}
+// function butPath(){
+//     findId(emp_no);
+//     upload();
+// }
+//
+// function findId(id) {
+//     document.getElementById('emp_id').value = id;
+// }
 function upload() {
-    let file  = document.getElementById('file').value;
-    if(/\.(jpg|png|gif|jpeg|png)$/.test(file)){
+    let file = document.getElementById("file").value;
+    if(/\.(img|jpg|png|gif|jpeg|png)$/.test(file)){
         document.getElementById('file_error').innerText = "";
-        //alert("上传完成");
         return true;
     }
-    //alert("file="+file+"id="+id);
     document.getElementById('file_error').innerText = "只能上传图片！";
     return false;
 }

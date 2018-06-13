@@ -1,9 +1,6 @@
 package sss.idao;
 
-import sss.dao.EmployeeDAO;
-import sss.dao.SeatDAO;
-import sss.dao.StudioDAO;
-import sss.dao.UserDAO;
+import sss.dao.*;
 
 /**
  * Created by zxw on 17-11-19.
@@ -25,4 +22,6 @@ public class DAOFactory
     public static ISeat createSeatDAO(){
         return new SeatDAO();
     }
+
+    public static IPlay createPlayDAO() {return new PlayDAO(); }
 }
