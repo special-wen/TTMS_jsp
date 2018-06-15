@@ -32,7 +32,11 @@
         <nav class="navbar navbar-default" role="navigation">
             <div class="container-fluid">
                 <ul class="nav nav-tabs" id = "navbar">
-                    <li class="nav navbar-nav navbar-right" id = "logout"><a href="/out"><span><i class="fa fa-sign-out" aria-hidden="true"></i></span>退出登录</a></li>
+                    <li class="nav navbar-nav navbar-right" id = "logout">
+                        <a href=" ">
+                        <span><i class="fa fa-sign-out" aria-hidden="true"></i></span>退出登录
+                        </a>
+                    </li>
                     <li class="nav navbar-nav navbar-right" id = "user"></li>
                     <li class="nav navbar-nav navbar-right" id = "name"></li>
                 </ul>
@@ -83,11 +87,11 @@
             <input id="studio_name" type="text" class="form-control" placeholder="查找演出厅">
         </div>
     </form>
-        <button type = "button" class="btn btn-default navbar-btn" onclick="reset_get()"><i class="fa fa-search" aria-hidden="true"></i>查找</button>
-        <button type="button" class="btn btn-default navbar-btn" data-toggle="modal" data-target="#myModal"><i class="fa fa-plus" aria-hidden="true"></i> 添加演出厅</button>
-        <button type="button" class="btn btn-default navbar-btn" id = 'deleteStudio' onclick="removeStudio()"><i class="fa fa-minus" aria-hidden="true"></i> 删除演出厅</button>
-        <button type="button" class="btn btn-default navbar-btn" id="changeStudio" onclick="change()" data-toggle="modal" data-target="#myModals" ><i class="fa fa-pencil-square-o" aria-hidden="true"></i> 修改演出厅</button>
-        <button type="button" class="btn btn-default navbar-btn" id = "seat" onclick="seat()"><i class="fa fa-cog" aria-hidden="true" ></i>座位管理</button>
+    <button type = "button" class="btn btn-default navbar-btn" onclick="reset_get()"><i class="fa fa-search" aria-hidden="true"></i>查找</button>
+    <button type="button" class="btn btn-default navbar-btn" data-toggle="modal" data-target="#myModal"><i class="fa fa-plus" aria-hidden="true"></i> 添加演出厅</button>
+    <button type="button" class="btn btn-default navbar-btn" id = 'deleteStudio' onclick="removeStudio()"><i class="fa fa-minus" aria-hidden="true"></i> 删除演出厅</button>
+    <button type="button" class="btn btn-default navbar-btn" id="changeStudio" onclick="change()" data-toggle="modal" data-target="#myModals" ><i class="fa fa-pencil-square-o" aria-hidden="true"></i> 修改演出厅</button>
+    <button type="button" class="btn btn-default navbar-btn" id = "seat" onclick="seat()"><i class="fa fa-cog" aria-hidden="true" ></i>座位管理</button>
 
 </div>
 
@@ -105,12 +109,21 @@
             </div>
             <div class="modal-body">
                 <form role="form">
-                    演出厅名称: <input type="text" name = "studioName" id="studioName" class="form-control" placeholder="请输入演出厅名称" onblur="check()" required/><br><span id = 'err'></span><br>
-                    座位行数: <input type="text" name = "sateRow" id="sateRow" class="form-control" placeholder="请输入演出厅中座位的行数" onblur="check1()"required/><br><span id = 'err1'></span><br>
-                    座位列数: <input type="text" name = "sateCol" id = "sateCol" class="form-control" placeholder="请输入演出厅的列数" onblur="check2()" required/><br><span id = 'err2'></span><br>
-                    演出厅详情: <input type="text" name="studioIntroduction" id = "studioIntroduction" class="form-control" placeholder="请输入演出厅简介"/><br>
+                    演出厅名称: <input type="text" name = "studioName" id="studioName" class="form-control" placeholder="请输入演出厅名称" onblur="check()" required/>
+                    <span id = 'err'></span>
 
-                    <%--演出厅状态: <input type="text" name="studioState" value="可用" id = "studioState" class="form-control" onblur="check3()" required/><br><span id = 'err3'></span><br>--%>
+                    座位行数: <input type="text" name = "sateRow" id="sateRow" class="form-control" placeholder="请输入演出厅中座位的行数" onblur="check1()"required/>
+                    <span id = 'err1'></span>
+
+                    座位列数: <input type="text" name = "sateCol" id = "sateCol" class="form-control" placeholder="请输入演出厅的列数" onblur="check2()" required/>
+                    <span id = 'err2'></span>
+
+                    演出厅详情: <input type="text" name="studioIntroduction" id = "studioIntroduction" class="form-control" placeholder="请输入演出厅简介"/>
+
+
+                    <%--演出厅状态: <input type="text" name="studioState" value="可用" id = "studioState" class="form-control" onblur="check3()" required/>
+<span id = 'err3'></span>
+--%>
                 </form>
                 <div class="modal-footer">
                     <button class="btn btn-default" data-dismiss="modal">关闭</button>
@@ -136,16 +149,19 @@
             </div>
             <div class="modal-body">
                 <form role="form" id = "change">
-                    演出厅id: <input type="text" name = "studioNo" class="form-control" id = "studio_no" disabled><br>
-                    演出厅名称: <input type="text" name = "studioName"  class="form-control" id = "changeName" onblur="check4()"required/><span id = 'err4'></span><br>
-                    座位行数: <input type="text" name = "sateRow"  class="form-control" id = "changeRow" onblur="check5()" required/><span id = 'err5'></span><br>
-                    座位列数: <input type="text" name = "sateCol"  class="form-control" id = "changeCol" onblur="check6()" required/><span id = 'err6'></span><br>
+                    <%--演出厅id: <input type="text" name = "studioNo" class="form-control" id = "studio_no" disabled>
+--%>
+                    演出厅名称: <input type="text" name = "studioName"  class="form-control" id = "changeName" onblur="check4()"required/><span id = 'err4'></span>
+
+                    座位行数: <input type="text" name = "sateRow"  class="form-control" id = "changeRow" onblur="check5()" required/><span id = 'err5'></span>
+
+                    座位列数: <input type="text" name = "sateCol"  class="form-control" id = "changeCol" onblur="check6()" required/><span id = 'err6'></span>
+
                     演出厅状态：<select class="form-control" name="orange" id="changeInt">
-                                <option value="normal" id = 'normal'>已生成座位</option>
-                                <option value="broken" id = 'broken' >已损坏</option>
-                              </select>
-                    <br>
-                    <%--演出厅状态: <input type="text" name="studioState"   class="form-control" id = 'changeInt' onblur="check7()" required/><span id = 'err7'></span><br>--%>
+                    <option value="normal" id = 'normal'>已生成座位</option>
+                    <option value="broken" id = 'broken' >已损坏</option>
+                </select>
+
                     演出厅简介: <input type="text" name="studioIntroduction"  class="form-control" id = 'changeState'/>
                 </form>
                 <div class="modal-footer">
@@ -159,10 +175,10 @@
 <div class="modal fade" id="error" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="alert alert-warning">
-            <%--<a href="#" class="close" data-dismiss="alert">--%>
-                <%--&times;--%>
-            <%--</a>--%>
-            <strong>警告</strong><p id = 'waring'></p>
+            <%--< a href="#" class="close" data-dismiss="alert">--%>
+            <%--&times;--%>
+            <%--</ a>--%>
+            <strong>警告</strong><p id = 'waring'></p >
         </div>
     </div><!-- /.modal -->
 </div>
@@ -175,4 +191,3 @@
 
 </script>
 </html>
-

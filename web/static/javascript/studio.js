@@ -1,5 +1,6 @@
 'use strict'
 let number = 0;
+let studio_id = 0;
 
 //添加演出厅
 function addStudio() {
@@ -127,10 +128,13 @@ function removeStudio() {
 function changeRow(number) {
     let array = [];
     let table = document.getElementById('studio');
-    let length = table.rows.length;
+    let length =  table.rows[number].cells.length;
+    console.log('信息的多少：'+length);
     for(let i = 0;i<length;i++){
-        array[i] = table.rows[number].cells[i].innerHTML;
+        array[i] = table.rows[number].cells[i].innerText;
     }
+    console.log('studio_mess:'+array);
+    studio_id = array[0];
     return array
 }
 
@@ -139,12 +143,16 @@ function change() {
     if(number > 0){
         let change = [];
         let array = changeRow(number);
-        console.log("演出厅信息"+array);
-        change[0] = document.getElementById('studio_no').value = array[0];
+        // console.log("演出厅信息"+array);
+        // change[0] = document.getElementById('studio_no').value = array[0];
         change[1] = document.getElementById('changeName').value = array[1];
         change[2] = document.getElementById('changeRow').value = array[2];
         change[3] = document.getElementById('changeCol').value = array[3];
-        change[4] = document.getElementById("changeState").value = array[4];
+        if(array[4] == '' || array[4] == null){
+            change[4] = document.getElementById("changeState").value = '';
+        }else {
+            change[4] = document.getElementById("changeState").value = array[4];
+        }
         if (array[5] == '已生成座位'){
             document.getElementById('normal').setAttribute('selected','selected');
         }else {
@@ -180,14 +188,12 @@ function seat() {
 
 }
 function putStudio() {
-    alert(document.getElementById('changeInt').innerHTML);
-    let studio_no = document.getElementById('studio_no').value;
+    var aaa = [];
+    // let studio_no = document.getElementById('studio_no').value;
     let studio_name = document.getElementById('changeName').value;
     let studio_row = document.getElementById('changeRow').value;
     let studio_col = document.getElementById('changeCol').value;
     let studio_state = document.getElementById('changeInt').value;
-    alert(document.getElementById('changeInt').innerHTML);
-    // let studio_state = document.getElementById('changeInt').value;
     let studio_int = document.getElementById('changeState').value;
 
     if(studio_state == "normal"){
@@ -206,16 +212,16 @@ function putStudio() {
         if(xml.readyState == 4 && xml.status == 200){
             let json = JSON.parse(xml.responseText);
             if (json.state){
-                // alert("刷新");
                 get_studio();
             }else{
                 alert("失败，请重试！");
             }
         }
     };
+
     let sss = window.location.search;
     let method = 'PUT';
-    let data = 'studio_name='+studio_name+'&studio_rows='+studio_row+'&studio_cols='+studio_col+'&stuio_detial='+studio_int+'&flag='+studio_state+'&id='+studio_no;
+    let data = 'studio_name='+studio_name+'&studio_rows='+studio_row+'&studio_cols='+studio_col+'&stuio_detial='+studio_int+'&flag='+studio_state+'&id='+studio_id;
     xml.open(method,'/api/studio');
     xml.setRequestHeader("Content-type","application/x-www-form-urlencoded");
     xml.send(data);
@@ -305,4 +311,3 @@ function check6() {
         return false;
     }
 }
-

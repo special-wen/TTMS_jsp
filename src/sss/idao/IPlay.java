@@ -18,7 +18,7 @@ public interface IPlay {
     public ArrayList<Play> findPlayAll(int offset, int nums);
 
     //根据剧目id查询<一般用于数据内部关联操作>
-    public ArrayList<Play> findPlayByname(String play_name, int offset, int nums);
+    public ArrayList<Play> findPlayByname(String play_name,int offset,int nums);
 
     public Play findPlayById(int id);
 }

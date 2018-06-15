@@ -99,7 +99,7 @@ public class StudioDAO implements IStudio {
             pstmt.setString(4, studio.getStudio_introduction());
             pstmt.setInt(5, studio.getStudio_flag());
             pstmt.setInt(6, studio.getStudio_id());
-
+            System.out.println(pstmt.toString());
             pstmt.executeUpdate();
             result = true;
         }

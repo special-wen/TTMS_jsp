@@ -33,6 +33,8 @@ public interface IUser {
     //查找不在登录表里面的员工
     public ArrayList<EmpUser> findEmpnotinUser();
 
+    public ArrayList<User> findUserShoupiao();
+
 
 //    public Employee findEmployeeByNo(String emp_no);
 

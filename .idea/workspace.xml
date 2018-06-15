@@ -11,13 +11,141 @@
   <component name="ChangeListManager">
     <list default="true" id="fade8653-9a97-4cb4-bf39-6bca313cf18f" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aaa.iml" beforeDir="false" afterPath="$PROJECT_DIR$/aaa.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/WEB-INF/classes/BackEntry.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/WEB-INF/classes/BackEntry.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/WEB-INF/classes/account.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/WEB-INF/classes/account.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/WEB-INF/classes/sss/dao/PlayDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/WEB-INF/classes/sss/dao/PlayDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/WEB-INF/classes/sss/dao/SeatDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/WEB-INF/classes/sss/dao/SeatDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/WEB-INF/classes/sss/dao/StudioDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/WEB-INF/classes/sss/dao/StudioDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/WEB-INF/classes/sss/dao/UserDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/WEB-INF/classes/sss/dao/UserDAO.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/WEB-INF/classes/sss/idao/DAOFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/WEB-INF/classes/sss/idao/DAOFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/WEB-INF/classes/sss/idao/ISeat.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/WEB-INF/classes/sss/idao/ISeat.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/WEB-INF/classes/sss/idao/IUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/WEB-INF/classes/sss/idao/IUser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/WEB-INF/classes/studioServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/WEB-INF/classes/studioServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/WEB-INF/classes/userServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/WEB-INF/classes/userServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/admin/studio.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/admin/studio.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/admin/user.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/admin/user.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/img/UserHead/000001.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/img/UserHead/000001.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/img/UserHead/000001.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/img/UserHead/000001.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/mana/play.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/mana/play.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/font-awesome-4.7.0/HELP-US-OUT.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/font-awesome-4.7.0/HELP-US-OUT.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/font-awesome-4.7.0/css/font-awesome.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/font-awesome-4.7.0/css/font-awesome.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/font-awesome-4.7.0/css/font-awesome.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/font-awesome-4.7.0/css/font-awesome.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/font-awesome-4.7.0/fonts/FontAwesome.otf" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/font-awesome-4.7.0/fonts/FontAwesome.otf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/font-awesome-4.7.0/fonts/fontawesome-webfont.eot" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/font-awesome-4.7.0/fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/font-awesome-4.7.0/fonts/fontawesome-webfont.svg" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/font-awesome-4.7.0/fonts/fontawesome-webfont.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/font-awesome-4.7.0/fonts/fontawesome-webfont.woff" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/font-awesome-4.7.0/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/font-awesome-4.7.0/less/animated.less" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/font-awesome-4.7.0/less/animated.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/font-awesome-4.7.0/less/bordered-pulled.less" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/font-awesome-4.7.0/less/bordered-pulled.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/font-awesome-4.7.0/less/core.less" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/font-awesome-4.7.0/less/core.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/font-awesome-4.7.0/less/fixed-width.less" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/font-awesome-4.7.0/less/fixed-width.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/font-awesome-4.7.0/less/font-awesome.less" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/font-awesome-4.7.0/less/font-awesome.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/font-awesome-4.7.0/less/icons.less" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/font-awesome-4.7.0/less/icons.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/font-awesome-4.7.0/less/larger.less" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/font-awesome-4.7.0/less/larger.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/font-awesome-4.7.0/less/list.less" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/font-awesome-4.7.0/less/list.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/font-awesome-4.7.0/less/mixins.less" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/font-awesome-4.7.0/less/mixins.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/font-awesome-4.7.0/less/path.less" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/font-awesome-4.7.0/less/path.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/font-awesome-4.7.0/less/rotated-flipped.less" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/font-awesome-4.7.0/less/rotated-flipped.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/font-awesome-4.7.0/less/screen-reader.less" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/font-awesome-4.7.0/less/screen-reader.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/font-awesome-4.7.0/less/stacked.less" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/font-awesome-4.7.0/less/stacked.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/font-awesome-4.7.0/less/variables.less" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/font-awesome-4.7.0/less/variables.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/font-awesome-4.7.0/scss/_animated.scss" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/font-awesome-4.7.0/scss/_animated.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/font-awesome-4.7.0/scss/_bordered-pulled.scss" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/font-awesome-4.7.0/scss/_bordered-pulled.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/font-awesome-4.7.0/scss/_core.scss" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/font-awesome-4.7.0/scss/_core.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/font-awesome-4.7.0/scss/_fixed-width.scss" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/font-awesome-4.7.0/scss/_fixed-width.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/font-awesome-4.7.0/scss/_icons.scss" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/font-awesome-4.7.0/scss/_icons.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/font-awesome-4.7.0/scss/_larger.scss" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/font-awesome-4.7.0/scss/_larger.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/font-awesome-4.7.0/scss/_list.scss" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/font-awesome-4.7.0/scss/_list.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/font-awesome-4.7.0/scss/_mixins.scss" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/font-awesome-4.7.0/scss/_mixins.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/font-awesome-4.7.0/scss/_path.scss" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/font-awesome-4.7.0/scss/_path.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/font-awesome-4.7.0/scss/_rotated-flipped.scss" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/font-awesome-4.7.0/scss/_rotated-flipped.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/font-awesome-4.7.0/scss/_screen-reader.scss" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/font-awesome-4.7.0/scss/_screen-reader.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/font-awesome-4.7.0/scss/_stacked.scss" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/font-awesome-4.7.0/scss/_stacked.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/font-awesome-4.7.0/scss/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/font-awesome-4.7.0/scss/_variables.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/font-awesome-4.7.0/scss/font-awesome.scss" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/font-awesome-4.7.0/scss/font-awesome.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/image/login.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/image/login.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/javascript/empList.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/javascript/empList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/javascript/employee.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/javascript/employee.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/javascript/messinfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/javascript/messinfo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/javascript/play.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/javascript/play.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/javascript/seat.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/javascript/seat.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/javascript/studio.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/javascript/studio.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/javascript/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/javascript/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/jquery/jquery.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/aaa_war_exploded/static/jquery/jquery.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/aaa/BackEntry.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/aaa/BackEntry.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/aaa/account.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/aaa/account.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/aaa/sss/dao/PlayDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/aaa/sss/dao/PlayDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/aaa/sss/dao/SeatDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/aaa/sss/dao/SeatDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/aaa/sss/dao/StudioDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/aaa/sss/dao/StudioDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/aaa/sss/dao/UserDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/aaa/sss/dao/UserDAO.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/aaa/sss/idao/DAOFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/aaa/sss/idao/DAOFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/aaa/sss/idao/ISeat.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/aaa/sss/idao/ISeat.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/aaa/sss/idao/IUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/aaa/sss/idao/IUser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/aaa/studioServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/aaa/studioServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/aaa/userServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/aaa/userServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BackEntry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BackEntry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Head.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Head.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/account.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sss/dao/PlayDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sss/dao/PlayDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sss/dao/SeatDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sss/dao/SeatDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sss/dao/StudioDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sss/dao/StudioDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sss/dao/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sss/dao/UserDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sss/idao/DAOFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sss/idao/DAOFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/admin/aboutMe.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin/aboutMe.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/static/css/aboutMe.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/css/aboutMe.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sss/idao/IPlay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sss/idao/IPlay.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sss/idao/ISeat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sss/idao/ISeat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sss/idao/IUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sss/idao/IUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/studioServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/studioServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/userServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/userServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/admin/studio.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin/studio.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/admin/user.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin/user.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/mana/play.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/mana/play.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/static/font-awesome-4.7.0/HELP-US-OUT.txt" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/font-awesome-4.7.0/HELP-US-OUT.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/static/font-awesome-4.7.0/css/font-awesome.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/font-awesome-4.7.0/css/font-awesome.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/static/font-awesome-4.7.0/css/font-awesome.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/font-awesome-4.7.0/css/font-awesome.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/static/font-awesome-4.7.0/fonts/FontAwesome.otf" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/font-awesome-4.7.0/fonts/FontAwesome.otf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/static/font-awesome-4.7.0/fonts/fontawesome-webfont.eot" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/font-awesome-4.7.0/fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/static/font-awesome-4.7.0/fonts/fontawesome-webfont.svg" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/font-awesome-4.7.0/fonts/fontawesome-webfont.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/static/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/static/font-awesome-4.7.0/fonts/fontawesome-webfont.woff" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/font-awesome-4.7.0/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/static/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/static/font-awesome-4.7.0/less/animated.less" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/font-awesome-4.7.0/less/animated.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/static/font-awesome-4.7.0/less/bordered-pulled.less" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/font-awesome-4.7.0/less/bordered-pulled.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/static/font-awesome-4.7.0/less/core.less" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/font-awesome-4.7.0/less/core.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/static/font-awesome-4.7.0/less/fixed-width.less" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/font-awesome-4.7.0/less/fixed-width.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/static/font-awesome-4.7.0/less/font-awesome.less" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/font-awesome-4.7.0/less/font-awesome.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/static/font-awesome-4.7.0/less/icons.less" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/font-awesome-4.7.0/less/icons.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/static/font-awesome-4.7.0/less/larger.less" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/font-awesome-4.7.0/less/larger.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/static/font-awesome-4.7.0/less/list.less" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/font-awesome-4.7.0/less/list.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/static/font-awesome-4.7.0/less/mixins.less" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/font-awesome-4.7.0/less/mixins.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/static/font-awesome-4.7.0/less/path.less" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/font-awesome-4.7.0/less/path.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/static/font-awesome-4.7.0/less/rotated-flipped.less" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/font-awesome-4.7.0/less/rotated-flipped.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/static/font-awesome-4.7.0/less/screen-reader.less" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/font-awesome-4.7.0/less/screen-reader.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/static/font-awesome-4.7.0/less/stacked.less" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/font-awesome-4.7.0/less/stacked.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/static/font-awesome-4.7.0/less/variables.less" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/font-awesome-4.7.0/less/variables.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/static/font-awesome-4.7.0/scss/_animated.scss" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/font-awesome-4.7.0/scss/_animated.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/static/font-awesome-4.7.0/scss/_bordered-pulled.scss" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/font-awesome-4.7.0/scss/_bordered-pulled.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/static/font-awesome-4.7.0/scss/_core.scss" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/font-awesome-4.7.0/scss/_core.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/static/font-awesome-4.7.0/scss/_fixed-width.scss" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/font-awesome-4.7.0/scss/_fixed-width.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/static/font-awesome-4.7.0/scss/_icons.scss" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/font-awesome-4.7.0/scss/_icons.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/static/font-awesome-4.7.0/scss/_larger.scss" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/font-awesome-4.7.0/scss/_larger.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/static/font-awesome-4.7.0/scss/_list.scss" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/font-awesome-4.7.0/scss/_list.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/static/font-awesome-4.7.0/scss/_mixins.scss" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/font-awesome-4.7.0/scss/_mixins.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/static/font-awesome-4.7.0/scss/_path.scss" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/font-awesome-4.7.0/scss/_path.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/static/font-awesome-4.7.0/scss/_rotated-flipped.scss" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/font-awesome-4.7.0/scss/_rotated-flipped.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/static/font-awesome-4.7.0/scss/_screen-reader.scss" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/font-awesome-4.7.0/scss/_screen-reader.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/static/font-awesome-4.7.0/scss/_stacked.scss" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/font-awesome-4.7.0/scss/_stacked.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/static/font-awesome-4.7.0/scss/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/font-awesome-4.7.0/scss/_variables.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/static/font-awesome-4.7.0/scss/font-awesome.scss" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/font-awesome-4.7.0/scss/font-awesome.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/static/image/login.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/image/login.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/static/javascript/empList.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/javascript/empList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/static/javascript/employee.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/javascript/employee.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/static/javascript/messinfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/javascript/messinfo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/static/javascript/play.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/javascript/play.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/static/javascript/seat.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/javascript/seat.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/static/javascript/studio.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/javascript/studio.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/static/javascript/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/javascript/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/static/jquery/jquery.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/jquery/jquery.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -40,60 +168,26 @@
     <favorites_list name="TTMS_jsp" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="aboutMe.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/admin/aboutMe.jsp">
+    <leaf>
+      <file leaf-file-name="fightServer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/fightServer.java">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="context.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/META-INF/context.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="89" column="58" selection-start-line="89" selection-start-column="58" selection-end-line="89" selection-end-column="58" />
-              <folding>
-                <element signature="n#style#0;n#ul#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="418">
+              <caret line="22" column="31" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IUser.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/sss/idao/IUser.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="25" column="10" lean-forward="true" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="readmessge.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/static/javascript/readmessge.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-120">
-              <caret line="4" column="9" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="messinfo.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/static/javascript/messinfo.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="134">
-              <caret line="139" column="19" selection-start-line="139" selection-start-column="19" selection-end-line="139" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="message.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/static/javascript/message.js">
+      <file leaf-file-name="ScheduleServer.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/ScheduleServer.java">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="23" lean-forward="true" selection-start-column="23" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserHeadServer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sss/api/UserHeadServer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-57">
-              <caret line="27" column="40" selection-start-line="27" selection-start-column="40" selection-end-line="27" selection-end-column="40" />
+              <caret line="24" column="13" lean-forward="true" selection-start-line="24" selection-start-column="13" selection-end-line="25" selection-end-column="77" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -141,8 +235,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/web/mana/easy/seat.jsp" />
-        <option value="$PROJECT_DIR$/src/sss/model/Employee.java" />
         <option value="$PROJECT_DIR$/web/mana/hard/user.jsp" />
         <option value="$PROJECT_DIR$/web/mana/easy/studio.jsp" />
         <option value="$PROJECT_DIR$/web/mana/hard/employee.jsp" />
@@ -192,6 +284,8 @@
         <option value="$PROJECT_DIR$/src/sss/api/UserHeadServer.java" />
         <option value="$PROJECT_DIR$/web/static/javascript/messinfo.js" />
         <option value="$PROJECT_DIR$/web/admin/aboutMe.jsp" />
+        <option value="$PROJECT_DIR$/web/META-INF/context.xml" />
+        <option value="$PROJECT_DIR$/src/ScheduleServer.java" />
       </list>
     </option>
   </component>
@@ -208,9 +302,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="960" />
     <option name="y" value="27" />
-    <option name="width" value="1366" />
-    <option name="height" value="741" />
+    <option name="width" value="960" />
+    <option name="height" value="1053" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -228,17 +323,13 @@
       </profile-state>
     </entry>
   </component>
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="1" id="Add" />
-  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -254,60 +345,19 @@
             <path>
               <item name="TTMS_jsp" type="b2602c69:ProjectViewProjectNode" />
               <item name="TTMS_jsp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sss" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TTMS_jsp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TTMS_jsp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sss" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TTMS_jsp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TTMS_jsp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sss" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TTMS_jsp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TTMS_jsp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sss" type="462c0819:PsiDirectoryNode" />
-              <item name="idao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TTMS_jsp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TTMS_jsp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sss" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TTMS_jsp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TTMS_jsp" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TTMS_jsp" type="b2602c69:ProjectViewProjectNode" />
               <item name="TTMS_jsp" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="META-INF" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TTMS_jsp" type="b2602c69:ProjectViewProjectNode" />
               <item name="TTMS_jsp" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TTMS_jsp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TTMS_jsp" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="javascript" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TTMS_jsp" type="b2602c69:ProjectViewProjectNode" />
@@ -326,6 +376,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -341,22 +392,22 @@
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Font" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="java" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/web/static/javascript" />
-      <recent name="$PROJECT_DIR$/web/admin" />
-      <recent name="$PROJECT_DIR$/src/sss/idao" />
-      <recent name="$PROJECT_DIR$/src/sss/dao" />
-      <recent name="$PROJECT_DIR$/src/sss/model" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/web/mana" />
       <recent name="$PROJECT_DIR$/web/WEB-INF/lib" />
       <recent name="$PROJECT_DIR$/web/lib" />
       <recent name="$PROJECT_DIR$/web/WEB-INF" />
       <recent name="$PROJECT_DIR$/web/mana/hard" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/web/static/javascript" />
+      <recent name="$PROJECT_DIR$/web/admin" />
+      <recent name="$PROJECT_DIR$/src/sss/idao" />
+      <recent name="$PROJECT_DIR$/src/sss/dao" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="java" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -934,7 +985,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="411806000" />
+    <option name="totallyTimeSpent" value="413392000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -946,42 +997,67 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="27" width="1366" height="741" extended-state="6" />
+    <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Application Servers" order="9" weight="0.32833335" />
-      <window_info anchor="right" id="Maven Projects" order="9" />
-      <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
-      <window_info id="Capture Tool" order="8" />
+      <window_info anchor="bottom" id="Application Servers" order="8" weight="0.32972136" />
+      <window_info anchor="right" id="Maven Projects" order="4" />
+      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
+      <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="3" />
       <window_info anchor="right" id="Database" order="5" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.2488189" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="4" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.516692" side_tool="true" weight="0.21322314" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32894737" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.11455108" />
       <window_info anchor="bottom" id="Messages" order="8" sideWeight="0.4969651" weight="0.30811402" />
-      <window_info anchor="right" id="Palette&#9;" order="6" />
-      <window_info id="Image Layers" order="5" />
-      <window_info anchor="bottom" id="Java Enterprise" order="13" weight="0.32833335" />
-      <window_info anchor="right" id="Capture Analysis" order="7" />
-      <window_info anchor="bottom" id="Version Control" order="10" weight="0.32833335" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
+      <window_info id="Image Layers" order="7" />
+      <window_info anchor="bottom" id="Java Enterprise" order="9" weight="0.32972136" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="10" weight="0.32972136" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.30482456" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32972136" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1784188" />
+      <window_info id="Web" order="5" side_tool="true" />
+      <window_info anchor="right" id="Theme Preview" order="7" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.48330805" weight="0.30666667" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4969651" weight="0.15166667" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4280992" visible="true" weight="0.20789075" />
-      <window_info id="Web" order="6" sideWeight="0.57190084" side_tool="true" weight="0.19195752" />
-      <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info id="Favorites" order="7" side_tool="true" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Java Enterprise" order="13" weight="0.32833335" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4969651" weight="0.15166667" />
+      <window_info anchor="bottom" id="Application Servers" order="9" weight="0.32833335" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Maven Projects" order="9" />
+      <window_info id="Web" order="6" sideWeight="0.57190084" side_tool="true" weight="0.19195752" />
+      <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info id="Image Layers" order="5" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.2488189" />
+      <window_info anchor="right" id="Database" order="5" />
+      <window_info id="Capture Tool" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="10" weight="0.32833335" />
+      <window_info anchor="right" id="Capture Analysis" order="7" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32894737" />
       <window_info anchor="bottom" id="Thumbnails" order="12" weight="0.3290938" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info id="Nl-Palette" order="2" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="right" id="Properties" order="4" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info id="UI Designer" order="4" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4969651" weight="0.5233333" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.516692" side_tool="true" weight="0.21322314" />
+      <window_info anchor="right" id="Properties" order="4" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info id="Designer" order="3" />
     </layout>
     <layout-to-restore>
       <window_info anchor="bottom" id="Thumbnails" order="13" weight="0.3290938" />
@@ -1002,12 +1078,12 @@
       <window_info anchor="bottom" id="Messages" order="8" sideWeight="0.4969651" weight="0.30811402" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32894737" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Java Enterprise" order="14" weight="0.32833335" />
       <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="11" weight="0.32833335" />
       <window_info id="Nl-Palette" order="2" />
       <window_info anchor="right" id="Maven Projects" order="9" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4969651" weight="0.5233333" />
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4280992" visible="true" weight="0.20619658" />
       <window_info anchor="right" id="Database" order="5" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -1016,7 +1092,7 @@
       <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.2488189" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4969651" weight="0.5233333" />
+      <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.516692" side_tool="true" weight="0.21322314" />
     </layout-to-restore>
   </component>
@@ -1231,12 +1307,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="113">
           <caret line="158" column="37" selection-start-line="158" selection-start-column="37" selection-end-line="158" selection-end-column="37" />
-          <folding>
-            <element signature="n#!!block;n#removeStudio#0" />
-            <element signature="n#!!block;n#check#0" />
-            <element signature="n#!!block;n#check1#0" />
-            <element signature="n#!!block;n#check2#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1251,11 +1321,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
           <caret line="57" column="47" selection-start-line="57" selection-start-column="47" selection-end-line="57" selection-end-column="47" />
-          <folding>
-            <element signature="n#style#0;n#option#0;n#select#0;n#form#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#option#1;n#select#0;n#form#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#option#2;n#select#0;n#form#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1272,15 +1337,6 @@
           <caret line="106" column="172" selection-start-line="106" selection-start-column="172" selection-end-line="106" selection-end-column="172" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sss/model/Play.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sss/dao/PlayDAO.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sss/idao/IPlay.java">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sss/idao/DAOFactory.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1305,11 +1361,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
           <caret line="196" column="16" lean-forward="true" selection-start-line="196" selection-start-column="16" selection-end-line="196" selection-end-column="16" />
-          <folding>
-            <element signature="method#insert#0;class#UserDAO#0" />
-            <element signature="method#delete#0;class#UserDAO#0" />
-            <element signature="method#update#0;class#UserDAO#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1353,15 +1404,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="532">
           <caret line="236" column="29" selection-start-line="236" selection-start-column="29" selection-end-line="236" selection-end-column="29" />
-          <folding>
-            <element signature="n#!!block;n#check#0" />
-            <element signature="n#!!block;n#getUserCount#0" />
-            <element signature="n#!!block;n#get_user#0" />
-            <element signature="n#!!block;n#other_page#0" />
-            <element signature="n#!!block;n#addUser#0" />
-            <element signature="n#!!block;n#reset_get#0" />
-            <element signature="n#!!block;n#studioRow#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1383,9 +1425,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-57">
           <caret line="27" column="40" selection-start-line="27" selection-start-column="40" selection-end-line="27" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1417,6 +1456,26 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
           <caret line="25" column="10" lean-forward="true" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fightServer.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/META-INF/context.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="22" column="31" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ScheduleServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="24" column="13" lean-forward="true" selection-start-line="24" selection-start-column="13" selection-end-line="25" selection-end-column="77" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

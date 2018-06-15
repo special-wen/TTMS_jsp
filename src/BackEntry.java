@@ -36,11 +36,16 @@ public class BackEntry extends HttpServlet {
             }
             //经理可以访问的url:
             else if ((Integer)session.getAttribute("type") == 0){
+                hp.put("演出计划管理","/mana/schedule.jsp");
+                hp.put("演出剧目管理","/mana/play.jsp");
+                hp.put("个人信息","/mana/aboutMe.jsp");
+                hp.put("销售额管理","/mana/xse.jsp");
 
             }
             //售票可以访问的url：
             else {
-
+                hp.put("售票","/seller/playRoot.jsp");
+                hp.put("个人信息","/seller/aboutMe.jsp");
             }
         }
         obj.put("entry",hp);

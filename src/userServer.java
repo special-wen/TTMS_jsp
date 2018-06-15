@@ -135,7 +135,7 @@ public class userServer extends HttpServlet {
 
         }
         data = data.substring(0,data.length()-1);
-        System.out.println(data+"adfdfdfdfdfdfddfdfdfd");
+        System.out.println(data);
         HashMap<String,String> hm = new HashMap<String,String>();
         try {
             String listp[] = data.split("&");
@@ -148,7 +148,7 @@ public class userServer extends HttpServlet {
         }
         try {
             id = hm.get("id");
-            System.out.println(id+"aaaaaaaaaaaaaaaaaaaaaa");
+            System.out.println(id);
         }
         catch (java.lang.Exception e){
             System.out.print("err");

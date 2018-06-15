@@ -189,12 +189,11 @@ function removeEmployee() {
         let emp = []
         emp = changeRow(row);
         let id = emp[0];
-        alert(id);
         let xhr = new XMLHttpRequest();
         xhr.onreadystatechange = function () {
             if(xhr.readyState == 4 && xhr.status == 200){
                 if(JSON.parse(xhr.responseText).status){
-                    get_emp();
+                    window.location.href = 'http://localhost:9999/admin/employee.jsp';
                 }else {
                     alert("删除失败！");
                 }

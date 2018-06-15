@@ -87,6 +87,39 @@ public class SeatDAO implements ISeat {
     }
 
     @Override
+    public ArrayList<Seat> findSeatidByStudioId(int studio_id,int row, int col) {
+        ArrayList<Seat> list = new ArrayList<Seat>();
+        Seat info = null;
+        Connection con = ConnectionManager.getInstance().getConnection();
+        PreparedStatement pstmt = null;
+        ResultSet rs = null;
+        try {
+            //获取座位信息
+            pstmt = con.prepareStatement("select seat_id from seat where studio_id = ? and seat_row= ? and seat_column=?");
+            pstmt.setInt(1,studio_id);
+            pstmt.setInt(2,row);
+            pstmt.setInt(3,col);
+           // System.out.println(row,col);
+            rs = pstmt.executeQuery();
+            //System.out.println(rs.next());
+
+            while (rs.next()) {
+                info = new Seat();
+                //System.out.println("AAAAAAAAAAAAAAAAAAAaa");
+                info.setSeat_id(rs.getInt("seat_id"));
+                //System.out.println(info.getSeat_id());
+                list.add(info);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+
+        } finally {
+            ConnectionManager.close(rs, pstmt, con);
+            return list;
+        }
+    }
+
+    @Override
     public boolean update(Seat seat){
         boolean result = false;
         if (seat == null)

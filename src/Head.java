@@ -79,3 +79,4 @@ public class Head extends HttpServlet {
         doPost(request, response);
     }
 }
+

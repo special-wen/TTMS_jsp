@@ -1,6 +1,17 @@
 'use strict'
 let number = 0;
 var each_nums = 0;
+// function check1() {
+//     let pass = document.getElementById('pass').value;
+//     let a = /^[0-9a-zA-Z]{6,20}$/.test(pass);
+//     if(!a){
+//         document.getElementById('err1').innerHTML = '密码需要6～20位的任意字母和数字组合'
+//         return false;
+//     }else{
+//         document.getElementById('err').innerHTML = '';
+//         return true;
+//     }
+// }
 function check(){
     let pass = document.getElementById('pass').value;
     let passAgain = document.getElementById('passAgain').value;
@@ -127,7 +138,6 @@ function addUser() {
     let empName = document.getElementById('empName');
     let indexeN = empName.selectedIndex;
     let emp_no = empName.options[indexeN].value;
-    alert(emp_no);
     let job = document.getElementById('Job');
     let indexJob = job.selectedIndex;
     let type = job.options[indexJob].value;
@@ -155,18 +165,20 @@ function addUser() {
             let json = JSON.parse(xml.responseText);
             if (json.state) {
                 get_user();
-                getUserCount()
+                getUserCount();
+                window.location.href = 'http://localhost:9999/admin/user.jsp';
+
             } else {
                 alert("失败，请重试！");
             }
         }
     };
-        let sss = window.location.search;
-        let method = 'POST';
-        let data = 'emp_no='+emp_no+'&emp_pass='+user_pass+'&type='+type+'&head_path='+head_path;
-        xml.open(method,'/api/user');
-        xml.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-        xml.send(data);
+    let sss = window.location.search;
+    let method = 'POST';
+    let data = 'emp_no='+emp_no+'&emp_pass='+user_pass+'&type='+type+'&head_path='+head_path;
+    xml.open(method,'/api/user');
+    xml.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+    xml.send(data);
 }
 
 function reset_get() {
@@ -215,7 +227,7 @@ function studioRow(obj) {
 function deleteRow(row) {
     let deleteRow = document.getElementById('loginUser');
     //let length = deleteRow.rows.length;
-        deleteRow.deleteRow(row);
+    deleteRow.deleteRow(row);
 
 }
 
@@ -238,14 +250,15 @@ function removeUser() {
         console.log(user);
         let xhr = new XMLHttpRequest();
         xhr.onreadystatechange = function () {
-          if(xhr.readyState == 4 && xhr.status == 200){
-              if (JSON.parse(xhr.responseText).status){
-                  get_user();
-                  getUserCount()
-              }else {
-                  alert("删除失败");
-              }
-          }
+            if(xhr.readyState == 4 && xhr.status == 200){
+                if (JSON.parse(xhr.responseText).status){
+                    get_user();
+                    getUserCount();
+                    window.location.href = 'http://localhost:9999/admin/user.jsp';
+                }else {
+                    alert("删除失败");
+                }
+            }
         };
         xhr.open('DELETE','/api/user');
         xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
@@ -347,22 +360,23 @@ function putUser() {
     }
     let xml = new XMLHttpRequest();
     xml.onreadystatechange = function () {
-      if(xml.readyState == 4 && xml.status == 200){
-          let json = JSON.parse(xml.responseText);
-          if(json.state){
-              get_user();
-          }else{
-              alert("失败，请重试！");
-          }
-      }
+        if(xml.readyState == 4 && xml.status == 200){
+            let json = JSON.parse(xml.responseText);
+            if(json.state){
+                get_user();
+                getUserCount();
+                // window.location.href = 'http://localhost:9999/admin/user.jsp';
+
+            }else{
+                alert("失败，请重试！");
+            }
+        }
     };
     let sss = window.location.search;
     let method = 'PUT';
     let data = 'emp_no='+emp_no+'&emp_pass='+emp_pass+'&type='+type+'&head_path='+head_path;
-    alert(data);
     xml.open(method,'/api/user');
     xml.setRequestHeader("Content-type","application/x-www-form-urlencoded");
     xml.send(data);
 }
-
 

@@ -50,9 +50,9 @@ function account() {
                 let i;
                 for(i in json){
 
-                        let cell = table.rows[rows].insertCell(1);
-                        cell.innerText = json[i];
-                        rows ++;
+                    let cell = table.rows[rows].insertCell(1);
+                    cell.innerText = json[i];
+                    rows ++;
                 }
             }
         }

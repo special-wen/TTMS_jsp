@@ -13,12 +13,12 @@ function getPlayCount() {
                 alert("获取剧目失败");
             }else {
                 var playCount = res.object.length;
-                alert(playCount+"ww");
+                //alert(playCount+"ww");
                 var pagesCount = Math.ceil(playCount/each_nums);
                 var pages = document.getElementById("pages");
                 pages.innerText = "共"+pagesCount+"页";
                 console.log("剧目的总页数："+pagesCount);
-                alert("pagesCount"+pagesCount);
+                //alert("pagesCount"+pagesCount);
             }
         }
     };
@@ -223,6 +223,7 @@ function other_page(offset) {
 
 function reset_get() {
     document.getElementById('now_page').innerText = '1';
+    document.getElementById('play').innerHTML = '';
     get_play();
     getPlayCount();
 }
@@ -289,16 +290,16 @@ function addPlay() {
         flag=0;
     else
         flag=-1;
-    //if(check() && check1() && check2() && check3() ){
+    if(check1() && check3()){
 
-    //}else {
-      //  alert("格式输入有误！");
-     //   return false;
-    //}
+    }else {
+        alert("格式输入有误！");
+        return false;
+    }
 
     let method = 'POST';
     let data = 'play_type_id='+ty+'&play_lang_id='+la+'&play_name='+name+'&play_introduction='+intro+'&play_image='+image+'&play_length='+length+'&play_ticket_price='+price+'&play_status='+flag;
-    alert(data);
+    //alert(data);
 
     let xml = new XMLHttpRequest();
     xml.onreadystatechange = function () {
@@ -491,12 +492,12 @@ function putPlay() {
         flag=0;
     else
         flag=-1;
-    //if(check4() && check5() ){
+    if(check5()  ){
 
-    //}else {
-      //  alert("格式输入有误！");
-     //   return false;
-    //}
+    }else {
+        alert("格式输入有误！");
+        return false;
+    }
     let xml = new XMLHttpRequest();
     xml.onreadystatechange = function () {
         if(xml.readyState == 4 && xml.status == 200){
@@ -522,73 +523,64 @@ function putPlay() {
 
 
 //添加剧目名称
-function check() {
+function check1() {
     let aaa = document.getElementById('playName').value;
     console.log(aaa);
     if(/^.{2,20}$/.test(aaa)){
-        document.getElementById('err').innerHTML = '';
-        // alert("正确");
-        return true;
-    }
-    else{
-        // alert("格式错误");
-        document.getElementById('err').innerHTML = 'err:剧目名称为2～20个字符！';
-        return false;
-    }
-    // alert(aaa);
-}
-
-//添加海报路径
-function check1() {
-    let aaa = document.getElementById('playImage').value;
-    console.log(aaa);
-    ///^([\/] [\w-]+)*$/
-    if(/^([\/] [\w-]+)*$/.test(aaa)){
         document.getElementById('err1').innerHTML = '';
         // alert("正确");
         return true;
-    }else{
-        // alert("格式错误");
-
-        document.getElementById('err1').innerHTML = 'err:路径格式有误！';
-        return false;
-    }
-    // alert(aaa);
-}
-
-
-
-function check4() {
-    let aaa = document.getElementById('changeplayName').value;
-    console.log(aaa);
-    if(/^.{2,20}$/.test(aaa)){
-        document.getElementById('err4').innerHTML = '';
-        // alert("正确");
-        return true;
     }
     else{
         // alert("格式错误");
-        document.getElementById('err4').innerHTML = 'err:剧目名称为2～20个字符！';
+        document.getElementById('err1').innerHTML = 'err:剧目名称为2～20个字符！';
+        return false;
+    }
+    // alert(aaa);
+}
+
+function check2() {
+    let aaa = document.getElementById('playLength').value;
+    if(/^(?:0|[1-9][0-9]?|300)$/.test(aaa)){
+        document.getElementById('err2').innerHTML = '';
+        return true;
+    }else{
+        document.getElementById('err2').innerHTML = 'err:演出时长不符合规范（只能为1～300）！';
         return false;
     }
 }
 
-
-function check5() {
-    let aaa = document.getElementById('changeplayImage').value;
-    console.log(aaa);
-    ///^([\/] [\w-]+)*$/
-    if(/^([\/] [\w-]+)*$/.test(aaa)){
-        document.getElementById('err5').innerHTML = '';
-        // alert("正确");
+function check3() {
+    let aaa = document.getElementById('playPrice').value;
+    if(/^(?:(?!0\d)\d{1,2}(?:\.\d{1,2})?|100(?:\.0{1,2})?)$/.test(aaa)){
+        document.getElementById('err3').innerHTML = '';
         return true;
     }else{
-        // alert("格式错误");
-
-        document.getElementById('err5').innerHTML = 'err:路径格式有误！';
+        document.getElementById('err3').innerHTML = 'err:票价不合法（只能为0.00~100.00）！';
         return false;
     }
-    // alert(aaa);
+}
+
+function check4() {
+    let aaa = document.getElementById('changeplayLength').value;
+    if(/^(?:0|[1-9][0-9]?|300)$/.test(aaa)){
+        document.getElementById('err4').innerHTML = '';
+        return true;
+    }else{
+        document.getElementById('err4').innerHTML = 'err:演出时长不符合规范（只能为1～300）！';
+        return false;
+    }
+}
+
+function check5() {
+    let aaa = document.getElementById('changeplayPrice').value;
+    if(/^(?:(?!0\d)\d{1,2}(?:\.\d{1,2})?|100(?:\.0{1,2})?)$/.test(aaa)){
+        document.getElementById('err5').innerHTML = '';
+        return true;
+    }else{
+        document.getElementById('err5').innerHTML = 'err:票价不合法（0.00~100.00）！';
+        return false;
+    }
 }
 
 

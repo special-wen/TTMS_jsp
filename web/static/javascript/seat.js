@@ -15,7 +15,7 @@ var array = new Array();
 var flag_aa = 0;
 var flag_bb = 0;
 var seat_status = 0;
-
+var seat_id = 0;
 
 
 //获取座位行列信息：

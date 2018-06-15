@@ -228,8 +228,8 @@ public class studioServer extends HttpServlet {
             return;
         }
 
-        if(hm.get("studio_detial") != null){
-            stu.setStudio_introduction(hm.get("studio_detial"));
+        if(hm.get("stuio_detial") != null){
+            stu.setStudio_introduction(hm.get("stuio_detial"));
         }
 
         if(DAOFactory.createStudioDAO().update(stu)){

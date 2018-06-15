@@ -1,7 +1,10 @@
 package sss.idao;
 
+import sss.model.Sale;
 import sss.model.Seat;
 
+import java.math.BigDecimal;
+import java.sql.Timestamp;
 import java.util.ArrayList;
 
 /**
@@ -19,6 +22,8 @@ public interface ISeat {
 
     //查  更具影厅id查找座位信息
     public ArrayList<Seat> findSeatStateByStudioId(int id);
+
+    public ArrayList<Seat> findSeatidByStudioId(int studio_id,int row,int col);
 //    public boolean update(Seat seat);
 
     //查找所有座位

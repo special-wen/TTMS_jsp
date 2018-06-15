@@ -5,7 +5,7 @@
   Time: 上午10:06
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" errorPage="error.jsp" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" errorPage="/error.jsp" %>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -37,17 +37,6 @@
     </div>
 </div>
 
-
-<!--剧目的增删改查-->
-<div id = 'addSearch'>
-    <form class="navbar-form navbar-left" role="search">
-        <div class="form-group">
-            <input type="text" class="form-control" id="play_name" placeholder="查找剧目">
-        </div>
-    </form>
-    <button type = "button" class="btn btn-default navbar-btn" onclick="reset_get()"><i class="fa fa-search" aria-hidden="true"></i>查找</button>
-    <button type="button" class="btn btn-default navbar-btn" data-toggle="modal" data-target="#myModal"><i class="fa fa-plus" aria-hidden="true"></i> 添加剧目</button>
-</div>
 <!--所有剧目-->
 
 
@@ -72,6 +61,17 @@
 </div>
 
 <li id="delete_now" style="display: none"></li>
+
+<!--剧目的增查-->
+<div style="float: right">
+    <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+            <input type="text" class="form-control" id="play_name" placeholder="查找剧目">
+        </div>
+    </form>
+    <button type = "button" class="btn btn-default navbar-btn" onclick="reset_get()"><i class="fa fa-search" aria-hidden="true"></i>查找</button>
+    <button type="button" class="btn btn-default navbar-btn" data-toggle="modal" data-target="#myModal"><i class="fa fa-plus" aria-hidden="true"></i> 添加剧目</button>
+</div>
 
 
 <!--添加剧目-->
@@ -106,11 +106,11 @@
                             <option value="英语">英语</option>
                         </select>
                     </div>
-                    剧目名称：<input type="text" name="playName" id="playName" class="form-control" placeholder="请输入剧目名称" onblur="check()" required/><br><span id="err"></span><br>
+                    剧目名称：<input type="text" name="playName" id="playName" class="form-control" placeholder="请输入剧目名称" onblur="check1()" required/><br><span id="err1"></span><br>
                     剧目介绍：<input type="text" name="playIntro" id="playIntro" class="form-control" placeholder="请输入剧目简介"><br>
                     <input type="text" name="playIMage" id="playImage" class="form-control" placeholder="请输入剧目海报路径" value="null" style="display: none"><br>
-                    剧目时长：<input type="text" name="playLength" id="playLength" class="form-control" placeholder="请输入剧目时长（分钟）" ><br>
-                    剧目票价：<input type="text" name="playPrice" id="playPrice" class="form-control" placeholder="请输入剧目票价" ><br>
+                    剧目时长：<input type="text" name="playLength" id="playLength" class="form-control" placeholder="请输入剧目时长（分钟）"><br>
+                    剧目票价：<input type="text" name="playPrice" id="playPrice" class="form-control" placeholder="请输入剧目票价" onblur="check3()" required/><br><span id="err3"></span><br>
                     剧目状态：<input type="text" name="playState" value="待安排演出" id="playState" class="form-control" ><br>
 
                 </form>
@@ -159,7 +159,7 @@
                     </div>
                     剧目介绍：<input type="text" name="playIntro" id="changeplayIntro" class="form-control" ><br>
                     剧目时长：<input type="text" name="playLength" id="changeplayLength" class="form-control" ><br>
-                    剧目票价：<input type="text" name="playPrice" id="changeplayPrice" class="form-control" ><br>
+                    剧目票价：<input type="text" name="playPrice" id="changeplayPrice" class="form-control" onblur="check5()" required/><br><span id="err5"></span><br>
                     剧目状态：<input type="text" name="playState" value="待安排演出" id="changeplayState"  ><br>
 
                 </form>

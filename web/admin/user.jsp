@@ -16,18 +16,18 @@
 </head>
 <body>
 <div id="usermessage">
-<div id="header">
-    <nav class="navbar navbar-default" role="navigation">
-        <div class="container-fluid">
-            <ul class="nav nav-tabs" id = "navbar">
-                <li class="nav navbar-nav navbar-right" id = "logout"><a href="/out"><span><i class="fa fa-sign-out" aria-hidden="true"></i></span>退出登录</a></li>
-                <li class="nav navbar-nav navbar-right" id = "user"></li>
-                <li class="nav navbar-nav navbar-right" id = "name"></li>
-            </ul>
+    <div id="header">
+        <nav class="navbar navbar-default" role="navigation">
+            <div class="container-fluid">
+                <ul class="nav nav-tabs" id = "navbar">
+                    <li class="nav navbar-nav navbar-right" id = "logout"><a href="/out"><span><i class="fa fa-sign-out" aria-hidden="true"></i></span>退出登录</a></li>
+                    <li class="nav navbar-nav navbar-right" id = "user"></li>
+                    <li class="nav navbar-nav navbar-right" id = "name"></li>
+                </ul>
 
-        </div>
-    </nav>
-</div>
+            </div>
+        </nav>
+    </div>
 </div>
 
 <!--所有的演出厅-->
@@ -103,7 +103,7 @@
                             <option value="boss">经理</option>
                         </select>
                     </div>
-                    登录密码：<input type="password" name = "sateCol" id = "pass" class="form-control" placeholder="请输入含有字母和数字的密码" required/><br>
+                    登录密码：<input type="password" name = "sateCol" id = "pass" class="form-control" placeholder="请输入含有字母和数字的密码"  required/><span id = 'err1'></span><br>
                     确认密码：<input type="password" name= "sat" id = "passAgain" class="form-control" placeholder="确认密码" onblur="check()" required/><span id = 'err'></span><br>
                 </form>
                 <div class="modal-footer">
@@ -138,8 +138,8 @@
                             <option value="boss">经理</option>
                         </select>
                     </div>
-                    修改密码：<input type="text" name = "sateCol" id = "user_pass" class="form-control" placeholder="请输入含有字母和数字的密码" ><br>
-                    确认密码：<input type="text" name= "sat" id = "user_passA" class="form-control" placeholder="确认密码" onblur="check1()"><span id = 'err1'></span><br>
+                    修改密码：<input type="text" name = "sateCol" id = "user_pass" class="form-control" placeholder="请输入含有字母和数字的密码" onblur="check2()"><span id = 'err2'></span><br>
+                    确认密码：<input type="text" name= "sat" id = "user_passA" class="form-control" placeholder="确认密码" onblur="check3()"><span id = 'err3'></span><br>
 
                 </form>
                 <div class="modal-footer">
@@ -162,14 +162,14 @@
 </div>
 </body>
 <script>
-//    message('./user.html');
-getEmpnotUser();
-get_user_message('/me.jsp');
-getUserCount();
+    //    message('./user.html');
+    getEmpnotUser();
+    get_user_message('/me.jsp');
+    getUserCount();
 
-//    account();
-get_user();
-function getEmpnotUser() {
+    //    account();
+    get_user();
+    function getEmpnotUser() {
         let emp = document.getElementById("empName");
         let xhr = new XMLHttpRequest();
         xhr.onreadystatechange = function(){
